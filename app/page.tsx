@@ -1,4 +1,4 @@
-import TaiwanMap from '@/components/TaiwanMap';
+import Map from '@/components/home/map';
 import { readJsonFile } from '@/utils/readFile';
 
 async function Home() {
@@ -6,7 +6,7 @@ async function Home() {
 
   return (
     <main className="min-h-screen">
-      <TaiwanMap topology={topology} />
+      <Map topology={topology} />
     </main>
   );
 }

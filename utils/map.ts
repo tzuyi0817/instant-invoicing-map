@@ -1,8 +1,8 @@
-import { geoMercator, geoPath, select, type Selection, type BaseType } from 'd3';
+import { geoMercator, geoPath } from 'd3';
 import { feature } from 'topojson-client';
+import { createSvg } from './d3';
+import type { SelectionD3 } from '@/types/d3';
 import type { MapTopology } from '@/types/map';
-
-type SelectionD3<T extends BaseType> = Selection<T, unknown, HTMLElement, any>;
 
 class Map {
   static instance: Map | null = null;
@@ -31,7 +31,11 @@ class Map {
   }
 
   drawMap(topology: MapTopology) {
-    this.map = select('#map').attr('width', this.width).attr('height', this.height).append('svg');
+    this.map = createSvg({
+      selector: '#map',
+      width: this.width,
+      height: this.height,
+    });
     this.g = this.map.append('g');
     // @ts-ignore
     this.geoMapFeature = feature(topology, 'COUNTY');
