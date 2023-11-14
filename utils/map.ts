@@ -1,9 +1,20 @@
-import { geoMercator, geoPath, select } from 'd3';
-import { feature, mesh } from 'topojson-client';
+import { geoMercator, geoPath, select, type Selection, type BaseType } from 'd3';
+import { feature } from 'topojson-client';
 import type { MapTopology } from '@/types/map';
+
+type SelectionD3<T extends BaseType> = Selection<T, unknown, HTMLElement, any>;
 
 class Map {
   static instance: Map | null = null;
+
+  map: SelectionD3<SVGSVGElement> | null = null;
+  g: SelectionD3<SVGGElement> | null = null;
+  mesh: SelectionD3<SVGPathElement> | null = null;
+  geoMapFeature: GeoJSON.FeatureCollection | null = null;
+  projection = geoMercator().center([123, 24]).scale(5500);
+  path = geoPath(this.projection);
+  width = 0;
+  height = 0;
 
   static getInstance() {
     if (Map.instance === null) {
@@ -12,27 +23,34 @@ class Map {
     return Map.instance;
   }
 
-  draw(topology: MapTopology) {
+  resetMap() {
     const { clientWidth, clientHeight } = document.body;
-    const centerPoint: [number, number] = [123, 24];
-    const projection = geoMercator().center(centerPoint).scale(5500);
-    const path = geoPath(projection);
 
-    select('.counties')
-      .selectAll('path')
-      .data(feature(topology, topology.objects['COUNTY_MOI_1090820']).features)
+    this.width = clientWidth;
+    this.height = clientHeight;
+  }
+
+  drawMap(topology: MapTopology) {
+    this.map = select('#map').attr('width', this.width).attr('height', this.height).append('svg');
+    this.g = this.map.append('g');
+    // @ts-ignore
+    this.geoMapFeature = feature(topology, 'COUNTY');
+    this.renderCounty();
+  }
+
+  renderCounty() {
+    if (!this.geoMapFeature) return;
+    this.g
+      ?.selectAll('path')
+      .data(this.geoMapFeature.features)
       .enter()
       .append('path')
-      .attr('d', path);
+      .attr('class', 'county')
+      .attr('d', this.path);
+  }
 
-    select('.county-borders').attr(
-      'd',
-      path(
-        mesh(topology, topology.objects['COUNTY_MOI_1090820'], function (a, b) {
-          return a !== b;
-        }),
-      ),
-    );
+  removeMap() {
+    this.map?.remove();
   }
 }
 

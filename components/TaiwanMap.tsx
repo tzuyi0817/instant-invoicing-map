@@ -12,17 +12,15 @@ function TaiwanMap({ topology }: Props) {
   const map = Map.getInstance();
 
   useEffect(() => {
-    map.draw(topology);
+    map.resetMap();
+    map.drawMap(topology);
+    return () => map.removeMap();
   }, []);
 
   return (
-    <svg
-      width="500"
-      height="500"
-    >
-      <g className="counties"></g>
-      <path className="county-borders"></path>
-    </svg>
+    <div className="w-screen h-screen overflow-hidden">
+      <svg id="map"></svg>
+    </div>
   );
 }
 

@@ -1,0 +1,6 @@
+#map {
+  @apply border border-gray-200 bg-gray-100 top-0 left-0 bottom-0 right-0;
+  .county {
+    @apply fill-yellow-500 stroke-[0.5px] stroke-white cursor-pointer hover:fill-[#7f9ca7] transition-all duration-500;
+  }
+}

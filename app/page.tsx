@@ -2,7 +2,7 @@ import TaiwanMap from '@/components/TaiwanMap';
 import { readJsonFile } from '@/utils/readFile';
 
 async function Home() {
-  const topology = await readJsonFile('/assets/json/taiwan.json');
+  const topology = await readJsonFile('/assets/json/map.json');
 
   return (
     <main className="min-h-screen">
