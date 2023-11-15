@@ -2,18 +2,18 @@
 
 import { useEffect } from 'react';
 import Map from '@/utils/map';
-import type { MapTopology } from '@/types/map';
+import type { Topology } from '@/types/map';
 
 interface Props {
-  topology: MapTopology;
+  topology: Topology;
 }
 
 function TaiwanMap({ topology }: Props) {
-  const map = Map.getInstance();
+  const map = Map.getInstance(topology);
 
   useEffect(() => {
     map.resetMap();
-    map.drawMap(topology);
+    map.drawMap();
     return () => map.removeMap();
   }, []);
 

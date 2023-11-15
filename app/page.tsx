@@ -2,11 +2,15 @@ import Map from '@/components/home/map';
 import { readJsonFile } from '@/utils/readFile';
 
 async function Home() {
-  const topology = await readJsonFile('/assets/json/map.json');
+  const [county, town, village] = await Promise.all([
+    readJsonFile('/assets/json/county.json'),
+    readJsonFile('/assets/json/town.json'),
+    readJsonFile('/assets/json/village.json'),
+  ]);
 
   return (
     <main className="min-h-screen">
-      <Map topology={topology} />
+      <Map topology={{ county, town, village }} />
     </main>
   );
 }

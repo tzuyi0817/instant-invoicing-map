@@ -7,3 +7,9 @@ export interface MapTopology {
   };
   objects: Record<string, any>;
 }
+
+export interface Topology {
+  county: MapTopology;
+  town: MapTopology;
+  village: MapTopology;
+}
