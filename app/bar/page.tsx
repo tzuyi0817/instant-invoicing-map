@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Bar from '@/utils/bar';
 
 const bar = new Bar();
+const buttonStyle = 'bg-gray-300 rounded px-3 py-1 m-2';
 const data = [
   { x: 1, w: Math.floor(Math.random() * 200) },
   { x: 2, w: Math.floor(Math.random() * 200) },
@@ -24,8 +25,27 @@ function Page() {
     return () => bar.removeBar();
   }, []);
 
+  function changeData(isRandom = false) {
+    data.forEach(item => {
+      item.w = isRandom ? Math.floor(Math.random() * 200) : 0;
+    });
+    bar.changeData(data);
+  }
+
   return (
     <main className="pt-20 px-3">
+      <button
+        className={buttonStyle}
+        onClick={() => changeData(true)}
+      >
+        切換數據
+      </button>
+      <button
+        className={buttonStyle}
+        onClick={() => changeData()}
+      >
+        歸零
+      </button>
       <svg className="bar"></svg>
     </main>
   );

@@ -5,6 +5,7 @@ import type { SelectionD3, CreateSvgParams } from '@/types/d3';
 class Bar {
   bar: SelectionD3<SVGSVGElement> | null = null;
   duration = 1500;
+  previous: Array<number> = [];
 
   createBar(createSvgParams: CreateSvgParams) {
     this.bar = createSvg(createSvgParams);
@@ -42,8 +43,33 @@ class Bar {
       .tween('number', data => {
         const interpolate = interpolateRound(0, data.w);
 
+        this.previous[data.x - 1] = data.w;
         return function (t) {
           this.textContent = `${interpolate(t)}`;
+        };
+      });
+  }
+
+  changeData(data: Record<string, number>[]) {
+    this.bar
+      ?.selectAll('rect')
+      .data(data)
+      .transition()
+      .duration(this.duration)
+      .attr('width', data => data.w);
+
+    this.bar
+      ?.selectAll('text')
+      .data(data)
+      .transition()
+      .duration(this.duration)
+      .attr('x', data => data.w + 5)
+      .tween('number', data => {
+        const interpolate = interpolateRound(this.previous[data.x - 1] ?? 0, data.w);
+
+        this.previous[data.x - 1] = data.w;
+        return function (t) {
+          (this as SVGTextElement).textContent = `${interpolate(t)}`;
         };
       });
   }
