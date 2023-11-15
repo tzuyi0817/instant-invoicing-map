@@ -18,7 +18,7 @@ function TaiwanMap({ topology }: Props) {
   }, []);
 
   return (
-    <div className="w-screen h-screen overflow-hidden">
+    <div className="map-container w-screen h-screen overflow-hidden">
       <svg id="map"></svg>
     </div>
   );
