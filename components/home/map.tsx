@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import Map from '@/utils/map';
+import Arrow from '@/assets/images/svg/arrow-right.svg';
 import type { Topology } from '@/types/map';
 
 interface Props {
@@ -19,7 +20,8 @@ function TaiwanMap({ topology }: Props) {
 
   return (
     <div className="map-container w-screen h-screen overflow-hidden">
-      <svg className="map"></svg>
+      {/* <svg className="map"></svg> */}
+      <Arrow className="absolute left-7 stroke-red-500" />
     </div>
   );
 }
