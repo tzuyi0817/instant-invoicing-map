@@ -2,10 +2,15 @@
 
 @layer components {
   .map-container {
-    #map {
-      @apply border border-gray-200 bg-blue-950 top-0 left-0 bottom-0 right-0;
-      .county {
-        @apply fill-yellow-500 stroke-[0.5px] stroke-white cursor-pointer hover:opacity-80 transition-all;
+    @apply bg-blue-950;
+    .map {
+      @apply top-0 left-0 bottom-0 right-0;
+      .county,
+      .town {
+        @apply stroke-[0.05px] stroke-white cursor-pointer hover:opacity-80 transition-all;
+        &-active {
+          @apply stroke-1 stroke-orange-500;
+        }
       }
     }
     .tooltip {

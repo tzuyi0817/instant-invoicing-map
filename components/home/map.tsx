@@ -14,12 +14,12 @@ function TaiwanMap({ topology }: Props) {
   useEffect(() => {
     map.resetMap();
     map.drawMap();
-    return () => map.removeMap();
+    return () => map.resetMap();
   }, []);
 
   return (
     <div className="map-container w-screen h-screen overflow-hidden">
-      <svg id="map"></svg>
+      <svg className="map"></svg>
     </div>
   );
 }
