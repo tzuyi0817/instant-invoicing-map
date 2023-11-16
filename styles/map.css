@@ -6,10 +6,11 @@
     .map {
       @apply top-0 left-0 bottom-0 right-0;
       .county,
-      .town {
+      .town,
+      .village {
         @apply stroke-[0.05px] stroke-white cursor-pointer hover:opacity-80 transition-all;
         &-active {
-          @apply stroke-1 stroke-orange-500;
+          @apply stroke-[0.5px] stroke-orange-500;
         }
       }
     }

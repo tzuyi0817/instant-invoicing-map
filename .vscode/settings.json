@@ -20,5 +20,5 @@
   },
   "files.associations": {},
   "typescript.tsdk": "node_modules/typescript/lib",
-  "cSpell.words": ["dotenv", "topojson", "COUNTYNAME", "COUNTYID", "TOWNNAME"]
+  "cSpell.words": ["dotenv", "topojson", "COUNTYNAME", "COUNTYID", "TOWNNAME", "TOWNID", "VILLNAME"]
 }

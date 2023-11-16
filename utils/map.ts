@@ -1,6 +1,7 @@
 import { geoMercator, geoPath, select, type Selection } from 'd3';
 import { feature } from 'topojson-client';
 import { createSvg, createTooltip } from './d3';
+import { MAP_AREA_NAME } from '@/configs/map';
 import type { SelectionD3 } from '@/types/d3';
 import type { Topology, MapFeature, MapSelectArea, MapArea } from '@/types/map';
 
@@ -29,8 +30,8 @@ class Map {
     county: { x: 0, y: 0, scale: 1 },
     town: { x: 0, y: 0, scale: 1 },
   };
-  fillColor = { county: '#eab308', town: '#3b82f6', village: '' };
-  nextArea = { county: 'town', town: 'village' } as const;
+  fillColor = { county: '#eab308', town: '#3b82f6', village: '#22c55e' };
+  currentArea: MapArea = 'county';
 
   static getInstance(topology: Topology) {
     if (Map.instance === null) {
@@ -81,15 +82,68 @@ class Map {
     this.drawArea('town', towns);
   }
 
+  renderVillage(town: MapFeature) {
+    const villages = this.villageFeature.features.filter(({ properties }) => {
+      return properties?.TOWNID === town.properties.TOWNID;
+    });
+
+    this.drawArea('village', villages);
+  }
+
+  drawArea(area: MapArea, features: MapFeature[]) {
+    this.currentArea = area;
+    this.g
+      ?.selectAll(`.${area}`)
+      .data(features)
+      .enter()
+      .append('path')
+      .classed(area, true)
+      .attr('d', this.path)
+      .style('fill', this.fillColor[area])
+      .on('click', async function (event, data) {
+        if (area === 'village') return;
+        const instance = Map.instance;
+
+        if (!instance) return;
+        instance.clearBoundary(area);
+        instance.currentPath = select(this);
+        instance.drawBoundary(area);
+        await instance.clearMap(area);
+        instance.boundsMap(area, data);
+      })
+      .on('mouseover', (_, data) => {
+        this.tooltip?.style('opacity', 1).html(`<p>${data.properties?.[MAP_AREA_NAME[area]]}</p>`);
+      })
+      .on('mousemove', event => {
+        this.tooltip?.style('left', `${event.pageX + 10}px`).style('top', `${event.pageY + 10}px`);
+      })
+      .on('mouseout', () => {
+        this.tooltip?.style('opacity', 0);
+      });
+  }
+
+  clearArea(area: MapArea, duration = 300) {
+    return this.g?.selectAll(`.${area}`).data([]).exit().transition().duration(duration).remove().end();
+  }
+
+  clearMap(area: MapSelectArea) {
+    const clear = {
+      county: () => Promise.all([this.clearArea.call(this, 'town'), this.clearArea.call(this, 'village')]),
+      town: this.clearArea.bind(this, 'village'),
+    };
+
+    return clear[area]();
+  }
+
   async boundsMap(area: MapSelectArea, data: MapFeature) {
     const bounds = this.path.bounds(data);
     const renderMap = {
       county: this.renderTown.bind(this),
-      town: () => {},
+      town: this.renderVillage.bind(this),
     } as const;
 
     await this.zoomMap(area, bounds);
-    renderMap[area]?.(data);
+    renderMap[area](data);
   }
 
   zoomMap(area: MapSelectArea, bounds: [[number, number], [number, number]]) {
@@ -108,59 +162,15 @@ class Map {
     return this.translateMap();
   }
 
-  drawBoundary() {
+  drawBoundary(area: MapSelectArea) {
     if (!this.currentPath) return;
-    this.currentPath.classed('county-active', true);
+    this.currentPath.classed(`${area}-active`, true);
     this.currentPath.raise();
   }
 
-  clearBoundary() {
+  clearBoundary(area: MapSelectArea) {
     if (!this.currentPath) return;
-    this.currentPath.classed('county-active', false);
-    this.currentPath.lower();
-  }
-
-  drawArea(area: MapArea, features: MapFeature[]) {
-    this.g
-      ?.selectAll(`.${area}`)
-      .data(features)
-      .enter()
-      .append('path')
-      .classed(area, true)
-      .attr('d', this.path)
-      .style('fill', this.fillColor[area])
-      .on('click', async function (event, data) {
-        if (area === 'village') return;
-        const instance = Map.instance;
-
-        if (!instance) return;
-        instance.clearBoundary.call(instance);
-        instance.currentPath = select(this);
-        instance.drawBoundary.call(instance);
-        await instance.clearArea(instance.nextArea[area]);
-        instance.boundsMap(area, data);
-      })
-      .on('mouseover', (_, data) => {
-        this.tooltip?.style('opacity', 1).html(`<p>${data.properties?.[`${area.toUpperCase()}NAME`]}</p>`);
-      })
-      .on('mousemove', event => {
-        this.tooltip?.style('left', `${event.pageX + 10}px`).style('top', `${event.pageY + 10}px`);
-      })
-      .on('mouseout', () => {
-        this.tooltip?.style('opacity', 0);
-      });
-  }
-
-  clearArea(area: Exclude<MapArea, 'county'>, duration = 300) {
-    return this.g
-      ?.selectAll(`.${area}`)
-      .data([])
-      .exit()
-      .transition()
-      .duration(duration)
-      .style('opacity', 0)
-      .remove()
-      .end();
+    this.currentPath.classed(`${area}-active`, false).classed('county-active', false);
   }
 
   translateMap(duration = 800) {
