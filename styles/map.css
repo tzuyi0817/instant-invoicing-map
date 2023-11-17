@@ -2,7 +2,7 @@
 
 @layer components {
   .map-container {
-    @apply bg-blue-950;
+    @apply bg-blue-950 w-screen h-screen overflow-hidden;
     .map {
       @apply top-0 left-0 bottom-0 right-0;
       .county,

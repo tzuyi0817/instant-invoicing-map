@@ -3,7 +3,7 @@ import { feature } from 'topojson-client';
 import { createSvg, createTooltip } from './d3';
 import { MAP_AREA_NAME } from '@/configs/map';
 import type { SelectionD3 } from '@/types/d3';
-import type { Topology, MapFeature, MapSelectArea, MapArea } from '@/types/map';
+import type { Topology, MapFeature, MapSelectArea, MapArea, MapBackArea } from '@/types/map';
 
 class Map {
   static instance: Map | null = null;
@@ -18,6 +18,7 @@ class Map {
   mesh: SelectionD3<SVGPathElement> | null = null;
   tooltip: SelectionD3<HTMLDivElement> | null = null;
   currentPath: Selection<SVGPathElement, unknown, null, undefined> | null = null;
+  previousPath: Selection<SVGPathElement, unknown, null, undefined> | null = null;
   projection = geoMercator().center([123, 24]).scale(6000);
   path = geoPath(this.projection);
   width = 0;
@@ -106,6 +107,7 @@ class Map {
 
         if (!instance) return;
         instance.clearBoundary(area);
+        instance.previousPath = instance.currentPath;
         instance.currentPath = select(this);
         instance.drawBoundary(area);
         await instance.clearMap(area);
@@ -162,15 +164,44 @@ class Map {
     return this.translateMap();
   }
 
-  drawBoundary(area: MapSelectArea) {
+  drawBoundary(area: MapSelectArea, isRaise = true) {
     if (!this.currentPath) return;
     this.currentPath.classed(`${area}-active`, true);
-    this.currentPath.raise();
+    isRaise && this.currentPath.raise();
   }
 
   clearBoundary(area: MapSelectArea) {
     if (!this.currentPath) return;
     this.currentPath.classed(`${area}-active`, false).classed('county-active', false);
+  }
+
+  backArea({ x, y, scale, from, to }: MapBackArea) {
+    this.clearArea(from);
+    this.x = x;
+    this.y = y;
+    this.scale = scale;
+    this.clearBoundary(to);
+    this.translateMap();
+    this.currentArea = to;
+  }
+
+  backToPreviousArea() {
+    const backAreaMap = {
+      county: null,
+      town: () => {
+        const { x, y, scale } = this.translate.default;
+
+        this.backArea({ x, y, scale, from: 'town', to: 'county' });
+      },
+      village: () => {
+        const { x, y, scale } = this.translate.county;
+
+        this.backArea({ x, y, scale, from: 'village', to: 'town' });
+        this.currentPath = this.previousPath;
+        this.drawBoundary('county', false);
+      },
+    };
+    backAreaMap[this.currentArea]?.();
   }
 
   translateMap(duration = 800) {

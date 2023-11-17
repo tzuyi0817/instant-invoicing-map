@@ -18,10 +18,19 @@ function TaiwanMap({ topology }: Props) {
     return () => map.resetMap();
   }, []);
 
+  function backToPreviousArea() {
+    map.backToPreviousArea();
+  }
+
   return (
-    <div className="map-container w-screen h-screen overflow-hidden">
-      {/* <svg className="map"></svg> */}
-      <Arrow className="absolute left-7 stroke-red-500" />
+    <div className="map-container">
+      <svg className="map"></svg>
+      <button
+        className="absolute top-20 left-20"
+        onClick={backToPreviousArea}
+      >
+        <Arrow className="stroke-white w-10 rotate-180 transition-all hover:stroke-red-400" />
+      </button>
     </div>
   );
 }

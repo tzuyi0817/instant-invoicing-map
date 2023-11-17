@@ -19,3 +19,11 @@ export interface Topology {
   town: MapTopology;
   village: MapTopology;
 }
+
+export interface MapBackArea {
+  x: number;
+  y: number;
+  scale: number;
+  from: MapArea;
+  to: MapSelectArea;
+}
