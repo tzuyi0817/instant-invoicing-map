@@ -1,52 +1,14 @@
-'use client';
+import BarChart from '@/components/bar/bar-chart';
+import BarAxis from '@/components/bar/bar-axis';
+import { readJsonFile } from '@/utils/readFile';
 
-import { useEffect } from 'react';
-import Bar from '@/utils/bar';
-
-const bar = new Bar();
-const buttonStyle = 'bg-gray-300 rounded px-3 py-1 m-2';
-const data = [
-  { x: 1, w: Math.floor(Math.random() * 200) },
-  { x: 2, w: Math.floor(Math.random() * 200) },
-  { x: 3, w: Math.floor(Math.random() * 200) },
-  { x: 4, w: Math.floor(Math.random() * 200) },
-  { x: 5, w: Math.floor(Math.random() * 200) },
-];
-
-function Page() {
-  useEffect(() => {
-    bar.createBar({
-      selector: '.bar',
-      width: 300,
-      height: 300,
-    });
-    bar.drawBar(data);
-    bar.drawText(data);
-    return () => bar.removeBar();
-  }, []);
-
-  function changeData(isRandom = false) {
-    data.forEach(item => {
-      item.w = isRandom ? Math.floor(Math.random() * 200) : 0;
-    });
-    bar.changeData(data);
-  }
+async function Page() {
+  const county = await readJsonFile('/assets/json/vote/county.json');
 
   return (
     <main className="pt-20 px-3">
-      <button
-        className={buttonStyle}
-        onClick={() => changeData(true)}
-      >
-        切換數據
-      </button>
-      <button
-        className={buttonStyle}
-        onClick={() => changeData()}
-      >
-        歸零
-      </button>
-      <svg className="bar"></svg>
+      <BarChart />
+      <BarAxis county={county} />
     </main>
   );
 }

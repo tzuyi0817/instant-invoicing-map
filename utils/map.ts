@@ -1,6 +1,6 @@
 import { geoMercator, geoPath, select, type Selection } from 'd3';
 import { feature } from 'topojson-client';
-import { createSvg, createTooltip } from './d3';
+import { createSvg } from './d3';
 import { MAP_AREA_NAME } from '@/configs/map';
 import type { SelectionD3 } from '@/types/d3';
 import type { Topology, MapFeature, MapSelectArea, MapArea, MapBackArea } from '@/types/map';
@@ -66,7 +66,7 @@ class Map {
       height: this.height,
     });
     this.g = this.map.append('g');
-    this.tooltip = createTooltip('.map-container');
+    this.tooltip = select('.map-container.tooltip');
     this.renderCounty();
   }
 
@@ -214,7 +214,6 @@ class Map {
 
   removeMap() {
     this.map?.remove();
-    this.tooltip?.remove();
   }
 }
 

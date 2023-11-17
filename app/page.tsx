@@ -3,9 +3,9 @@ import { readJsonFile } from '@/utils/readFile';
 
 async function Home() {
   const [county, town, village] = await Promise.all([
-    readJsonFile('/assets/json/county.json'),
-    readJsonFile('/assets/json/town.json'),
-    readJsonFile('/assets/json/village.json'),
+    readJsonFile('/assets/json/map/county.json'),
+    readJsonFile('/assets/json/map/town.json'),
+    readJsonFile('/assets/json/map/village.json'),
   ]);
 
   return (

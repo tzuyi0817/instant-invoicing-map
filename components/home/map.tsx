@@ -25,6 +25,7 @@ function TaiwanMap({ topology }: Props) {
   return (
     <div className="map-container">
       <svg className="map"></svg>
+      <div className="tooltip"></div>
       <button
         className="absolute top-20 left-20"
         onClick={backToPreviousArea}
