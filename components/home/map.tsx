@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import Map from '@/utils/map';
-import Arrow from '@/assets/images/svg/arrow-right.svg';
+import Arrow from '@/assets/images/svg/arrow.svg';
 import type { Topology } from '@/types/map';
 
 interface Props {
