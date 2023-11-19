@@ -13,22 +13,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'primary-vote-red': '#E72F00',
+        'primary-red': '#E72F00',
 
-        'low-vote-green': '#8AF1B6',
-        'medium-vote-green': '#30CB73',
-        'high-vote-green': '#25A55C',
+        'shallow-green': '#8AF1B6',
+        'normal-green': '#30CB73',
+        'deep-green': '#25A55C',
 
-        'low-vote-blue': '#BBD9FF',
-        'medium-vote-blue': '#7EB2F4',
-        'high-vote-blue': '#4A8FE7',
+        'shallow-blue': '#BBD9FF',
+        'normal-blue': '#7EB2F4',
+        'deep-blue': '#4A8FE7',
 
-        'low-vote-orange': '#FFB58C',
-        'medium-vote-orange': '#F79E6D',
-        'high-vote-orange': '#F88545',
+        'shallow-orange': '#FFB58C',
+        'normal-orange': '#F79E6D',
+        'deep-orange': '#F88545',
 
-        'primary-vote-gray': '#444444',
-        'secondary-vote-gray-': '#8C8C8C',
+        'primary-gray': '#444444',
+        'secondary-gray': '#8C8C8C',
       },
       backgroundImage: {},
     },

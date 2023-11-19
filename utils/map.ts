@@ -1,7 +1,6 @@
 import { geoMercator, geoPath, select, type Selection } from 'd3';
 import { feature } from 'topojson-client';
 import { createSvg } from './d3';
-import { MAP_AREA_NAME } from '@/configs/map';
 import type { SelectionD3 } from '@/types/d3';
 import type { Topology, MapFeature, MapSelectArea, MapArea, MapBackArea } from '@/types/map';
 
@@ -44,11 +43,11 @@ class Map {
   constructor(topology: Topology) {
     this.topology = topology;
     // @ts-ignore
-    this.countyFeature = feature(this.topology.county, 'COUNTY');
+    this.countyFeature = feature(this.topology.county, 'county');
     // @ts-ignore
-    this.townFeature = feature(this.topology.town, 'TOWN');
+    this.townFeature = feature(this.topology.town, 'town');
     // @ts-ignore
-    this.villageFeature = feature(this.topology.village, 'VILLAGE');
+    this.villageFeature = feature(this.topology.village, 'village');
   }
 
   resetMap() {
@@ -66,7 +65,7 @@ class Map {
       height: this.height,
     });
     this.g = this.map.append('g');
-    this.tooltip = select('.map-container.tooltip');
+    this.tooltip = select('.map-container .tooltip');
     this.renderCounty();
   }
 
@@ -77,7 +76,7 @@ class Map {
 
   renderTown(county: MapFeature) {
     const towns = this.townFeature.features.filter(({ properties }) => {
-      return properties?.COUNTYID === county.properties.COUNTYID;
+      return properties?.countyId === county.properties.countyId;
     });
 
     this.drawArea('town', towns);
@@ -85,7 +84,7 @@ class Map {
 
   renderVillage(town: MapFeature) {
     const villages = this.villageFeature.features.filter(({ properties }) => {
-      return properties?.TOWNID === town.properties.TOWNID;
+      return properties?.townId === town.properties.townId;
     });
 
     this.drawArea('village', villages);
@@ -114,7 +113,7 @@ class Map {
         instance.boundsMap(area, data);
       })
       .on('mouseover', (_, data) => {
-        this.tooltip?.style('opacity', 1).html(`<p>${data.properties?.[MAP_AREA_NAME[area]]}</p>`);
+        this.tooltip?.style('opacity', 1).html(`<p>${data.properties?.[`${area}Name`]}</p>`);
       })
       .on('mousemove', event => {
         this.tooltip?.style('left', `${event.pageX + 10}px`).style('top', `${event.pageY + 10}px`);
