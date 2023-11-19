@@ -13,8 +13,8 @@ function BarVote({ county }: Props) {
   useEffect(() => {
     bar.createBar({
       selector: '.bar-axis',
-      width: 800,
-      height: 600,
+      width: 600,
+      height: 300,
     });
     bar.drawVoteBar(county.COUNTY);
     return () => bar.removeBar();

@@ -1,4 +1,4 @@
-import { interpolateRound, scaleLinear, max, axisBottom } from 'd3';
+import { interpolateRound, scaleLinear, axisBottom, scaleBand, axisLeft } from 'd3';
 import { createSvg } from './d3';
 import type { SelectionD3, CreateSvgParams } from '@/types/d3';
 
@@ -8,11 +8,12 @@ class Bar {
   previous: Array<number> = [];
   width = 0;
   height = 0;
+  margin = 50;
 
   createBar(createSvgParams: CreateSvgParams) {
     this.bar = createSvg(createSvgParams);
-    this.width = createSvgParams.width;
-    this.height = createSvgParams.height;
+    this.width = createSvgParams.width - this.margin * 2;
+    this.height = createSvgParams.height - this.margin * 2;
   }
 
   drawVoteBar(data: Record<string, string | number>[]) {
@@ -24,28 +25,43 @@ class Bar {
       { name: 'RJ', friend: 10 },
     ];
 
-    const scale = scaleLinear()
-      .domain([0, max(sevenFat.map(item => item.friend))])
-      .range([0, 300]);
+    const x = scaleBand()
+      .domain(sevenFat.map(item => item.name))
+      .range([0, this.width])
+      .padding(0.2);
+    const y = scaleLinear().domain([0, 60]).range([this.height, 0]);
 
-    const axis = axisBottom(scale)
-      .ticks(5)
-      .tickFormat(item => item + '人');
+    if (!this.bar) return;
+    this.bar
+      ?.append('g')
+      .attr('transform', `translate(${this.margin},${this.height + this.margin})`)
+      .transition()
+      .duration(750)
+      .call(axisBottom(x).tickSize(5))
+      .selectAll('text')
+      .style('font-size', '14px');
 
     this.bar
-      ?.selectAll('g')
+      ?.append('g')
+      .attr('transform', `translate(${this.margin},${this.margin})`)
+      .call(axisLeft(y).tickValues([0, 20, 40, 60]).tickSize(0))
+      .selectAll('text')
+      .style('font-size', '14px');
+
+    this.bar
+      ?.selectAll('bars')
       .data(sevenFat)
       .enter()
-      .append('g')
       .append('rect')
-      .attr('x', (item, i) => i * 60)
-      .attr('y', 0)
-      .attr('width', 50)
-      .attr('height', item => scale(item.friend))
+      .attr('x', item => `${x(item.name)}`)
+      .attr('y', item => y(item.friend))
       .attr('fill', '#09c')
-      .attr('transform', 'translate(100,125)');
-
-    this.bar?.append('g').attr('transform', 'translate(95,125)').transition().duration(750).call(axis);
+      .attr('transform', `translate(${this.margin},${this.margin})`)
+      .attr('width', x.bandwidth())
+      .attr('height', 0)
+      .transition()
+      .duration(750)
+      .attr('height', item => (y(item.friend) < this.height ? this.height - y(item.friend) : this.height));
   }
 
   drawBar(data: Record<string, number>[]) {
