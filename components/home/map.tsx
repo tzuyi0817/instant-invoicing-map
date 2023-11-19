@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import Map from '@/utils/map';
 import Arrow from '@/assets/images/svg/arrow.svg';
+// import { readJsonFile } from '@/utils/readFile';
 import type { Topology } from '@/types/map';
 
 interface Props {
@@ -10,6 +11,12 @@ interface Props {
 }
 
 function TaiwanMap({ topology }: Props) {
+  // const [county, town, village] = await Promise.all([
+  //   readJsonFile('/assets/json/map/county.json'),
+  //   readJsonFile('/assets/json/map/town.json'),
+  //   readJsonFile('/assets/json/map/village.json'),
+  // ]);
+
   const map = Map.getInstance(topology);
 
   useEffect(() => {

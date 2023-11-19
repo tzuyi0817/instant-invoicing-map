@@ -1,0 +1,15 @@
+h1 {
+  @apply lg:text-[32px] lg:leading-[46px] font-bold;
+}
+
+h2 {
+  @apply lg:text-[32px] lg:leading-[46px] font-medium;
+}
+
+h3 {
+  @apply lg:text-2xl lg:leading-[36px] text-xs font-medium;
+}
+
+h4 {
+  @apply lg:text-lg text-xs font-medium;
+}
