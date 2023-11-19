@@ -1,16 +1,23 @@
+import Image from 'next/image';
 import Link from 'next/link';
-
-const linkStyle = 'text-white hover:text-red-500 transition-all';
+import Logo from 'assets/images/svg/2020-vote.svg';
+import Menu from 'assets/images/svg/menu.svg';
 
 function Header() {
   return (
-    <header className="fixed bg-black/50 px-3 py-2 w-full">
-      <ul className="flex gap-3">
-        <li className={linkStyle}>
-          <Link href="/">Home</Link>
+    <header className="fixed px-4 py-3 w-full border-b-[3px] border-black flex justify-between">
+      <Logo width="285" />
+      <Menu />
+
+      <ul>
+        <li>
+          <Link href="/">首頁</Link>
         </li>
-        <li className={linkStyle}>
-          <Link href="/bar">Bar</Link>
+        <li>
+          <Link href="/">開票地圖</Link>
+        </li>
+        <li>
+          <Link href="/">候選人政見</Link>
         </li>
       </ul>
     </header>
