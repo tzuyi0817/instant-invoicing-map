@@ -1,25 +1,25 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import Logo from 'assets/images/svg/2020-vote.svg';
-import Menu from 'assets/images/svg/menu.svg';
+'use client';
+
+import { motion, useCycle } from 'framer-motion';
+import Logo from '@/components/layout/navigation-logo';
+import Navigation from '@/components/layout/navigation';
+import MenuToggle from '@/components/common/menu-toggle';
 
 function Header() {
-  return (
-    <header className="fixed px-4 py-3 w-full border-b-[3px] border-black flex justify-between">
-      <Logo width="285" />
-      <Menu />
+  const [isOpen, toggleOpen] = useCycle(false, true);
 
-      <ul>
-        <li>
-          <Link href="/">首頁</Link>
-        </li>
-        <li>
-          <Link href="/">開票地圖</Link>
-        </li>
-        <li>
-          <Link href="/">候選人政見</Link>
-        </li>
-      </ul>
+  return (
+    <header className="fixed w-full">
+      <motion.nav
+        initial={false}
+        animate={isOpen ? 'open' : 'closed'}
+        className="flex justify-between px-4 py-3"
+      >
+        <Logo />
+        <Navigation />
+        <MenuToggle toggle={() => toggleOpen()} />
+      </motion.nav>
+      <div className="border-b-[3px] border-black"></div>
     </header>
   );
 }
