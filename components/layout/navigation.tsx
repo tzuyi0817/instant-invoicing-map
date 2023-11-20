@@ -4,6 +4,10 @@ import { motion } from 'framer-motion';
 import MenuPresidential from '@/assets/images/layout/menu-presidential.png';
 import MenuBackground from '@/assets/images/layout/menu-background.svg';
 
+interface Props {
+  toggle: () => void;
+}
+
 const sidebar = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
@@ -50,7 +54,7 @@ const liVariants = {
   },
 };
 
-function Navigation() {
+function Navigation({ toggle }: Props) {
   return (
     <>
       <motion.div
@@ -74,13 +78,22 @@ function Navigation() {
         className="fixed top-1/3 right-5 text-right text-white text-2xl font-bold flex flex-col gap-4"
         variants={ulVariants}
       >
-        <motion.li variants={liVariants}>
+        <motion.li
+          variants={liVariants}
+          onClick={toggle}
+        >
           <Link href="/">首頁</Link>
         </motion.li>
-        <motion.li variants={liVariants}>
-          <Link href="/">開票地圖</Link>
+        <motion.li
+          variants={liVariants}
+          onClick={toggle}
+        >
+          <Link href="/invoicing">開票地圖</Link>
         </motion.li>
-        <motion.li variants={liVariants}>
+        <motion.li
+          variants={liVariants}
+          onClick={toggle}
+        >
           <Link href="/">候選人政見</Link>
         </motion.li>
       </motion.ul>

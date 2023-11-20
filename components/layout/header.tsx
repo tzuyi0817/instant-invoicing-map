@@ -16,7 +16,7 @@ function Header() {
         className="flex justify-between px-4 py-3"
       >
         <Logo />
-        <Navigation />
+        <Navigation toggle={() => toggleOpen()} />
         <MenuToggle toggle={() => toggleOpen()} />
       </motion.nav>
       <div className="border-b-[3px] border-black"></div>
