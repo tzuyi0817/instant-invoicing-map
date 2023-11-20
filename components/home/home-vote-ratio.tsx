@@ -23,6 +23,7 @@ function HomeVoteRatio() {
               src={PresidentialPalace}
               alt="presidential palace"
               className="w-full object-cover"
+              priority
             />
             <ul className="w-full absolute bottom-0 flex text-xs px-1">
               <li className={`w-1/3 ${PseudoElement}`}>蔡英文 0%</li>
@@ -32,7 +33,7 @@ function HomeVoteRatio() {
           </div>
         </div>
         <div className="w-full">
-          <button className="btn mt-2 border-l-transparent border-b-transparent">看開票地圖</button>
+          <button className="btn-home mt-2">看開票地圖</button>
         </div>
       </div>
     </div>

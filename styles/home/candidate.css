@@ -1,0 +1,29 @@
+@import 'tailwindcss/components';
+
+@layer components {
+  .home-candidate {
+    &-kmt {
+      @apply w-1/2 relative -top-10 -left-3 transition-transform;
+      &:hover > img {
+        @apply -translate-y-3;
+      }
+    }
+    &-ddp {
+      @apply w-1/2 absolute bottom-0 z-[1];
+      &:hover {
+        img {
+          @apply -translate-y-3;
+        }
+        svg {
+          @apply rotate-12;
+        }
+      }
+    }
+    &-pfp {
+      @apply w-1/2 relative -right-3 -top-2 scale-[1.2];
+      &:hover > img {
+        @apply -rotate-6;
+      }
+    }
+  }
+}
