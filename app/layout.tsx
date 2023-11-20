@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Noto_Sans_TC } from 'next/font/google';
 import Header from '@/components/layout/header';
+import Footer from '@/components/layout/footer';
 import '@/styles/globals.css';
 import '@/styles/index.css';
 
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={notoSansTC.className}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

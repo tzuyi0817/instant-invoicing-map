@@ -1,0 +1,7 @@
+@import 'tailwindcss/components';
+
+@layer components {
+  .container {
+    @apply min-h-[calc(100vh-138px)];
+  }
+}
