@@ -1,0 +1,7 @@
+@import 'tailwindcss/components';
+
+@layer components {
+  .btn {
+    @apply px-3 py-2 border border-black transition-colors duration-300 hover:bg-black hover:text-white;
+  }
+}

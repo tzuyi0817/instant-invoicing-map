@@ -9,7 +9,7 @@ function Header() {
   const [isOpen, toggleOpen] = useCycle(false, true);
 
   return (
-    <header className="fixed w-full">
+    <header className="fixed w-full z-10">
       <motion.nav
         initial={false}
         animate={isOpen ? 'open' : 'closed'}
