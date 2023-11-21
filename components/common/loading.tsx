@@ -7,7 +7,46 @@ import VoteStamp from '@/assets/images/loading/vote-stamp.png';
 import Message from './message';
 import { sleep } from '@/utils/common';
 
-const TIME_INTERVAL = 1500;
+const TIME_INTERVAL = 1.5;
+const messages = [
+  { className: 'absolute -top-8 -right-28 w-[163px]', translateX: '30%', translateY: '-50%', message: '逮灣發大財' },
+  {
+    className: 'absolute top-0 -left-24 w-[122px]',
+    translateX: '-30%',
+    translateY: '-50%',
+    message: '凍蒜!凍蒜!',
+    isWhite: true,
+  },
+  {
+    className: 'absolute top-10 -right-28 w-[122px]',
+    translateX: '30%',
+    translateY: '30%',
+    message: '2020台灣要贏',
+    isWhite: true,
+  },
+  {
+    className: 'absolute top-20 -left-20 w-[100px]',
+    translateX: '-30%',
+    translateY: '30%',
+    message: '點亮台灣',
+    rotateClass: 'rotate-180',
+  },
+  {
+    className: 'absolute top-32 -left-32 w-[164px]',
+    translateX: '-30%',
+    translateY: '50%',
+    message: 'Taiwan No.1',
+    isWhite: true,
+  },
+  {
+    className: 'absolute top-28 -right-12 w-[122px]',
+    translateX: '30%',
+    translateY: '50%',
+    message: '結束藍綠對峙',
+    rotateClass: 'rotate-180',
+    rotate: 360,
+  },
+];
 
 function Loading() {
   const controls = useAnimationControls();
@@ -15,24 +54,19 @@ function Loading() {
   function rotateSpring(rotate: number) {
     return controls.start({
       rotate,
-      transition: { type: 'spring', stiffness: 500 },
+      transition: { type: 'spring', stiffness: 500, delay: TIME_INTERVAL },
     });
   }
 
-  function rotateStamp() {
-    requestAnimationFrame(async () => {
-      await rotateSpring(-90);
-      await sleep(TIME_INTERVAL);
-      await rotateSpring(-180);
-      await sleep(TIME_INTERVAL);
-      await rotateSpring(-270);
-      await sleep(TIME_INTERVAL);
-      await rotateSpring(-360);
-      controls.stop();
-      controls.set({ rotate: 0 });
-      await sleep(TIME_INTERVAL);
-      rotateStamp();
-    });
+  async function rotateStamp() {
+    await rotateSpring(-90);
+    await rotateSpring(-180);
+    await rotateSpring(-270);
+    await rotateSpring(-360);
+    controls.stop();
+    controls.set({ rotate: 0 });
+    await sleep();
+    rotateStamp();
   }
 
   useEffect(() => {
@@ -48,60 +82,17 @@ function Loading() {
             className="w-[153px]"
           />
         </motion.div>
-        <Message
-          className="absolute -top-8 -right-28 w-[163px]"
-          translateX="30%"
-          translateY="-50%"
-          timeInterval={TIME_INTERVAL}
-        >
-          逮灣發大財
-        </Message>
-        <Message
-          isWhite
-          className="absolute top-0 -left-24 w-[122px]"
-          translateX="-30%"
-          translateY="-50%"
-          timeInterval={TIME_INTERVAL}
-        >
-          凍蒜!凍蒜!
-        </Message>
-        <Message
-          isWhite
-          className="absolute top-10 -right-28 w-[122px]"
-          translateX="30%"
-          translateY="30%"
-          timeInterval={TIME_INTERVAL}
-        >
-          2020台灣要贏
-        </Message>
-        <Message
-          className="absolute top-20 -left-20 w-[100px]"
-          rotateClass="rotate-180"
-          translateX="-30%"
-          translateY="30%"
-          timeInterval={TIME_INTERVAL}
-        >
-          點亮台灣
-        </Message>
-        <Message
-          isWhite
-          className="absolute top-32 -left-32 w-[164px]"
-          translateX="-30%"
-          translateY="50%"
-          timeInterval={TIME_INTERVAL}
-        >
-          Taiwan No.1
-        </Message>
-        <Message
-          className="absolute top-28 -right-12 w-[122px]"
-          rotateClass="rotate-180"
-          translateX="30%"
-          translateY="50%"
-          rotate={360}
-          timeInterval={TIME_INTERVAL}
-        >
-          結束藍綠對峙
-        </Message>
+        {messages.map(({ message, ...item }) => {
+          return (
+            <Message
+              key={message}
+              timeInterval={TIME_INTERVAL}
+              {...item}
+            >
+              {message}
+            </Message>
+          );
+        })}
       </div>
     </div>
   );
