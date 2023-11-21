@@ -3,10 +3,10 @@ import HomeCandidate from '@/components/home/home-candidate';
 
 function Home() {
   return (
-    <main className="container">
+    <>
       <HomeVoteRatio />
       <HomeCandidate />
-    </main>
+    </>
   );
 }
 

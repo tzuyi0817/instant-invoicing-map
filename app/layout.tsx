@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Noto_Sans_TC } from 'next/font/google';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
+import Transition from '@/components/layout/transition';
+import Loading from '@/components/common/loading';
 import '@/styles/globals.css';
 import '@/styles/index.css';
 
@@ -9,7 +11,7 @@ const notoSansTC = Noto_Sans_TC({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Presidential election vote map',
-  description: '2020 presidential election vote map.',
+  description: 'The 2020 President instantly opens a map of Taiwan.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -17,8 +19,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={notoSansTC.className}>
         <Header />
-        {children}
+        <main className="container">
+          <Transition>{children}</Transition>
+        </main>
         <Footer />
+        {/* <Loading /> */}
       </body>
     </html>
   );

@@ -1,5 +1,9 @@
 function Invoicing() {
-  return <main className="container"></main>;
+  return (
+    <>
+      <div>123</div>
+    </>
+  );
 }
 
 export default Invoicing;
