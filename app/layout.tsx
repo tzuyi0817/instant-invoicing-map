@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Transition>{children}</Transition>
         </main>
         <Footer />
-        {/* <Loading /> */}
+        <Loading />
       </body>
     </html>
   );
