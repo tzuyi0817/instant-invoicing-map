@@ -1,5 +1,5 @@
-import { useEffect, type PropsWithChildren, type MutableRefObject } from 'react';
-import { motion, useAnimationControls, type AnimationDefinition } from 'framer-motion';
+import { useEffect, type PropsWithChildren } from 'react';
+import { motion, useAnimationControls } from 'framer-motion';
 import BlackMessage from '@/assets/images/loading/black-message.svg';
 import WhiteMessage from '@/assets/images/loading/white-message.svg';
 

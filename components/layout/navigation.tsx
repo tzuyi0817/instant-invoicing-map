@@ -30,12 +30,14 @@ const sidebar = {
 
 const ulVariants = {
   open: {
+    visibility: 'visible',
     transition: { staggerChildren: 0.07, delayChildren: 0.2 },
   },
   closed: {
-    transition: { staggerChildren: 0.05, staggerDirection: -1 },
+    visibility: 'hidden',
+    transition: { staggerChildren: 0.05, staggerDirection: -1, when: 'afterChildren' },
   },
-};
+} as const;
 
 const liVariants = {
   open: {

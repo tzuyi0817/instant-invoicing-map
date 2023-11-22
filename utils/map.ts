@@ -1,6 +1,7 @@
 import { geoMercator, geoPath, select, type Selection } from 'd3';
 import { feature } from 'topojson-client';
 import { createSvg } from './d3';
+import { MAP_AREA_COLOR } from '@/configs/map';
 import type { SelectionD3 } from '@/types/d3';
 import type { Topology, MapFeature, MapSelectArea, MapArea, MapBackArea } from '@/types/map';
 
@@ -18,19 +19,18 @@ class Map {
   tooltip: SelectionD3<HTMLDivElement> | null = null;
   currentPath: Selection<SVGPathElement, unknown, null, undefined> | null = null;
   previousPath: Selection<SVGPathElement, unknown, null, undefined> | null = null;
-  projection = geoMercator().center([123, 24]).scale(6000);
+  projection = geoMercator().center([123, 24]).scale(4500);
   path = geoPath(this.projection);
   width = 0;
   height = 0;
-  x = 200;
-  y = 150;
+  x = -110;
+  y = -100;
   scale = 1;
   translate = {
     default: { x: this.x, y: this.y, scale: this.scale },
     county: { x: 0, y: 0, scale: 1 },
     town: { x: 0, y: 0, scale: 1 },
   };
-  fillColor = { county: '#eab308', town: '#3b82f6', village: '#22c55e' };
   currentArea: MapArea = 'county';
 
   static getInstance(topology: Topology) {
@@ -51,10 +51,10 @@ class Map {
   }
 
   resetMap() {
-    const { clientWidth, clientHeight } = document.body;
+    const container = document.querySelector('.map-container');
 
-    this.width = clientWidth;
-    this.height = clientHeight;
+    this.width = container?.clientWidth ?? 0;
+    this.height = container?.clientHeight ?? 0;
     this.removeMap();
   }
 
@@ -99,7 +99,13 @@ class Map {
       .append('path')
       .classed(area, true)
       .attr('d', this.path)
-      .style('fill', this.fillColor[area])
+      .style('fill', data => {
+        const { kmt, ddp, pfp } = data.properties;
+
+        if (kmt > ddp && kmt > pfp) return MAP_AREA_COLOR.kmt[fillLevel(kmt)];
+        if (ddp > kmt && ddp > pfp) return MAP_AREA_COLOR.ddp[fillLevel(ddp)];
+        return MAP_AREA_COLOR.pfp[fillLevel(pfp)];
+      })
       .on('click', async function (event, data) {
         if (area === 'village') return;
         const instance = Map.instance;
@@ -214,6 +220,12 @@ class Map {
   removeMap() {
     this.map?.remove();
   }
+}
+
+function fillLevel(value: number) {
+  if (value > 70) return 'deep';
+  if (value < 40) return 'shallow';
+  return 'normal';
 }
 
 export default Map;

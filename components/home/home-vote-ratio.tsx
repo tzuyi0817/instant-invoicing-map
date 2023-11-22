@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import PaperPresidential from '@/assets/images/layout/paper-presidential.png';
 import PresidentialPalace from '@/assets/images/layout/presidential-palace.png';
 
@@ -33,7 +34,9 @@ function HomeVoteRatio() {
           </div>
         </div>
         <div className="w-full">
-          <button className="btn-home mt-2">看開票地圖</button>
+          <button className="btn-home mt-2">
+            <Link href="/invoicing">看開票地圖</Link>
+          </button>
         </div>
       </div>
     </div>
