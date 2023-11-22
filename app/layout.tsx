@@ -4,6 +4,7 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import Transition from '@/components/layout/transition';
 import Loading from '@/components/common/loading';
+import PrefetchMap from '@/components/common/prefetch-map';
 import '@/styles/globals.css';
 import '@/styles/index.css';
 
@@ -23,6 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Transition>{children}</Transition>
         </main>
         <Footer />
+        <PrefetchMap />
         <Loading />
       </body>
     </html>

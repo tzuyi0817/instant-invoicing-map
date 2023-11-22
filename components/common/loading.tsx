@@ -1,13 +1,12 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { motion, useAnimationControls } from 'framer-motion';
 import VoteStamp from '@/assets/images/loading/vote-stamp.png';
 import Message from './message';
 import { sleep } from '@/utils/common';
 
-const TIME_INTERVAL = 1.5;
 const messages = [
   { className: 'absolute -top-8 -right-28 w-[163px]', translateX: '30%', translateY: '-50%', message: '逮灣發大財' },
   {
@@ -49,12 +48,13 @@ const messages = [
 ];
 
 function Loading() {
+  const [isShow, setShow] = useState(true);
   const controls = useAnimationControls();
 
   function rotateSpring(rotate: number) {
     return controls.start({
       rotate,
-      transition: { type: 'spring', stiffness: 500, delay: TIME_INTERVAL },
+      transition: { type: 'spring', stiffness: 500 },
     });
   }
 
@@ -69,32 +69,45 @@ function Loading() {
     rotateStamp();
   }
 
+  function onAnimationComplete() {
+    controls.stop();
+    setShow(false);
+  }
+
   useEffect(() => {
     rotateStamp();
   }, []);
   return (
-    <div className="fixed top-0 left-0 w-screen h-screen bg-white flex justify-center items-center z-20">
-      <div className="relative">
-        <motion.div animate={controls}>
-          <Image
-            src={VoteStamp}
-            alt="vote stamp"
-            className="w-[153px]"
-          />
-        </motion.div>
-        {messages.map(({ message, ...item }) => {
-          return (
-            <Message
-              key={message}
-              timeInterval={TIME_INTERVAL}
-              {...item}
-            >
-              {message}
-            </Message>
-          );
-        })}
-      </div>
-    </div>
+    isShow && (
+      <motion.div
+        className="fixed top-0 left-0 w-screen h-screen bg-white flex justify-center items-center z-20"
+        onAnimationComplete={onAnimationComplete}
+        animate={{
+          opacity: 0,
+          transition: { delay: 1.2 },
+        }}
+      >
+        <div className="relative">
+          <motion.div animate={controls}>
+            <Image
+              src={VoteStamp}
+              alt="vote stamp"
+              className="w-[153px]"
+            />
+          </motion.div>
+          {messages.map(({ message, ...item }) => {
+            return (
+              <Message
+                key={message}
+                {...item}
+              >
+                {message}
+              </Message>
+            );
+          })}
+        </div>
+      </motion.div>
+    )
   );
 }
 

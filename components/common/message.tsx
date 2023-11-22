@@ -1,5 +1,5 @@
-import { useEffect, type PropsWithChildren } from 'react';
-import { motion, useAnimationControls } from 'framer-motion';
+import { useEffect, type PropsWithChildren, type MutableRefObject } from 'react';
+import { motion, useAnimationControls, type AnimationDefinition } from 'framer-motion';
 import BlackMessage from '@/assets/images/loading/black-message.svg';
 import WhiteMessage from '@/assets/images/loading/white-message.svg';
 
@@ -10,26 +10,17 @@ interface Props {
   translateX: string;
   translateY: string;
   rotate?: number;
-  timeInterval: number;
 }
 
-function Message({ children, isWhite, className, rotateClass, timeInterval, ...translate }: PropsWithChildren<Props>) {
+function Message({ children, isWhite, className, rotateClass, ...translate }: PropsWithChildren<Props>) {
   const controls = useAnimationControls();
 
   async function messageEffect() {
-    await controls.start({
+    controls.start({
       ...translate,
       scale: 1.5,
-      transition: { type: 'spring', stiffness: 500, delay: timeInterval },
+      transition: { type: 'spring', stiffness: 500, repeat: Infinity, repeatType: 'mirror' },
     });
-    await controls.start({
-      translateX: 0,
-      translateY: 0,
-      rotate: 0,
-      scale: 1,
-      transition: { type: 'spring', stiffness: 500, delay: timeInterval },
-    });
-    messageEffect();
   }
 
   useEffect(() => {
