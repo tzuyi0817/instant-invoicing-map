@@ -8,10 +8,19 @@
       .county,
       .town,
       .village {
-        @apply stroke-[0.05px] stroke-white cursor-pointer hover:opacity-80 transition-all;
+        @apply stroke-white cursor-pointer hover:opacity-80 transition-all;
         &-active {
-          @apply stroke-[0.5px] stroke-orange-500;
+          @apply drop-shadow-[-2px_2px_6px_rgba(0,0,0,0.9)];
         }
+      }
+      .county {
+        @apply stroke-[0.5px];
+      }
+      .town {
+        @apply stroke-[0.1px];
+      }
+      .village {
+        @apply stroke-[0.05px];
       }
     }
     .tooltip {

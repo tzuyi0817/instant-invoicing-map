@@ -100,11 +100,9 @@ class Map {
       .classed(area, true)
       .attr('d', this.path)
       .style('fill', data => {
-        const { kmt, ddp, pfp } = data.properties;
+        const { winner, winnerRate } = data.properties;
 
-        if (kmt > ddp && kmt > pfp) return MAP_AREA_COLOR.kmt[fillLevel(kmt)];
-        if (ddp > kmt && ddp > pfp) return MAP_AREA_COLOR.ddp[fillLevel(ddp)];
-        return MAP_AREA_COLOR.pfp[fillLevel(pfp)];
+        return MAP_AREA_COLOR[<'ddp' | 'kmt' | 'pfp'>winner]?.[fillLevel(winnerRate)];
       })
       .on('click', async function (event, data) {
         if (area === 'village') return;

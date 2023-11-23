@@ -11,7 +11,7 @@ export interface MapTopology {
     scale: [number, number];
     translate: [number, number];
   };
-  objects: Record<string, any>;
+  objects: Record<MapArea, MapTopologyObject>;
 }
 
 export interface Topology {
@@ -26,4 +26,27 @@ export interface MapBackArea {
   scale: number;
   from: MapArea;
   to: MapSelectArea;
+}
+
+export interface MapTopologyObject {
+  type: 'GeometryCollection';
+  geometries: MapTopologyGeometry[];
+}
+
+export interface MapTopologyGeometry {
+  type: 'Polygon';
+  properties: MapTopologyProperties;
+  id: string;
+}
+
+export interface MapTopologyProperties {
+  countyId: string;
+  countyName: string;
+  kmt: number;
+  ddp: number;
+  pfp: number;
+  winner: 'kmt' | 'ddp' | 'pfp';
+  winnerRate: number;
+  townName: string;
+  townId: string;
 }
