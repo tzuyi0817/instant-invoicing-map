@@ -15,7 +15,7 @@ function InvoicingInformation({ proportion }: Props) {
   return (
     <div className="border-2 border-black mt-4">
       <div className="py-2 border-b border-b-black text-center">{countyName || '全台'}</div>
-      <div className="p-4">
+      <div className="px-4 py-8">
         <InvoicingBar
           className="h-[18px]"
           proportion={proportion}

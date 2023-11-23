@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import InvoicingSearch from '@/components/invoicing/invoicing-search';
 import InvoicingInformation from '@/components/invoicing/invoicing-information';
+import InvoicingSupport from '@/components/invoicing/invoicing-support';
 import { INVOICING } from '@/configs/Invoicing';
 import type { SelectAreaOption } from '@/types/select';
 
@@ -32,6 +33,7 @@ function InvoicingProportion({ options }: Props) {
         changeSearch={changeSearch}
       />
       <InvoicingInformation proportion={proportion} />
+      <InvoicingSupport />
     </div>
   );
 }
