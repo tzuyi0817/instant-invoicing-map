@@ -1,0 +1,14 @@
+@import 'tailwindcss/components';
+
+@layer components {
+  .invoicing {
+    &-information {
+      &-candidate {
+        @apply flex items-center mb-2;
+      }
+      &-content {
+        @apply flex items-center flex-1 gap-4;
+      }
+    }
+  }
+}

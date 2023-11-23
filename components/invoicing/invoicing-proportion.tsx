@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import InvoicingSearch from '@/components/invoicing/invoicing-search';
+import InvoicingInformation from '@/components/invoicing/invoicing-information';
+import { INVOICING } from '@/configs/Invoicing';
 import type { SelectAreaOption } from '@/types/select';
 
 interface Props {
@@ -17,6 +19,8 @@ interface ChangeSearchParams {
 }
 
 function InvoicingProportion({ options }: Props) {
+  const [proportion, setProportion] = useState(INVOICING.default);
+
   function changeSearch({ county, town }: ChangeSearchParams) {
     console.log({ county, town });
   }
@@ -27,6 +31,7 @@ function InvoicingProportion({ options }: Props) {
         options={options}
         changeSearch={changeSearch}
       />
+      <InvoicingInformation proportion={proportion} />
     </div>
   );
 }
