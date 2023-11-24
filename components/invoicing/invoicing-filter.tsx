@@ -25,16 +25,16 @@ interface FilterContentProps {
   candidate: string;
 }
 
-const filterStyle = 'h-6 rounded-[24px] transition-all border border-white flex items-center';
-const filterText = 'text-white text-xs pl-5 flex-1';
+const filterStyle = 'h-6 rounded-[24px] transition-all border border-white flex items-center overflow-hidden';
+const filterText = 'text-white text-xs pl-5 flex-1 whitespace-nowrap';
 
 function InvoicingFilter({ filter, setFilter }: Props) {
   return (
-    <div className="border border-black py-3 px-7 flex items-center gap-2">
+    <div className="border border-black py-3 px-7 flex items-center gap-2 mr-3">
       <p>最支持</p>
       <div className="flex">
         <div
-          className={`bg-deep-green ${filterStyle} ${filter.ddp ? 'w-[104px]' : 'w-6'} z-[2]`}
+          className={`bg-deep-green ${filterStyle} ${filter.ddp ? 'w-[104px] duration-300' : 'w-6 duration-0'} z-[2]`}
           onClick={() => setFilter({ ddp: true, kmt: false, pfp: false })}
         >
           <FilterContent
@@ -44,7 +44,9 @@ function InvoicingFilter({ filter, setFilter }: Props) {
           />
         </div>
         <div
-          className={`bg-deep-blue ${filterStyle} ${filter.kmt ? 'w-[104px]' : 'w-6'} -translate-x-3 z-[1]`}
+          className={`bg-deep-blue ${filterStyle} ${
+            filter.kmt ? 'w-[104px] duration-300' : 'w-6 duration-0'
+          } -translate-x-3 z-[1]`}
           onClick={() => setFilter({ ddp: false, kmt: true, pfp: false })}
         >
           <FilterContent
@@ -54,7 +56,9 @@ function InvoicingFilter({ filter, setFilter }: Props) {
           />
         </div>
         <div
-          className={`bg-deep-orange ${filterStyle} ${filter.pfp ? 'w-[104px]' : 'w-6'} -translate-x-6`}
+          className={`bg-deep-orange ${filterStyle} ${
+            filter.pfp ? 'w-[104px] duration-300' : 'w-6 duration-0'
+          } -translate-x-6`}
           onClick={() => setFilter({ ddp: false, kmt: false, pfp: true })}
         >
           <FilterContent

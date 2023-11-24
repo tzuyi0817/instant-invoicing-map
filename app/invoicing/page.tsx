@@ -1,6 +1,7 @@
 import InvoicingMap from '@/components/invoicing/invoicing-map';
 import InvoicingProportion from '@/components/invoicing/invoicing-proportion';
 import { readMapFiles } from '@/utils/readFile';
+import { MapTopologyProperties } from '@/types/map';
 import type { SelectAreaOption } from '@/types/select';
 
 async function Invoicing() {
@@ -20,11 +21,20 @@ async function Invoicing() {
     },
     {} as Record<string, SelectAreaOption[]>,
   );
+  const villageMap = village.objects.village.geometries.reduce(
+    (map, { properties }) => {
+      const villages = map[properties.townId] ?? [];
+
+      villages.push(properties);
+      return Object.hasOwn(map, properties.townId) ? map : ((map[properties.townId] = villages), map);
+    },
+    {} as Record<string, MapTopologyProperties[]>,
+  );
 
   return (
     <>
       <InvoicingMap topology={{ county, town, village }} />
-      <InvoicingProportion options={{ countyOptions, townOptionsMap }} />
+      <InvoicingProportion options={{ countyOptions, townOptionsMap, villageMap }} />
     </>
   );
 }

@@ -1,0 +1,15 @@
+@import 'tailwindcss/components';
+
+@layer components {
+  ::-webkit-scrollbar {
+    @apply w-[6px] h-[6px];
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply rounded;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded bg-[#D9D9D9];
+  }
+}

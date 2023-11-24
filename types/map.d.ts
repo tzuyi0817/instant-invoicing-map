@@ -49,4 +49,6 @@ export interface MapTopologyProperties {
   winnerRate: number;
   townName: string;
   townId: string;
+  villageName: string;
+  villageId: string;
 }

@@ -7,7 +7,7 @@ function Footer() {
   return (
     <footer className="w-full px-6 py-[22px] bg-black text-white">
       <h2 className="px-[10px] flex gap-1 items-center">
-        看選前民調
+        <p className="whitespace-nowrap">看選前民調</p>
         <Link href="/">
           <motion.svg
             viewBox="0 0 280 18"

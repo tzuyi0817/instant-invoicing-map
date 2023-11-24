@@ -9,5 +9,7 @@ export const INVOICING = {
     countyName: '',
     townName: '',
     townId: '',
+    villageName: '',
+    villageId: '',
   },
 } as const;
