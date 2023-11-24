@@ -4,20 +4,19 @@ import { useEffect } from 'react';
 import InvoicingGradientGrid from '@/components/invoicing/invoicing-gradient-grid';
 import Map from '@/utils/map';
 import Arrow from '@/assets/images/svg/arrow.svg';
-import type { Topology } from '@/types/map';
+import { useMap } from '@/providers/map-provider';
 
-interface Props {
-  topology: Topology;
-}
-
-function TaiwanMap({ topology }: Props) {
-  const map = Map.getInstance(topology);
+function TaiwanMap() {
+  const { county, town, village } = useMap();
+  const map = Map.getInstance();
 
   useEffect(() => {
+    if (!county || !town || !village) return;
+    map.setTopology({ county, town, village });
     map.resetMap();
     map.drawMap();
     return () => map.resetMap();
-  }, []);
+  }, [county, town, village]);
 
   function backToPreviousArea() {
     map.backToPreviousArea();

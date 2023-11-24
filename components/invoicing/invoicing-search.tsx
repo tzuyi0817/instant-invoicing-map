@@ -13,7 +13,7 @@ interface ChangeSearchParams {
 interface Props {
   options: {
     countyOptions: Array<SelectAreaOption>;
-    townOptionsMap: Record<string, Array<SelectAreaOption>>;
+    townOptionsMap?: Record<string, Array<SelectAreaOption>> | null;
   };
   changeSearch: (params: ChangeSearchParams) => void;
 }
@@ -22,6 +22,7 @@ function InvoicingSearch({ options: { countyOptions, townOptionsMap }, changeSea
   const [selectedCounty, setSelectedCounty] = useState(countyOptions.at(0));
   const [selectedTown, setSelectedTown] = useState<SelectAreaOption | null>(null);
   const townOptions = useMemo(() => {
+    if (!townOptionsMap) return [];
     return townOptionsMap[selectedCounty?.value?.countyId ?? ''];
   }, [selectedCounty]);
 

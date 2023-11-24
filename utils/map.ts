@@ -8,10 +8,9 @@ import type { Topology, MapFeature, MapSelectArea, MapArea, MapBackArea } from '
 class Map {
   static instance: Map | null = null;
 
-  topology: Topology;
-  countyFeature: GeoJSON.FeatureCollection;
-  townFeature: GeoJSON.FeatureCollection;
-  villageFeature: GeoJSON.FeatureCollection;
+  countyFeature?: GeoJSON.FeatureCollection;
+  townFeature?: GeoJSON.FeatureCollection;
+  villageFeature?: GeoJSON.FeatureCollection;
 
   map: SelectionD3<SVGSVGElement> | null = null;
   g: SelectionD3<SVGGElement> | null = null;
@@ -33,28 +32,31 @@ class Map {
   };
   currentArea: MapArea = 'county';
 
-  static getInstance(topology: Topology) {
+  static getInstance() {
     if (Map.instance === null) {
-      Map.instance = new Map(topology);
+      Map.instance = new Map();
     }
     return Map.instance;
   }
 
-  constructor(topology: Topology) {
-    this.topology = topology;
+  setTopology(topology: Topology) {
     // @ts-ignore
-    this.countyFeature = feature(this.topology.county, 'county');
+    this.countyFeature = feature(topology.county, 'county');
     // @ts-ignore
-    this.townFeature = feature(this.topology.town, 'town');
+    this.townFeature = feature(topology.town, 'town');
     // @ts-ignore
-    this.villageFeature = feature(this.topology.village, 'village');
+    this.villageFeature = feature(topology.village, 'village');
   }
 
   resetMap() {
     const container = document.querySelector('.map-container');
+    const { x, y, scale } = this.translate.default;
 
     this.width = container?.clientWidth ?? 0;
     this.height = container?.clientHeight ?? 0;
+    this.x = x;
+    this.y = y;
+    this.scale = scale;
     this.removeMap();
   }
 
@@ -70,11 +72,13 @@ class Map {
   }
 
   renderCounty() {
+    if (!this.countyFeature) return;
     this.drawArea('county', this.countyFeature.features);
     this.translateMap(0);
   }
 
   renderTown(county: MapFeature) {
+    if (!this.townFeature) return;
     const towns = this.townFeature.features.filter(({ properties }) => {
       return properties?.countyId === county.properties.countyId;
     });
@@ -83,6 +87,7 @@ class Map {
   }
 
   renderVillage(town: MapFeature) {
+    if (!this.villageFeature) return;
     const villages = this.villageFeature.features.filter(({ properties }) => {
       return properties?.townId === town.properties.townId;
     });

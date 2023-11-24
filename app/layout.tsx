@@ -5,6 +5,7 @@ import Footer from '@/components/layout/footer';
 import Transition from '@/components/layout/transition';
 import Loading from '@/components/common/loading';
 import PrefetchMap from '@/components/common/prefetch-map';
+import MapProvider from '@/providers/map-provider';
 import '@/styles/globals.css';
 import '@/styles/index.css';
 
@@ -20,11 +21,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={notoSansTC.className}>
         <Header />
-        <main className="container">
-          <Transition>{children}</Transition>
-        </main>
+        <MapProvider>
+          <main className="container">
+            <Transition>{children}</Transition>
+          </main>
+          <PrefetchMap />
+        </MapProvider>
         <Footer />
-        <PrefetchMap />
         {/* <Loading /> */}
       </body>
     </html>
