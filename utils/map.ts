@@ -1,6 +1,6 @@
 import { geoMercator, geoPath, select, type Selection } from 'd3';
 import { feature } from 'topojson-client';
-import { createSvg } from './d3';
+import { createSvg, createInvoicingInformation } from './d3';
 import { MAP_AREA_COLOR } from '@/configs/map';
 import type { SelectionD3 } from '@/types/d3';
 import type { Topology, MapFeature, MapSelectArea, MapArea, MapBackArea } from '@/types/map';
@@ -104,7 +104,7 @@ class Map {
 
         return MAP_AREA_COLOR[<'ddp' | 'kmt' | 'pfp'>winner]?.[fillLevel(winnerRate)];
       })
-      .on('click', async function (event, data) {
+      .on('click', async function (_, data) {
         if (area === 'village') return;
         const instance = Map.instance;
 
@@ -117,10 +117,13 @@ class Map {
         instance.boundsMap(area, data);
       })
       .on('mouseover', (_, data) => {
-        this.tooltip?.style('opacity', 1).html(`<p>${data.properties?.[`${area}Name`]}</p>`);
+        this.tooltip?.style('opacity', 1).html(createInvoicingInformation(data.properties));
       })
       .on('mousemove', event => {
-        this.tooltip?.style('left', `${event.pageX + 10}px`).style('top', `${event.pageY + 10}px`);
+        const x = event.pageX + 10;
+        const max = this.width - 240;
+
+        this.tooltip?.style('left', `${x > max ? max : x}px`).style('top', `${event.pageY + 10}px`);
       })
       .on('mouseout', () => {
         this.tooltip?.style('opacity', 0);

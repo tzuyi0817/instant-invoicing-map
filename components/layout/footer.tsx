@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 function Footer() {
   return (
-    <footer className="w-full px-6 py-[22px] bg-black text-white">
+    <footer className="w-full px-6 py-[22px] bg-black text-white overflow-hidden">
       <h2 className="px-[10px] flex gap-1 items-center">
         <p className="whitespace-nowrap">看選前民調</p>
         <Link href="/">

@@ -2,7 +2,7 @@
 
 @layer components {
   .map-container {
-    @apply bg-[#F5F2F2] w-screen h-[350px] overflow-hidden relative;
+    @apply bg-[#F5F2F2] w-screen h-[350px] relative mb-2;
     .map {
       @apply top-0 left-0 bottom-0 right-0;
       .county,
@@ -24,7 +24,16 @@
       }
     }
     .tooltip {
-      @apply absolute opacity-0 transition-all border border-gray-600 bg-gray-300 rounded shadow px-2 py-1;
+      @apply absolute opacity-0 transition-all bg-white rounded shadow-lg w-fit z-[1] min-w-[240px] pointer-events-none;
+      &-bar {
+        @apply h-full transition-all duration-300 text-xs text-white flex items-center;
+      }
+      img {
+        @apply w-[34px];
+      }
+      .invoicing-information-content {
+        @apply mr-4;
+      }
     }
   }
 }

@@ -25,7 +25,8 @@ interface FilterContentProps {
   candidate: string;
 }
 
-const filterStyle = 'h-6 rounded-[24px] transition-all border border-white flex items-center overflow-hidden';
+const filterStyle =
+  'h-6 rounded-[24px] transition-all border border-white flex items-center overflow-hidden cursor-pointer hover:opacity-90';
 const filterText = 'text-white text-xs pl-5 flex-1 whitespace-nowrap';
 
 function InvoicingFilter({ filter, setFilter }: Props) {
@@ -36,7 +37,7 @@ function InvoicingFilter({ filter, setFilter }: Props) {
 
   return (
     <div
-      className="border border-black py-3 px-7 flex items-center gap-2 mr-3"
+      className="border border-black py-3 px-7 flex items-center gap-2 mr-3 cursor-pointer hover:bg-gray-100 transition-colors"
       onClick={event => resetFilter(event, { ddp: false, kmt: false, pfp: false })}
     >
       <p>最支持</p>
