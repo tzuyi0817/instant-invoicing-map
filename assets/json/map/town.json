@@ -228106,7 +228106,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10014",
-            "countryName": "臺東縣",
+            "countyName": "臺東縣",
             "kmt": 68.5,
             "ddp": 28.4,
             "pfp": 3.1,
@@ -228122,7 +228122,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 29,
             "ddp": 69.2,
             "pfp": 1.8,
@@ -228138,7 +228138,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10009",
-            "countryName": "雲林縣",
+            "countyName": "雲林縣",
             "kmt": 38.2,
             "ddp": 57,
             "pfp": 4.8,
@@ -228154,7 +228154,7 @@
           "type": "MultiPolygon",
           "properties": {
             "countyId": "10014",
-            "countryName": "臺東縣",
+            "countyName": "臺東縣",
             "kmt": 67.4,
             "ddp": 29.9,
             "pfp": 2.8,
@@ -228170,7 +228170,7 @@
           "type": "MultiPolygon",
           "properties": {
             "countyId": "10014",
-            "countryName": "臺東縣",
+            "countyName": "臺東縣",
             "kmt": 59.8,
             "ddp": 31,
             "pfp": 9.2,
@@ -228186,7 +228186,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10007",
-            "countryName": "彰化縣",
+            "countyName": "彰化縣",
             "kmt": 40.1,
             "ddp": 56,
             "pfp": 3.9,
@@ -228202,7 +228202,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10007",
-            "countryName": "彰化縣",
+            "countyName": "彰化縣",
             "kmt": 35.9,
             "ddp": 59.7,
             "pfp": 4.4,
@@ -228218,7 +228218,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 29.6,
             "ddp": 68.2,
             "pfp": 2.2,
@@ -228234,7 +228234,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 28.7,
             "ddp": 68.7,
             "pfp": 2.7,
@@ -228250,7 +228250,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10005",
-            "countryName": "苗栗縣",
+            "countyName": "苗栗縣",
             "kmt": 59.3,
             "ddp": 36.4,
             "pfp": 4.3,
@@ -228266,7 +228266,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10004",
-            "countryName": "新竹縣",
+            "countyName": "新竹縣",
             "kmt": 52,
             "ddp": 44,
             "pfp": 4,
@@ -228282,7 +228282,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10005",
-            "countryName": "苗栗縣",
+            "countyName": "苗栗縣",
             "kmt": 64.5,
             "ddp": 31.5,
             "pfp": 4,
@@ -228298,7 +228298,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10010",
-            "countryName": "嘉義縣",
+            "countyName": "嘉義縣",
             "kmt": 30.4,
             "ddp": 65.6,
             "pfp": 4,
@@ -228314,7 +228314,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10010",
-            "countryName": "嘉義縣",
+            "countyName": "嘉義縣",
             "kmt": 33.7,
             "ddp": 62.6,
             "pfp": 3.6,
@@ -228330,7 +228330,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10010",
-            "countryName": "嘉義縣",
+            "countyName": "嘉義縣",
             "kmt": 39,
             "ddp": 57.1,
             "pfp": 3.9,
@@ -228346,7 +228346,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10010",
-            "countryName": "嘉義縣",
+            "countyName": "嘉義縣",
             "kmt": 33,
             "ddp": 63.3,
             "pfp": 3.7,
@@ -228362,7 +228362,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10007",
-            "countryName": "彰化縣",
+            "countyName": "彰化縣",
             "kmt": 39.4,
             "ddp": 56.1,
             "pfp": 4.5,
@@ -228400,7 +228400,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 31.5,
             "ddp": 65.6,
             "pfp": 2.9,
@@ -228416,7 +228416,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10002",
-            "countryName": "宜蘭縣",
+            "countyName": "宜蘭縣",
             "kmt": 32.3,
             "ddp": 63.7,
             "pfp": 4,
@@ -228432,7 +228432,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10002",
-            "countryName": "宜蘭縣",
+            "countyName": "宜蘭縣",
             "kmt": 27.3,
             "ddp": 69.2,
             "pfp": 3.4,
@@ -228448,7 +228448,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10002",
-            "countryName": "宜蘭縣",
+            "countyName": "宜蘭縣",
             "kmt": 36.4,
             "ddp": 59.3,
             "pfp": 4.3,
@@ -228464,7 +228464,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10002",
-            "countryName": "宜蘭縣",
+            "countyName": "宜蘭縣",
             "kmt": 28.7,
             "ddp": 67.5,
             "pfp": 3.8,
@@ -228498,7 +228498,7 @@
           "type": "MultiPolygon",
           "properties": {
             "countyId": "09007",
-            "countryName": "連江縣",
+            "countyName": "連江縣",
             "kmt": 76.7,
             "ddp": 20.5,
             "pfp": 2.9,
@@ -228545,7 +228545,7 @@
           "type": "MultiPolygon",
           "properties": {
             "countyId": "09007",
-            "countryName": "連江縣",
+            "countyName": "連江縣",
             "kmt": 81.2,
             "ddp": 16.4,
             "pfp": 2.4,
@@ -228561,7 +228561,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "09020",
-            "countryName": "金門縣",
+            "countyName": "金門縣",
             "kmt": 67.7,
             "ddp": 28.4,
             "pfp": 3.9,
@@ -228577,7 +228577,7 @@
           "type": "MultiPolygon",
           "properties": {
             "countyId": "09020",
-            "countryName": "金門縣",
+            "countyName": "金門縣",
             "kmt": 85,
             "ddp": 13.3,
             "pfp": 1.8,
@@ -228593,7 +228593,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10002",
-            "countryName": "宜蘭縣",
+            "countyName": "宜蘭縣",
             "kmt": 32.1,
             "ddp": 64.1,
             "pfp": 3.8,
@@ -228609,7 +228609,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10002",
-            "countryName": "宜蘭縣",
+            "countyName": "宜蘭縣",
             "kmt": 29,
             "ddp": 67.3,
             "pfp": 3.7,
@@ -228625,7 +228625,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10002",
-            "countryName": "宜蘭縣",
+            "countyName": "宜蘭縣",
             "kmt": 26,
             "ddp": 70.4,
             "pfp": 3.6,
@@ -228641,7 +228641,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10002",
-            "countryName": "宜蘭縣",
+            "countyName": "宜蘭縣",
             "kmt": 29.2,
             "ddp": 66.9,
             "pfp": 3.9,
@@ -228657,7 +228657,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10002",
-            "countryName": "宜蘭縣",
+            "countyName": "宜蘭縣",
             "kmt": 75.8,
             "ddp": 20.4,
             "pfp": 3.8,
@@ -228673,7 +228673,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10004",
-            "countryName": "新竹縣",
+            "countyName": "新竹縣",
             "kmt": 52.9,
             "ddp": 41.5,
             "pfp": 5.7,
@@ -228689,7 +228689,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10004",
-            "countryName": "新竹縣",
+            "countyName": "新竹縣",
             "kmt": 45.8,
             "ddp": 49.4,
             "pfp": 4.8,
@@ -228705,7 +228705,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10004",
-            "countryName": "新竹縣",
+            "countyName": "新竹縣",
             "kmt": 51.6,
             "ddp": 43.9,
             "pfp": 4.4,
@@ -228721,7 +228721,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10004",
-            "countryName": "新竹縣",
+            "countyName": "新竹縣",
             "kmt": 49.7,
             "ddp": 44.4,
             "pfp": 5.9,
@@ -228737,7 +228737,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10004",
-            "countryName": "新竹縣",
+            "countyName": "新竹縣",
             "kmt": 51.8,
             "ddp": 42.6,
             "pfp": 5.6,
@@ -228753,7 +228753,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10004",
-            "countryName": "新竹縣",
+            "countyName": "新竹縣",
             "kmt": 57.9,
             "ddp": 37.3,
             "pfp": 4.8,
@@ -228769,7 +228769,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10004",
-            "countryName": "新竹縣",
+            "countyName": "新竹縣",
             "kmt": 55.2,
             "ddp": 39.8,
             "pfp": 4.9,
@@ -228785,7 +228785,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10004",
-            "countryName": "新竹縣",
+            "countyName": "新竹縣",
             "kmt": 70.3,
             "ddp": 25.3,
             "pfp": 4.4,
@@ -228801,7 +228801,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10004",
-            "countryName": "新竹縣",
+            "countyName": "新竹縣",
             "kmt": 73.4,
             "ddp": 22.9,
             "pfp": 3.6,
@@ -228817,7 +228817,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "66000",
-            "countryName": "臺中市",
+            "countyName": "臺中市",
             "kmt": 36.2,
             "ddp": 58.5,
             "pfp": 5.3,
@@ -228833,7 +228833,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "66000",
-            "countryName": "臺中市",
+            "countyName": "臺中市",
             "kmt": 38.1,
             "ddp": 56.9,
             "pfp": 5,
@@ -228849,7 +228849,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "66000",
-            "countryName": "臺中市",
+            "countyName": "臺中市",
             "kmt": 36.8,
             "ddp": 57.5,
             "pfp": 5.7,
@@ -228865,7 +228865,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "66000",
-            "countryName": "臺中市",
+            "countyName": "臺中市",
             "kmt": 34.3,
             "ddp": 60.6,
             "pfp": 5,
@@ -228919,7 +228919,7 @@
           "type": "MultiPolygon",
           "properties": {
             "countyId": "10016",
-            "countryName": "澎湖縣",
+            "countyName": "澎湖縣",
             "kmt": 35,
             "ddp": 59.8,
             "pfp": 5.2,
@@ -228935,7 +228935,7 @@
           "type": "MultiPolygon",
           "properties": {
             "countyId": "10014",
-            "countryName": "臺東縣",
+            "countyName": "臺東縣",
             "kmt": 81.7,
             "ddp": 15.6,
             "pfp": 2.7,
@@ -228951,7 +228951,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10014",
-            "countryName": "臺東縣",
+            "countyName": "臺東縣",
             "kmt": 59.5,
             "ddp": 37.3,
             "pfp": 3.2,
@@ -228967,7 +228967,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10005",
-            "countryName": "苗栗縣",
+            "countyName": "苗栗縣",
             "kmt": 56.9,
             "ddp": 38.6,
             "pfp": 4.4,
@@ -228983,7 +228983,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10005",
-            "countryName": "苗栗縣",
+            "countyName": "苗栗縣",
             "kmt": 42.5,
             "ddp": 53.4,
             "pfp": 4.1,
@@ -228999,7 +228999,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10005",
-            "countryName": "苗栗縣",
+            "countyName": "苗栗縣",
             "kmt": 60,
             "ddp": 36.5,
             "pfp": 3.5,
@@ -229015,7 +229015,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10005",
-            "countryName": "苗栗縣",
+            "countyName": "苗栗縣",
             "kmt": 54.9,
             "ddp": 40.4,
             "pfp": 4.7,
@@ -229031,7 +229031,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10005",
-            "countryName": "苗栗縣",
+            "countyName": "苗栗縣",
             "kmt": 58,
             "ddp": 37.9,
             "pfp": 4.2,
@@ -229047,7 +229047,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10005",
-            "countryName": "苗栗縣",
+            "countyName": "苗栗縣",
             "kmt": 58.5,
             "ddp": 37.4,
             "pfp": 4.1,
@@ -229063,7 +229063,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10005",
-            "countryName": "苗栗縣",
+            "countyName": "苗栗縣",
             "kmt": 56.4,
             "ddp": 38.9,
             "pfp": 4.7,
@@ -229079,7 +229079,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10005",
-            "countryName": "苗栗縣",
+            "countyName": "苗栗縣",
             "kmt": 60.4,
             "ddp": 34.6,
             "pfp": 5,
@@ -229095,7 +229095,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10005",
-            "countryName": "苗栗縣",
+            "countyName": "苗栗縣",
             "kmt": 54,
             "ddp": 41.3,
             "pfp": 4.8,
@@ -229111,7 +229111,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10005",
-            "countryName": "苗栗縣",
+            "countyName": "苗栗縣",
             "kmt": 64.7,
             "ddp": 32.2,
             "pfp": 3.1,
@@ -229127,7 +229127,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10005",
-            "countryName": "苗栗縣",
+            "countyName": "苗栗縣",
             "kmt": 75.8,
             "ddp": 21.3,
             "pfp": 2.8,
@@ -229143,7 +229143,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10007",
-            "countryName": "彰化縣",
+            "countyName": "彰化縣",
             "kmt": 39.5,
             "ddp": 55.5,
             "pfp": 5,
@@ -229159,7 +229159,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10007",
-            "countryName": "彰化縣",
+            "countyName": "彰化縣",
             "kmt": 38,
             "ddp": 57,
             "pfp": 5,
@@ -229175,7 +229175,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10007",
-            "countryName": "彰化縣",
+            "countyName": "彰化縣",
             "kmt": 41.9,
             "ddp": 52.3,
             "pfp": 5.8,
@@ -229191,7 +229191,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10007",
-            "countryName": "彰化縣",
+            "countyName": "彰化縣",
             "kmt": 39.1,
             "ddp": 56.2,
             "pfp": 4.8,
@@ -229207,7 +229207,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10007",
-            "countryName": "彰化縣",
+            "countyName": "彰化縣",
             "kmt": 36.1,
             "ddp": 59.4,
             "pfp": 4.5,
@@ -229223,7 +229223,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10007",
-            "countryName": "彰化縣",
+            "countyName": "彰化縣",
             "kmt": 40.4,
             "ddp": 54.8,
             "pfp": 4.8,
@@ -229239,7 +229239,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10007",
-            "countryName": "彰化縣",
+            "countyName": "彰化縣",
             "kmt": 36,
             "ddp": 59.4,
             "pfp": 4.6,
@@ -229255,7 +229255,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10007",
-            "countryName": "彰化縣",
+            "countyName": "彰化縣",
             "kmt": 40,
             "ddp": 55.6,
             "pfp": 4.5,
@@ -229281,7 +229281,7 @@
           "type": "MultiPolygon",
           "properties": {
             "countyId": "10010",
-            "countryName": "嘉義縣",
+            "countyName": "嘉義縣",
             "kmt": 33.3,
             "ddp": 63,
             "pfp": 3.6,
@@ -229297,7 +229297,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10007",
-            "countryName": "彰化縣",
+            "countyName": "彰化縣",
             "kmt": 37.2,
             "ddp": 58.3,
             "pfp": 4.5,
@@ -229313,7 +229313,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10007",
-            "countryName": "彰化縣",
+            "countyName": "彰化縣",
             "kmt": 44.2,
             "ddp": 51.1,
             "pfp": 4.8,
@@ -229329,7 +229329,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10007",
-            "countryName": "彰化縣",
+            "countyName": "彰化縣",
             "kmt": 34.7,
             "ddp": 60.6,
             "pfp": 4.7,
@@ -229345,7 +229345,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10007",
-            "countryName": "彰化縣",
+            "countyName": "彰化縣",
             "kmt": 36.5,
             "ddp": 59.1,
             "pfp": 4.3,
@@ -229361,7 +229361,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10007",
-            "countryName": "彰化縣",
+            "countyName": "彰化縣",
             "kmt": 40.3,
             "ddp": 56.1,
             "pfp": 3.6,
@@ -229377,7 +229377,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10007",
-            "countryName": "彰化縣",
+            "countyName": "彰化縣",
             "kmt": 43.5,
             "ddp": 52.3,
             "pfp": 4.2,
@@ -229393,7 +229393,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10007",
-            "countryName": "彰化縣",
+            "countyName": "彰化縣",
             "kmt": 37.4,
             "ddp": 58.1,
             "pfp": 4.5,
@@ -229409,7 +229409,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10007",
-            "countryName": "彰化縣",
+            "countyName": "彰化縣",
             "kmt": 35.6,
             "ddp": 60.3,
             "pfp": 4.1,
@@ -229425,7 +229425,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10007",
-            "countryName": "彰化縣",
+            "countyName": "彰化縣",
             "kmt": 44.2,
             "ddp": 52.2,
             "pfp": 3.6,
@@ -229441,7 +229441,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10007",
-            "countryName": "彰化縣",
+            "countyName": "彰化縣",
             "kmt": 34.4,
             "ddp": 62.2,
             "pfp": 3.3,
@@ -229457,7 +229457,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10007",
-            "countryName": "彰化縣",
+            "countyName": "彰化縣",
             "kmt": 33.1,
             "ddp": 62.6,
             "pfp": 4.2,
@@ -229473,7 +229473,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10008",
-            "countryName": "南投縣",
+            "countyName": "南投縣",
             "kmt": 44,
             "ddp": 50.9,
             "pfp": 5.1,
@@ -229489,7 +229489,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10008",
-            "countryName": "南投縣",
+            "countyName": "南投縣",
             "kmt": 47.4,
             "ddp": 48.2,
             "pfp": 4.3,
@@ -229505,7 +229505,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10008",
-            "countryName": "南投縣",
+            "countyName": "南投縣",
             "kmt": 41.1,
             "ddp": 54,
             "pfp": 4.9,
@@ -229521,7 +229521,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10008",
-            "countryName": "南投縣",
+            "countyName": "南投縣",
             "kmt": 41.3,
             "ddp": 55,
             "pfp": 3.6,
@@ -229537,7 +229537,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10008",
-            "countryName": "南投縣",
+            "countyName": "南投縣",
             "kmt": 44.8,
             "ddp": 50.7,
             "pfp": 4.5,
@@ -229553,7 +229553,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10008",
-            "countryName": "南投縣",
+            "countyName": "南投縣",
             "kmt": 35.5,
             "ddp": 60.4,
             "pfp": 4.2,
@@ -229569,7 +229569,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10008",
-            "countryName": "南投縣",
+            "countyName": "南投縣",
             "kmt": 46.7,
             "ddp": 49.6,
             "pfp": 3.7,
@@ -229585,7 +229585,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10008",
-            "countryName": "南投縣",
+            "countyName": "南投縣",
             "kmt": 41.8,
             "ddp": 53.8,
             "pfp": 4.4,
@@ -229601,7 +229601,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10008",
-            "countryName": "南投縣",
+            "countyName": "南投縣",
             "kmt": 44.2,
             "ddp": 51.6,
             "pfp": 4.2,
@@ -229637,7 +229637,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10008",
-            "countryName": "南投縣",
+            "countyName": "南投縣",
             "kmt": 48.9,
             "ddp": 46.7,
             "pfp": 4.5,
@@ -229653,7 +229653,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10008",
-            "countryName": "南投縣",
+            "countyName": "南投縣",
             "kmt": 46.7,
             "ddp": 49,
             "pfp": 4.3,
@@ -229669,7 +229669,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10008",
-            "countryName": "南投縣",
+            "countyName": "南投縣",
             "kmt": 62,
             "ddp": 34.2,
             "pfp": 3.8,
@@ -229685,7 +229685,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10008",
-            "countryName": "南投縣",
+            "countyName": "南投縣",
             "kmt": 76.1,
             "ddp": 20.5,
             "pfp": 3.4,
@@ -229701,7 +229701,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10009",
-            "countryName": "雲林縣",
+            "countyName": "雲林縣",
             "kmt": 39.3,
             "ddp": 56.4,
             "pfp": 4.4,
@@ -229717,7 +229717,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10009",
-            "countryName": "雲林縣",
+            "countyName": "雲林縣",
             "kmt": 35,
             "ddp": 61.2,
             "pfp": 3.8,
@@ -229733,7 +229733,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10009",
-            "countryName": "雲林縣",
+            "countyName": "雲林縣",
             "kmt": 37.8,
             "ddp": 57.6,
             "pfp": 4.5,
@@ -229749,7 +229749,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10009",
-            "countryName": "雲林縣",
+            "countyName": "雲林縣",
             "kmt": 30.6,
             "ddp": 66.4,
             "pfp": 3,
@@ -229765,7 +229765,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10009",
-            "countryName": "雲林縣",
+            "countyName": "雲林縣",
             "kmt": 32.8,
             "ddp": 63.2,
             "pfp": 4,
@@ -229781,7 +229781,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10009",
-            "countryName": "雲林縣",
+            "countyName": "雲林縣",
             "kmt": 30.6,
             "ddp": 65.8,
             "pfp": 3.6,
@@ -229797,7 +229797,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10009",
-            "countryName": "雲林縣",
+            "countyName": "雲林縣",
             "kmt": 35.8,
             "ddp": 60.8,
             "pfp": 3.4,
@@ -229813,7 +229813,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10009",
-            "countryName": "雲林縣",
+            "countyName": "雲林縣",
             "kmt": 31.7,
             "ddp": 64.6,
             "pfp": 3.7,
@@ -229829,7 +229829,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10009",
-            "countryName": "雲林縣",
+            "countyName": "雲林縣",
             "kmt": 29.4,
             "ddp": 66.9,
             "pfp": 3.7,
@@ -229845,7 +229845,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10009",
-            "countryName": "雲林縣",
+            "countyName": "雲林縣",
             "kmt": 35.6,
             "ddp": 60.4,
             "pfp": 4,
@@ -229861,7 +229861,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10009",
-            "countryName": "雲林縣",
+            "countyName": "雲林縣",
             "kmt": 28.1,
             "ddp": 69.3,
             "pfp": 2.6,
@@ -229877,7 +229877,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10009",
-            "countryName": "雲林縣",
+            "countyName": "雲林縣",
             "kmt": 33.3,
             "ddp": 63.3,
             "pfp": 3.4,
@@ -229893,7 +229893,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10009",
-            "countryName": "雲林縣",
+            "countyName": "雲林縣",
             "kmt": 37.1,
             "ddp": 59.2,
             "pfp": 3.8,
@@ -229909,7 +229909,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10009",
-            "countryName": "雲林縣",
+            "countyName": "雲林縣",
             "kmt": 33.3,
             "ddp": 62.8,
             "pfp": 3.8,
@@ -229925,7 +229925,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10009",
-            "countryName": "雲林縣",
+            "countyName": "雲林縣",
             "kmt": 32,
             "ddp": 64.5,
             "pfp": 3.5,
@@ -229941,7 +229941,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10009",
-            "countryName": "雲林縣",
+            "countyName": "雲林縣",
             "kmt": 25.8,
             "ddp": 70.9,
             "pfp": 3.3,
@@ -229957,7 +229957,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10010",
-            "countryName": "嘉義縣",
+            "countyName": "嘉義縣",
             "kmt": 31.1,
             "ddp": 65.6,
             "pfp": 3.3,
@@ -229973,7 +229973,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10010",
-            "countryName": "嘉義縣",
+            "countyName": "嘉義縣",
             "kmt": 33.7,
             "ddp": 62.5,
             "pfp": 3.8,
@@ -229989,7 +229989,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10010",
-            "countryName": "嘉義縣",
+            "countyName": "嘉義縣",
             "kmt": 31.1,
             "ddp": 64.9,
             "pfp": 4.1,
@@ -230005,7 +230005,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10010",
-            "countryName": "嘉義縣",
+            "countyName": "嘉義縣",
             "kmt": 25.7,
             "ddp": 70.9,
             "pfp": 3.4,
@@ -230021,7 +230021,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10010",
-            "countryName": "嘉義縣",
+            "countyName": "嘉義縣",
             "kmt": 25.4,
             "ddp": 71.4,
             "pfp": 3.3,
@@ -230037,7 +230037,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10010",
-            "countryName": "嘉義縣",
+            "countyName": "嘉義縣",
             "kmt": 26.7,
             "ddp": 70.3,
             "pfp": 3,
@@ -230053,7 +230053,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10010",
-            "countryName": "嘉義縣",
+            "countyName": "嘉義縣",
             "kmt": 31.1,
             "ddp": 65.6,
             "pfp": 3.3,
@@ -230069,7 +230069,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10010",
-            "countryName": "嘉義縣",
+            "countyName": "嘉義縣",
             "kmt": 29.5,
             "ddp": 67.8,
             "pfp": 2.7,
@@ -230085,7 +230085,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10010",
-            "countryName": "嘉義縣",
+            "countyName": "嘉義縣",
             "kmt": 34.3,
             "ddp": 61.8,
             "pfp": 3.9,
@@ -230101,7 +230101,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10010",
-            "countryName": "嘉義縣",
+            "countyName": "嘉義縣",
             "kmt": 36.8,
             "ddp": 59.1,
             "pfp": 4.1,
@@ -230117,7 +230117,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10010",
-            "countryName": "嘉義縣",
+            "countyName": "嘉義縣",
             "kmt": 41.7,
             "ddp": 54.9,
             "pfp": 3.4,
@@ -230133,7 +230133,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10010",
-            "countryName": "嘉義縣",
+            "countyName": "嘉義縣",
             "kmt": 65.9,
             "ddp": 30.6,
             "pfp": 3.5,
@@ -230149,7 +230149,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 38.3,
             "ddp": 58.5,
             "pfp": 3.2,
@@ -230165,7 +230165,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 34.3,
             "ddp": 62.9,
             "pfp": 2.8,
@@ -230181,7 +230181,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 33.6,
             "ddp": 63.5,
             "pfp": 2.9,
@@ -230197,7 +230197,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 29.5,
             "ddp": 67.9,
             "pfp": 2.6,
@@ -230213,7 +230213,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 24.7,
             "ddp": 72.8,
             "pfp": 2.5,
@@ -230229,7 +230229,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 27.7,
             "ddp": 69.8,
             "pfp": 2.4,
@@ -230245,7 +230245,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 35.8,
             "ddp": 61.6,
             "pfp": 2.6,
@@ -230261,7 +230261,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 26.3,
             "ddp": 71.5,
             "pfp": 2.2,
@@ -230277,7 +230277,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 28.4,
             "ddp": 69.6,
             "pfp": 1.9,
@@ -230293,7 +230293,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 31.9,
             "ddp": 65.3,
             "pfp": 2.8,
@@ -230309,7 +230309,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 34.5,
             "ddp": 62.7,
             "pfp": 2.8,
@@ -230325,7 +230325,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 27.9,
             "ddp": 69.4,
             "pfp": 2.8,
@@ -230341,7 +230341,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 29.6,
             "ddp": 67.7,
             "pfp": 2.7,
@@ -230357,7 +230357,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 51.1,
             "ddp": 45.9,
             "pfp": 2.9,
@@ -230373,7 +230373,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 70.8,
             "ddp": 26.2,
             "pfp": 3,
@@ -230389,7 +230389,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 67,
             "ddp": 29.9,
             "pfp": 3.1,
@@ -230405,7 +230405,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 70.6,
             "ddp": 26.3,
             "pfp": 3.1,
@@ -230421,7 +230421,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 72.8,
             "ddp": 24.3,
             "pfp": 2.9,
@@ -230437,7 +230437,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 74.5,
             "ddp": 22.1,
             "pfp": 3.4,
@@ -230453,7 +230453,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 74.4,
             "ddp": 22.6,
             "pfp": 3,
@@ -230469,7 +230469,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 76.1,
             "ddp": 21.1,
             "pfp": 2.8,
@@ -230485,7 +230485,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10014",
-            "countryName": "臺東縣",
+            "countyName": "臺東縣",
             "kmt": 54.3,
             "ddp": 42.6,
             "pfp": 3.1,
@@ -230501,7 +230501,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10014",
-            "countryName": "臺東縣",
+            "countyName": "臺東縣",
             "kmt": 53.6,
             "ddp": 42.8,
             "pfp": 3.6,
@@ -230517,7 +230517,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10014",
-            "countryName": "臺東縣",
+            "countyName": "臺東縣",
             "kmt": 74.8,
             "ddp": 22.5,
             "pfp": 2.7,
@@ -230533,7 +230533,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10015",
-            "countryName": "花蓮縣",
+            "countyName": "花蓮縣",
             "kmt": 67.6,
             "ddp": 29.5,
             "pfp": 3,
@@ -230549,7 +230549,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10015",
-            "countryName": "花蓮縣",
+            "countyName": "花蓮縣",
             "kmt": 63.6,
             "ddp": 32.9,
             "pfp": 3.5,
@@ -230565,7 +230565,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10015",
-            "countryName": "花蓮縣",
+            "countyName": "花蓮縣",
             "kmt": 61.5,
             "ddp": 34.1,
             "pfp": 4.5,
@@ -230593,7 +230593,7 @@
           "type": "MultiPolygon",
           "properties": {
             "countyId": "10016",
-            "countryName": "澎湖縣",
+            "countyName": "澎湖縣",
             "kmt": 42,
             "ddp": 52.9,
             "pfp": 5.1,
@@ -230755,7 +230755,7 @@
           "type": "MultiPolygon",
           "properties": {
             "countyId": "10016",
-            "countryName": "澎湖縣",
+            "countyName": "澎湖縣",
             "kmt": 44,
             "ddp": 52,
             "pfp": 3.9,
@@ -230792,7 +230792,7 @@
           "type": "MultiPolygon",
           "properties": {
             "countyId": "10016",
-            "countryName": "澎湖縣",
+            "countyName": "澎湖縣",
             "kmt": 41.2,
             "ddp": 54.1,
             "pfp": 4.7,
@@ -230867,7 +230867,7 @@
           "type": "MultiPolygon",
           "properties": {
             "countyId": "10016",
-            "countryName": "澎湖縣",
+            "countyName": "澎湖縣",
             "kmt": 34.8,
             "ddp": 59.5,
             "pfp": 5.7,
@@ -230883,7 +230883,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10016",
-            "countryName": "澎湖縣",
+            "countyName": "澎湖縣",
             "kmt": 51,
             "ddp": 41.5,
             "pfp": 7.5,
@@ -230904,7 +230904,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10017",
-            "countryName": "基隆市",
+            "countyName": "基隆市",
             "kmt": 45.4,
             "ddp": 49.1,
             "pfp": 5.6,
@@ -230929,7 +230929,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "63000",
-            "countryName": "臺北市",
+            "countyName": "臺北市",
             "kmt": 47,
             "ddp": 48.9,
             "pfp": 4.1,
@@ -230954,7 +230954,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "63000",
-            "countryName": "臺北市",
+            "countyName": "臺北市",
             "kmt": 49,
             "ddp": 46.5,
             "pfp": 4.5,
@@ -230970,7 +230970,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 32.6,
             "ddp": 64.6,
             "pfp": 2.8,
@@ -230986,7 +230986,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 36.4,
             "ddp": 60.4,
             "pfp": 3.2,
@@ -231002,7 +231002,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 36.8,
             "ddp": 59.6,
             "pfp": 3.6,
@@ -231027,7 +231027,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 33.8,
             "ddp": 63.2,
             "pfp": 3,
@@ -231071,7 +231071,7 @@
           "type": "MultiPolygon",
           "properties": {
             "countyId": "10002",
-            "countryName": "宜蘭縣",
+            "countyName": "宜蘭縣",
             "kmt": 38.9,
             "ddp": 56.3,
             "pfp": 4.8,
@@ -231087,7 +231087,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10002",
-            "countryName": "宜蘭縣",
+            "countyName": "宜蘭縣",
             "kmt": 82.8,
             "ddp": 14.8,
             "pfp": 2.4,
@@ -231103,7 +231103,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10004",
-            "countryName": "新竹縣",
+            "countyName": "新竹縣",
             "kmt": 40.2,
             "ddp": 53.6,
             "pfp": 6.2,
@@ -231119,7 +231119,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10004",
-            "countryName": "新竹縣",
+            "countyName": "新竹縣",
             "kmt": 45.5,
             "ddp": 48.8,
             "pfp": 5.7,
@@ -231135,7 +231135,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10005",
-            "countryName": "苗栗縣",
+            "countyName": "苗栗縣",
             "kmt": 34.2,
             "ddp": 61.3,
             "pfp": 4.5,
@@ -231151,7 +231151,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10005",
-            "countryName": "苗栗縣",
+            "countyName": "苗栗縣",
             "kmt": 39.3,
             "ddp": 56.3,
             "pfp": 4.4,
@@ -231167,7 +231167,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10005",
-            "countryName": "苗栗縣",
+            "countyName": "苗栗縣",
             "kmt": 43,
             "ddp": 51.5,
             "pfp": 5.5,
@@ -231183,7 +231183,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10005",
-            "countryName": "苗栗縣",
+            "countyName": "苗栗縣",
             "kmt": 44,
             "ddp": 51.9,
             "pfp": 4.1,
@@ -231199,7 +231199,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10007",
-            "countryName": "彰化縣",
+            "countyName": "彰化縣",
             "kmt": 34,
             "ddp": 61.4,
             "pfp": 4.6,
@@ -231215,7 +231215,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10007",
-            "countryName": "彰化縣",
+            "countyName": "彰化縣",
             "kmt": 33.7,
             "ddp": 61.9,
             "pfp": 4.4,
@@ -231231,7 +231231,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10009",
-            "countryName": "雲林縣",
+            "countyName": "雲林縣",
             "kmt": 42.2,
             "ddp": 53.8,
             "pfp": 4,
@@ -231247,7 +231247,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10009",
-            "countryName": "雲林縣",
+            "countyName": "雲林縣",
             "kmt": 36.8,
             "ddp": 60,
             "pfp": 3.2,
@@ -231263,7 +231263,7 @@
           "type": "MultiPolygon",
           "properties": {
             "countyId": "10009",
-            "countryName": "雲林縣",
+            "countyName": "雲林縣",
             "kmt": 30.1,
             "ddp": 66.4,
             "pfp": 3.5,
@@ -231279,7 +231279,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10010",
-            "countryName": "嘉義縣",
+            "countyName": "嘉義縣",
             "kmt": 33.8,
             "ddp": 63.1,
             "pfp": 3.1,
@@ -231295,7 +231295,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 28.6,
             "ddp": 68.7,
             "pfp": 2.6,
@@ -231311,7 +231311,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 33.3,
             "ddp": 64.2,
             "pfp": 2.5,
@@ -231327,7 +231327,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 24.9,
             "ddp": 72.4,
             "pfp": 2.6,
@@ -231343,7 +231343,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 28.2,
             "ddp": 69.4,
             "pfp": 2.3,
@@ -231359,7 +231359,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 33.9,
             "ddp": 63.8,
             "pfp": 2.4,
@@ -231375,7 +231375,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 38.2,
             "ddp": 58.9,
             "pfp": 2.9,
@@ -231391,7 +231391,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 32.2,
             "ddp": 66.1,
             "pfp": 1.6,
@@ -231407,7 +231407,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 72.9,
             "ddp": 23.4,
             "pfp": 3.6,
@@ -231423,7 +231423,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10014",
-            "countryName": "臺東縣",
+            "countyName": "臺東縣",
             "kmt": 53.7,
             "ddp": 42.5,
             "pfp": 3.8,
@@ -231439,7 +231439,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10014",
-            "countryName": "臺東縣",
+            "countyName": "臺東縣",
             "kmt": 55.4,
             "ddp": 41.1,
             "pfp": 3.4,
@@ -231455,7 +231455,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10014",
-            "countryName": "臺東縣",
+            "countyName": "臺東縣",
             "kmt": 64.3,
             "ddp": 31.9,
             "pfp": 3.8,
@@ -231471,7 +231471,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10015",
-            "countryName": "花蓮縣",
+            "countyName": "花蓮縣",
             "kmt": 57.7,
             "ddp": 38.5,
             "pfp": 3.8,
@@ -231487,7 +231487,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10015",
-            "countryName": "花蓮縣",
+            "countyName": "花蓮縣",
             "kmt": 60.2,
             "ddp": 36.5,
             "pfp": 3.3,
@@ -231503,7 +231503,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10015",
-            "countryName": "花蓮縣",
+            "countyName": "花蓮縣",
             "kmt": 71.1,
             "ddp": 25.8,
             "pfp": 3.1,
@@ -231519,7 +231519,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 36,
             "ddp": 60.7,
             "pfp": 3.4,
@@ -231541,7 +231541,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 36.2,
             "ddp": 60.6,
             "pfp": 3.2,
@@ -231573,7 +231573,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 32,
             "ddp": 65,
             "pfp": 3,
@@ -231589,7 +231589,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 29.9,
             "ddp": 67.5,
             "pfp": 2.6,
@@ -231605,7 +231605,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 28.9,
             "ddp": 68.2,
             "pfp": 2.9,
@@ -231621,7 +231621,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 31.2,
             "ddp": 65.6,
             "pfp": 3.2,
@@ -231637,7 +231637,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 33.4,
             "ddp": 63.4,
             "pfp": 3.2,
@@ -231653,7 +231653,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 35.9,
             "ddp": 60.6,
             "pfp": 3.4,
@@ -231669,7 +231669,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 26.8,
             "ddp": 70.1,
             "pfp": 3.1,
@@ -231685,7 +231685,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 31.5,
             "ddp": 65.6,
             "pfp": 2.9,
@@ -231701,7 +231701,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 29.1,
             "ddp": 68.3,
             "pfp": 2.6,
@@ -231717,7 +231717,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 27.8,
             "ddp": 69.2,
             "pfp": 2.9,
@@ -231733,7 +231733,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 30.9,
             "ddp": 65.3,
             "pfp": 3.9,
@@ -231749,7 +231749,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 29.2,
             "ddp": 67.3,
             "pfp": 3.5,
@@ -231765,7 +231765,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 34.7,
             "ddp": 62.2,
             "pfp": 3.1,
@@ -231781,7 +231781,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 45,
             "ddp": 52.5,
             "pfp": 2.5,
@@ -231797,7 +231797,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 38.6,
             "ddp": 58.7,
             "pfp": 2.7,
@@ -231813,7 +231813,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 47.8,
             "ddp": 49.5,
             "pfp": 2.7,
@@ -231829,7 +231829,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 42.1,
             "ddp": 55.6,
             "pfp": 2.3,
@@ -231845,7 +231845,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 37.7,
             "ddp": 59.6,
             "pfp": 2.7,
@@ -231861,7 +231861,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 75.3,
             "ddp": 22.9,
             "pfp": 1.7,
@@ -231877,7 +231877,7 @@
           "type": "MultiPolygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 73.3,
             "ddp": 23.9,
             "pfp": 2.8,
@@ -231893,7 +231893,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 71.5,
             "ddp": 26.8,
             "pfp": 1.7,
@@ -231921,7 +231921,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "65000",
-            "countryName": "新北市",
+            "countyName": "新北市",
             "kmt": 49.8,
             "ddp": 45.7,
             "pfp": 4.5,
@@ -231937,7 +231937,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "65000",
-            "countryName": "新北市",
+            "countyName": "新北市",
             "kmt": 51.7,
             "ddp": 44.1,
             "pfp": 4.2,
@@ -231953,7 +231953,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "65000",
-            "countryName": "新北市",
+            "countyName": "新北市",
             "kmt": 36.4,
             "ddp": 58.9,
             "pfp": 4.8,
@@ -231978,7 +231978,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "65000",
-            "countryName": "新北市",
+            "countyName": "新北市",
             "kmt": 30.4,
             "ddp": 65,
             "pfp": 4.5,
@@ -232000,7 +232000,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "65000",
-            "countryName": "新北市",
+            "countyName": "新北市",
             "kmt": 34.1,
             "ddp": 61.3,
             "pfp": 4.5,
@@ -232016,7 +232016,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "65000",
-            "countryName": "新北市",
+            "countyName": "新北市",
             "kmt": 32.6,
             "ddp": 64.3,
             "pfp": 3.2,
@@ -232032,7 +232032,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "65000",
-            "countryName": "新北市",
+            "countyName": "新北市",
             "kmt": 40.9,
             "ddp": 55.7,
             "pfp": 3.4,
@@ -232048,7 +232048,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "65000",
-            "countryName": "新北市",
+            "countyName": "新北市",
             "kmt": 51.3,
             "ddp": 44,
             "pfp": 4.7,
@@ -232064,7 +232064,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "66000",
-            "countryName": "臺中市",
+            "countyName": "臺中市",
             "kmt": 35.2,
             "ddp": 60,
             "pfp": 4.8,
@@ -232080,7 +232080,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "66000",
-            "countryName": "臺中市",
+            "countyName": "臺中市",
             "kmt": 46.2,
             "ddp": 49.5,
             "pfp": 4.3,
@@ -232096,7 +232096,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "66000",
-            "countryName": "臺中市",
+            "countyName": "臺中市",
             "kmt": 38.3,
             "ddp": 56.6,
             "pfp": 5.1,
@@ -232112,7 +232112,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "66000",
-            "countryName": "臺中市",
+            "countyName": "臺中市",
             "kmt": 32.4,
             "ddp": 62.9,
             "pfp": 4.7,
@@ -232142,7 +232142,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "66000",
-            "countryName": "臺中市",
+            "countyName": "臺中市",
             "kmt": 41.4,
             "ddp": 54.2,
             "pfp": 4.4,
@@ -232158,7 +232158,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "66000",
-            "countryName": "臺中市",
+            "countyName": "臺中市",
             "kmt": 43,
             "ddp": 52.3,
             "pfp": 4.7,
@@ -232174,7 +232174,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "66000",
-            "countryName": "臺中市",
+            "countyName": "臺中市",
             "kmt": 40.9,
             "ddp": 54.1,
             "pfp": 4.9,
@@ -232190,7 +232190,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "66000",
-            "countryName": "臺中市",
+            "countyName": "臺中市",
             "kmt": 38,
             "ddp": 56.8,
             "pfp": 5.2,
@@ -232206,7 +232206,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "66000",
-            "countryName": "臺中市",
+            "countyName": "臺中市",
             "kmt": 63.5,
             "ddp": 32.8,
             "pfp": 3.6,
@@ -232222,7 +232222,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 33.2,
             "ddp": 63.1,
             "pfp": 3.7,
@@ -232238,7 +232238,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 25.6,
             "ddp": 71.9,
             "pfp": 2.6,
@@ -232254,7 +232254,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 26.8,
             "ddp": 70.7,
             "pfp": 2.6,
@@ -232270,7 +232270,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 25.8,
             "ddp": 71.1,
             "pfp": 3.1,
@@ -232286,7 +232286,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 20,
             "ddp": 77.3,
             "pfp": 2.7,
@@ -232302,7 +232302,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 25.1,
             "ddp": 72,
             "pfp": 2.9,
@@ -232318,7 +232318,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 24.1,
             "ddp": 72.6,
             "pfp": 3.3,
@@ -232334,7 +232334,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 21.2,
             "ddp": 76.2,
             "pfp": 2.6,
@@ -232350,7 +232350,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 27,
             "ddp": 69.8,
             "pfp": 3.2,
@@ -232366,7 +232366,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 24.7,
             "ddp": 72.2,
             "pfp": 3,
@@ -232382,7 +232382,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 22.5,
             "ddp": 74.6,
             "pfp": 2.8,
@@ -232398,7 +232398,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 21.9,
             "ddp": 75.2,
             "pfp": 2.9,
@@ -232414,7 +232414,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 31.5,
             "ddp": 64.9,
             "pfp": 3.5,
@@ -232430,7 +232430,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 24.5,
             "ddp": 72.1,
             "pfp": 3.4,
@@ -232446,7 +232446,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 24.1,
             "ddp": 72.7,
             "pfp": 3.2,
@@ -232462,7 +232462,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 41.2,
             "ddp": 55.4,
             "pfp": 3.3,
@@ -232478,7 +232478,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 48.9,
             "ddp": 48.1,
             "pfp": 3,
@@ -232494,7 +232494,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 41.1,
             "ddp": 55.8,
             "pfp": 3.1,
@@ -232510,7 +232510,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 32.4,
             "ddp": 65.1,
             "pfp": 2.4,
@@ -232526,7 +232526,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 30.1,
             "ddp": 66.3,
             "pfp": 3.7,
@@ -232542,7 +232542,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 26.1,
             "ddp": 70.5,
             "pfp": 3.4,
@@ -232558,7 +232558,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 26.5,
             "ddp": 70.2,
             "pfp": 3.3,
@@ -232574,7 +232574,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 32.9,
             "ddp": 63.5,
             "pfp": 3.6,
@@ -232590,7 +232590,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 31,
             "ddp": 65.2,
             "pfp": 3.9,
@@ -232606,7 +232606,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 34.2,
             "ddp": 61.8,
             "pfp": 3.9,
@@ -232631,7 +232631,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 28.2,
             "ddp": 68.9,
             "pfp": 2.9,
@@ -232647,7 +232647,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 28.7,
             "ddp": 68.3,
             "pfp": 3,
@@ -232663,7 +232663,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 30.1,
             "ddp": 66.6,
             "pfp": 3.3,
@@ -232679,7 +232679,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 33.3,
             "ddp": 63.1,
             "pfp": 3.6,
@@ -232695,7 +232695,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 27.6,
             "ddp": 69.4,
             "pfp": 3,
@@ -232733,7 +232733,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "65000",
-            "countryName": "新北市",
+            "countyName": "新北市",
             "kmt": 41.7,
             "ddp": 53.6,
             "pfp": 4.7,
@@ -232749,7 +232749,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "65000",
-            "countryName": "新北市",
+            "countyName": "新北市",
             "kmt": 43.2,
             "ddp": 52.4,
             "pfp": 4.4,
@@ -232765,7 +232765,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "65000",
-            "countryName": "新北市",
+            "countyName": "新北市",
             "kmt": 39.8,
             "ddp": 54.9,
             "pfp": 5.3,
@@ -232796,7 +232796,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "65000",
-            "countryName": "新北市",
+            "countyName": "新北市",
             "kmt": 41.6,
             "ddp": 54.6,
             "pfp": 3.8,
@@ -232818,7 +232818,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "65000",
-            "countryName": "新北市",
+            "countyName": "新北市",
             "kmt": 37.3,
             "ddp": 58,
             "pfp": 4.6,
@@ -232834,7 +232834,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "66000",
-            "countryName": "臺中市",
+            "countyName": "臺中市",
             "kmt": 35.9,
             "ddp": 59.3,
             "pfp": 4.8,
@@ -232850,7 +232850,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "66000",
-            "countryName": "臺中市",
+            "countyName": "臺中市",
             "kmt": 36.5,
             "ddp": 59.3,
             "pfp": 4.3,
@@ -232866,7 +232866,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 25.5,
             "ddp": 72.2,
             "pfp": 2.3,
@@ -232882,7 +232882,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 24.8,
             "ddp": 71.5,
             "pfp": 3.7,
@@ -232898,7 +232898,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "68000",
-            "countryName": "桃園市",
+            "countyName": "桃園市",
             "kmt": 35.4,
             "ddp": 59.7,
             "pfp": 4.9,
@@ -232914,7 +232914,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "68000",
-            "countryName": "桃園市",
+            "countyName": "桃園市",
             "kmt": 37.9,
             "ddp": 57,
             "pfp": 5.1,
@@ -232930,7 +232930,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "68000",
-            "countryName": "桃園市",
+            "countyName": "桃園市",
             "kmt": 64,
             "ddp": 32.3,
             "pfp": 3.7,
@@ -232946,7 +232946,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10020",
-            "countryName": "嘉義市",
+            "countyName": "嘉義市",
             "kmt": 36.7,
             "ddp": 59.4,
             "pfp": 3.9,
@@ -232962,7 +232962,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10020",
-            "countryName": "嘉義市",
+            "countyName": "嘉義市",
             "kmt": 33.2,
             "ddp": 63,
             "pfp": 3.8,
@@ -232978,7 +232978,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10014",
-            "countryName": "臺東縣",
+            "countyName": "臺東縣",
             "kmt": 78.5,
             "ddp": 18.3,
             "pfp": 3.2,
@@ -232994,7 +232994,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10014",
-            "countryName": "臺東縣",
+            "countyName": "臺東縣",
             "kmt": 67.5,
             "ddp": 29.9,
             "pfp": 2.6,
@@ -233010,7 +233010,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10014",
-            "countryName": "臺東縣",
+            "countyName": "臺東縣",
             "kmt": 57.9,
             "ddp": 38.4,
             "pfp": 3.8,
@@ -233026,7 +233026,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10014",
-            "countryName": "臺東縣",
+            "countyName": "臺東縣",
             "kmt": 75.8,
             "ddp": 20.9,
             "pfp": 3.3,
@@ -233042,7 +233042,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10018",
-            "countryName": "新竹市",
+            "countyName": "新竹市",
             "kmt": 38.8,
             "ddp": 56.1,
             "pfp": 5.1,
@@ -233058,7 +233058,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10018",
-            "countryName": "新竹市",
+            "countyName": "新竹市",
             "kmt": 35.5,
             "ddp": 59.2,
             "pfp": 5.3,
@@ -233074,7 +233074,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10002",
-            "countryName": "宜蘭縣",
+            "countyName": "宜蘭縣",
             "kmt": 31.7,
             "ddp": 64.2,
             "pfp": 4.1,
@@ -233090,7 +233090,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10015",
-            "countryName": "花蓮縣",
+            "countyName": "花蓮縣",
             "kmt": 63.5,
             "ddp": 33.1,
             "pfp": 3.4,
@@ -233106,7 +233106,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10015",
-            "countryName": "花蓮縣",
+            "countyName": "花蓮縣",
             "kmt": 79.1,
             "ddp": 18.3,
             "pfp": 2.6,
@@ -233122,7 +233122,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10005",
-            "countryName": "苗栗縣",
+            "countyName": "苗栗縣",
             "kmt": 53.5,
             "ddp": 41.3,
             "pfp": 5.2,
@@ -233138,7 +233138,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "66000",
-            "countryName": "臺中市",
+            "countyName": "臺中市",
             "kmt": 34.1,
             "ddp": 61.2,
             "pfp": 4.8,
@@ -233154,7 +233154,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 28.8,
             "ddp": 67.8,
             "pfp": 3.4,
@@ -233170,7 +233170,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 35.8,
             "ddp": 60.3,
             "pfp": 3.9,
@@ -233186,7 +233186,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 31.4,
             "ddp": 65,
             "pfp": 3.6,
@@ -233202,7 +233202,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 30.3,
             "ddp": 65.9,
             "pfp": 3.8,
@@ -233218,7 +233218,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "68000",
-            "countryName": "桃園市",
+            "countyName": "桃園市",
             "kmt": 37.5,
             "ddp": 58.2,
             "pfp": 4.2,
@@ -233234,7 +233234,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "68000",
-            "countryName": "桃園市",
+            "countyName": "桃園市",
             "kmt": 41.7,
             "ddp": 53.7,
             "pfp": 4.7,
@@ -233250,7 +233250,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "68000",
-            "countryName": "桃園市",
+            "countyName": "桃園市",
             "kmt": 39.1,
             "ddp": 56.1,
             "pfp": 4.8,
@@ -233266,7 +233266,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "68000",
-            "countryName": "桃園市",
+            "countyName": "桃園市",
             "kmt": 33.5,
             "ddp": 61.7,
             "pfp": 4.8,
@@ -233282,7 +233282,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "68000",
-            "countryName": "桃園市",
+            "countyName": "桃園市",
             "kmt": 43.2,
             "ddp": 51.9,
             "pfp": 4.9,
@@ -233298,7 +233298,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10017",
-            "countryName": "基隆市",
+            "countyName": "基隆市",
             "kmt": 41.3,
             "ddp": 53.2,
             "pfp": 5.5,
@@ -233319,7 +233319,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10017",
-            "countryName": "基隆市",
+            "countyName": "基隆市",
             "kmt": 41.7,
             "ddp": 53.2,
             "pfp": 5.1,
@@ -233335,7 +233335,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10017",
-            "countryName": "基隆市",
+            "countyName": "基隆市",
             "kmt": 47.3,
             "ddp": 47.6,
             "pfp": 5.1,
@@ -233351,7 +233351,7 @@
           "type": "MultiPolygon",
           "properties": {
             "countyId": "10017",
-            "countryName": "基隆市",
+            "countyName": "基隆市",
             "kmt": 44.7,
             "ddp": 50.1,
             "pfp": 5.2,
@@ -233367,7 +233367,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10017",
-            "countryName": "基隆市",
+            "countyName": "基隆市",
             "kmt": 42.9,
             "ddp": 51.7,
             "pfp": 5.4,
@@ -233383,7 +233383,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10017",
-            "countryName": "基隆市",
+            "countyName": "基隆市",
             "kmt": 44,
             "ddp": 51,
             "pfp": 5.1,
@@ -233399,7 +233399,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "65000",
-            "countryName": "新北市",
+            "countyName": "新北市",
             "kmt": 38.1,
             "ddp": 57.3,
             "pfp": 4.6,
@@ -233415,7 +233415,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "65000",
-            "countryName": "新北市",
+            "countyName": "新北市",
             "kmt": 35,
             "ddp": 60.1,
             "pfp": 4.9,
@@ -233437,7 +233437,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "65000",
-            "countryName": "新北市",
+            "countyName": "新北市",
             "kmt": 45.6,
             "ddp": 49.9,
             "pfp": 4.6,
@@ -233453,7 +233453,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "65000",
-            "countryName": "新北市",
+            "countyName": "新北市",
             "kmt": 34.9,
             "ddp": 60.3,
             "pfp": 4.8,
@@ -233482,7 +233482,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "65000",
-            "countryName": "新北市",
+            "countyName": "新北市",
             "kmt": 42.4,
             "ddp": 53.5,
             "pfp": 4.1,
@@ -233507,7 +233507,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "65000",
-            "countryName": "新北市",
+            "countyName": "新北市",
             "kmt": 36,
             "ddp": 59.4,
             "pfp": 4.6,
@@ -233533,7 +233533,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "65000",
-            "countryName": "新北市",
+            "countyName": "新北市",
             "kmt": 33.2,
             "ddp": 63.3,
             "pfp": 3.6,
@@ -233549,7 +233549,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "65000",
-            "countryName": "新北市",
+            "countyName": "新北市",
             "kmt": 33,
             "ddp": 62.3,
             "pfp": 4.7,
@@ -233565,7 +233565,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "65000",
-            "countryName": "新北市",
+            "countyName": "新北市",
             "kmt": 35.8,
             "ddp": 59.8,
             "pfp": 4.4,
@@ -233596,7 +233596,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "65000",
-            "countryName": "新北市",
+            "countyName": "新北市",
             "kmt": 32.1,
             "ddp": 63.4,
             "pfp": 4.6,
@@ -233612,7 +233612,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "65000",
-            "countryName": "新北市",
+            "countyName": "新北市",
             "kmt": 41.9,
             "ddp": 54.4,
             "pfp": 3.7,
@@ -233628,7 +233628,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "65000",
-            "countryName": "新北市",
+            "countyName": "新北市",
             "kmt": 29.9,
             "ddp": 66.8,
             "pfp": 3.3,
@@ -233686,7 +233686,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "65000",
-            "countryName": "新北市",
+            "countyName": "新北市",
             "kmt": 42.3,
             "ddp": 53.1,
             "pfp": 4.6,
@@ -233714,7 +233714,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "65000",
-            "countryName": "新北市",
+            "countyName": "新北市",
             "kmt": 40.4,
             "ddp": 56,
             "pfp": 3.6,
@@ -233749,7 +233749,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "65000",
-            "countryName": "新北市",
+            "countyName": "新北市",
             "kmt": 36.6,
             "ddp": 59.8,
             "pfp": 3.6,
@@ -233765,7 +233765,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "65000",
-            "countryName": "新北市",
+            "countyName": "新北市",
             "kmt": 41.3,
             "ddp": 55.2,
             "pfp": 3.6,
@@ -233781,7 +233781,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 37,
             "ddp": 59.9,
             "pfp": 3.1,
@@ -233797,7 +233797,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 33.7,
             "ddp": 63.2,
             "pfp": 3.2,
@@ -233813,7 +233813,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "68000",
-            "countryName": "桃園市",
+            "countyName": "桃園市",
             "kmt": 35.5,
             "ddp": 60,
             "pfp": 4.5,
@@ -233829,7 +233829,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "68000",
-            "countryName": "桃園市",
+            "countyName": "桃園市",
             "kmt": 30.8,
             "ddp": 64.4,
             "pfp": 4.9,
@@ -233888,7 +233888,7 @@
           "type": "MultiPolygon",
           "properties": {
             "countyId": "09007",
-            "countryName": "連江縣",
+            "countyName": "連江縣",
             "kmt": 80.2,
             "ddp": 17.6,
             "pfp": 2.2,
@@ -233923,7 +233923,7 @@
           "type": "MultiPolygon",
           "properties": {
             "countyId": "09007",
-            "countryName": "連江縣",
+            "countyName": "連江縣",
             "kmt": 74.7,
             "ddp": 20.1,
             "pfp": 5.2,
@@ -233956,7 +233956,7 @@
           "type": "MultiPolygon",
           "properties": {
             "countyId": "09020",
-            "countryName": "金門縣",
+            "countyName": "金門縣",
             "kmt": 80.3,
             "ddp": 17.3,
             "pfp": 2.5,
@@ -233987,7 +233987,7 @@
           "type": "MultiPolygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 26.9,
             "ddp": 70.7,
             "pfp": 2.4,
@@ -234003,7 +234003,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10014",
-            "countryName": "臺東縣",
+            "countyName": "臺東縣",
             "kmt": 67.4,
             "ddp": 29.5,
             "pfp": 3.1,
@@ -234019,7 +234019,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10015",
-            "countryName": "花蓮縣",
+            "countyName": "花蓮縣",
             "kmt": 72.6,
             "ddp": 24.7,
             "pfp": 2.7,
@@ -234048,7 +234048,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "66000",
-            "countryName": "臺中市",
+            "countyName": "臺中市",
             "kmt": 38.1,
             "ddp": 56.7,
             "pfp": 5.2,
@@ -234078,7 +234078,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "66000",
-            "countryName": "臺中市",
+            "countyName": "臺中市",
             "kmt": 35.5,
             "ddp": 59.4,
             "pfp": 5.2,
@@ -234094,7 +234094,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "66000",
-            "countryName": "臺中市",
+            "countyName": "臺中市",
             "kmt": 38,
             "ddp": 56.8,
             "pfp": 5.2,
@@ -234110,7 +234110,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "66000",
-            "countryName": "臺中市",
+            "countyName": "臺中市",
             "kmt": 36.9,
             "ddp": 57.9,
             "pfp": 5.1,
@@ -234126,7 +234126,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "66000",
-            "countryName": "臺中市",
+            "countyName": "臺中市",
             "kmt": 38,
             "ddp": 57.6,
             "pfp": 4.4,
@@ -234142,7 +234142,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "66000",
-            "countryName": "臺中市",
+            "countyName": "臺中市",
             "kmt": 38.5,
             "ddp": 56.7,
             "pfp": 4.8,
@@ -234158,7 +234158,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "66000",
-            "countryName": "臺中市",
+            "countyName": "臺中市",
             "kmt": 38.5,
             "ddp": 56.4,
             "pfp": 5.1,
@@ -234180,7 +234180,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "66000",
-            "countryName": "臺中市",
+            "countyName": "臺中市",
             "kmt": 41.1,
             "ddp": 54.1,
             "pfp": 4.8,
@@ -234196,7 +234196,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "66000",
-            "countryName": "臺中市",
+            "countyName": "臺中市",
             "kmt": 40.3,
             "ddp": 54.6,
             "pfp": 5.1,
@@ -234222,7 +234222,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "66000",
-            "countryName": "臺中市",
+            "countyName": "臺中市",
             "kmt": 40.7,
             "ddp": 54.3,
             "pfp": 5,
@@ -234238,7 +234238,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "66000",
-            "countryName": "臺中市",
+            "countyName": "臺中市",
             "kmt": 37.1,
             "ddp": 57.9,
             "pfp": 5.1,
@@ -234262,7 +234262,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "63000",
-            "countryName": "臺北市",
+            "countyName": "臺北市",
             "kmt": 45,
             "ddp": 50.7,
             "pfp": 4.2,
@@ -234296,7 +234296,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "63000",
-            "countryName": "臺北市",
+            "countyName": "臺北市",
             "kmt": 39.4,
             "ddp": 56.4,
             "pfp": 4.2,
@@ -234323,7 +234323,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "63000",
-            "countryName": "臺北市",
+            "countyName": "臺北市",
             "kmt": 44.2,
             "ddp": 51.4,
             "pfp": 4.5,
@@ -234341,7 +234341,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "63000",
-            "countryName": "臺北市",
+            "countyName": "臺北市",
             "kmt": 44.5,
             "ddp": 51.1,
             "pfp": 4.3,
@@ -234366,7 +234366,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "63000",
-            "countryName": "臺北市",
+            "countyName": "臺北市",
             "kmt": 31.6,
             "ddp": 64,
             "pfp": 4.4,
@@ -234382,7 +234382,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "63000",
-            "countryName": "臺北市",
+            "countyName": "臺北市",
             "kmt": 39.8,
             "ddp": 55.7,
             "pfp": 4.5,
@@ -234437,7 +234437,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "63000",
-            "countryName": "臺北市",
+            "countyName": "臺北市",
             "kmt": 36.8,
             "ddp": 59.2,
             "pfp": 4.1,
@@ -234495,7 +234495,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "63000",
-            "countryName": "臺北市",
+            "countyName": "臺北市",
             "kmt": 38.3,
             "ddp": 57.6,
             "pfp": 4.1,
@@ -234511,7 +234511,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10015",
-            "countryName": "花蓮縣",
+            "countyName": "花蓮縣",
             "kmt": 56.8,
             "ddp": 39.2,
             "pfp": 4,
@@ -234527,7 +234527,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10015",
-            "countryName": "花蓮縣",
+            "countyName": "花蓮縣",
             "kmt": 61.5,
             "ddp": 34.6,
             "pfp": 3.9,
@@ -234543,7 +234543,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 25,
             "ddp": 71.7,
             "pfp": 3.3,
@@ -234559,7 +234559,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 28.1,
             "ddp": 68.9,
             "pfp": 3,
@@ -234575,7 +234575,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10007",
-            "countryName": "彰化縣",
+            "countyName": "彰化縣",
             "kmt": 38.1,
             "ddp": 57.1,
             "pfp": 4.8,
@@ -234591,7 +234591,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10007",
-            "countryName": "彰化縣",
+            "countyName": "彰化縣",
             "kmt": 38,
             "ddp": 57.7,
             "pfp": 4.3,
@@ -234607,7 +234607,7 @@
           "type": "MultiPolygon",
           "properties": {
             "countyId": "09020",
-            "countryName": "金門縣",
+            "countyName": "金門縣",
             "kmt": 75.8,
             "ddp": 20.9,
             "pfp": 3.3,
@@ -234623,7 +234623,7 @@
           "type": "MultiPolygon",
           "properties": {
             "countyId": "09020",
-            "countryName": "金門縣",
+            "countyName": "金門縣",
             "kmt": 80.6,
             "ddp": 16.8,
             "pfp": 2.6,
@@ -234657,7 +234657,7 @@
           "type": "MultiPolygon",
           "properties": {
             "countyId": "09020",
-            "countryName": "金門縣",
+            "countyName": "金門縣",
             "kmt": 75.1,
             "ddp": 21,
             "pfp": 3.8,
@@ -234673,7 +234673,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 26.5,
             "ddp": 69.9,
             "pfp": 3.6,
@@ -234689,7 +234689,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 30.5,
             "ddp": 66.5,
             "pfp": 3,
@@ -234705,7 +234705,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 22.6,
             "ddp": 74.5,
             "pfp": 2.9,
@@ -234721,7 +234721,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "67000",
-            "countryName": "臺南市",
+            "countyName": "臺南市",
             "kmt": 21.8,
             "ddp": 75.8,
             "pfp": 2.4,
@@ -234742,7 +234742,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 38.2,
             "ddp": 58.6,
             "pfp": 3.1,
@@ -234758,7 +234758,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "64000",
-            "countryName": "高雄市",
+            "countyName": "高雄市",
             "kmt": 41.8,
             "ddp": 54.9,
             "pfp": 3.4,
@@ -234774,7 +234774,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "68000",
-            "countryName": "桃園市",
+            "countyName": "桃園市",
             "kmt": 43.7,
             "ddp": 51.5,
             "pfp": 4.8,
@@ -234790,7 +234790,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10004",
-            "countryName": "新竹縣",
+            "countyName": "新竹縣",
             "kmt": 48.8,
             "ddp": 45.2,
             "pfp": 6,
@@ -234806,7 +234806,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10018",
-            "countryName": "新竹市",
+            "countyName": "新竹市",
             "kmt": 41.2,
             "ddp": 53.3,
             "pfp": 5.6,
@@ -234822,7 +234822,7 @@
           "type": "MultiPolygon",
           "properties": {
             "countyId": "10013",
-            "countryName": "屏東縣",
+            "countyName": "屏東縣",
             "kmt": 40.7,
             "ddp": 57,
             "pfp": 2.4,
@@ -234846,7 +234846,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "66000",
-            "countryName": "臺中市",
+            "countyName": "臺中市",
             "kmt": 36.5,
             "ddp": 58.8,
             "pfp": 4.7,
@@ -234922,7 +234922,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "66000",
-            "countryName": "臺中市",
+            "countyName": "臺中市",
             "kmt": 37.7,
             "ddp": 57.3,
             "pfp": 5,
@@ -234938,7 +234938,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10015",
-            "countryName": "花蓮縣",
+            "countyName": "花蓮縣",
             "kmt": 61.8,
             "ddp": 34.8,
             "pfp": 3.4,
@@ -234954,7 +234954,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "10015",
-            "countryName": "花蓮縣",
+            "countyName": "花蓮縣",
             "kmt": 75.1,
             "ddp": 22,
             "pfp": 2.9,
@@ -234970,7 +234970,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "68000",
-            "countryName": "桃園市",
+            "countyName": "桃園市",
             "kmt": 46.7,
             "ddp": 48.6,
             "pfp": 4.7,
@@ -234986,7 +234986,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "68000",
-            "countryName": "桃園市",
+            "countyName": "桃園市",
             "kmt": 42.4,
             "ddp": 52.7,
             "pfp": 4.9,
@@ -235042,7 +235042,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "63000",
-            "countryName": "臺北市",
+            "countyName": "臺北市",
             "kmt": 41.1,
             "ddp": 54.4,
             "pfp": 4.5,
@@ -235081,7 +235081,7 @@
           "type": "Polygon",
           "properties": {
             "countyId": "63000",
-            "countryName": "臺北市",
+            "countyName": "臺北市",
             "kmt": 42,
             "ddp": 53.2,
             "pfp": 4.7,

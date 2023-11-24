@@ -6,6 +6,7 @@ import InvoicingInformation from '@/components/invoicing/invoicing-information';
 import InvoicingSupport from '@/components/invoicing/invoicing-support';
 import { INVOICING } from '@/configs/Invoicing';
 import type { SelectAreaOption } from '@/types/select';
+import type { MapTopologyProperties } from '@/types/map';
 
 interface Props {
   options: {
@@ -15,15 +16,15 @@ interface Props {
 }
 
 interface ChangeSearchParams {
-  county?: SelectAreaOption;
-  town?: SelectAreaOption;
+  county?: MapTopologyProperties | null;
+  town?: MapTopologyProperties | null;
 }
 
 function InvoicingProportion({ options }: Props) {
-  const [proportion, setProportion] = useState(INVOICING.default);
+  const [proportion, setProportion] = useState<MapTopologyProperties>(INVOICING.default);
 
   function changeSearch({ county, town }: ChangeSearchParams) {
-    console.log({ county, town });
+    setProportion(town ?? county ?? INVOICING.default);
   }
 
   return (

@@ -1,8 +1,10 @@
+import { useMemo } from 'react';
 import Image from 'next/image';
 import InvoicingBar from '@/components/invoicing/invoicing-bar';
 import ddpAvatar from '@/assets/images/avatar/ddp-avatar.png';
 import kmtAvatar from '@/assets/images/avatar/kmt-avatar.png';
 import pfpAvatar from '@/assets/images/avatar/pfp-avatar.png';
+import Counter from '@/hooks/useCounter';
 import type { MapTopologyProperties } from '@/types/map';
 
 interface Props {
@@ -10,11 +12,14 @@ interface Props {
 }
 
 function InvoicingInformation({ proportion }: Props) {
-  const { countyName, ddp, kmt, pfp } = proportion;
+  const { countyName, townName, ddp, kmt, pfp } = proportion;
+  const title = useMemo(() => {
+    return [countyName, townName].filter(Boolean).join('/') || '全台';
+  }, [proportion]);
 
   return (
     <div className="border-2 border-black mt-4">
-      <div className="py-2 border-b border-b-black text-center">{countyName || '全台'}</div>
+      <div className="py-2 border-b border-b-black text-center">{title}</div>
       <div className="px-4 py-8">
         <InvoicingBar
           className="h-[18px]"
@@ -31,7 +36,10 @@ function InvoicingInformation({ proportion }: Props) {
               />
               <p>蔡英文得票率</p>
             </div>
-            <p className="text-deep-green">{ddp}%</p>
+            <Counter
+              className="text-deep-green"
+              to={ddp}
+            />
           </div>
           <div className="invoicing-information-candidate">
             <div className="invoicing-information-content">
@@ -42,7 +50,10 @@ function InvoicingInformation({ proportion }: Props) {
               />
               <p>韓國瑜得票率</p>
             </div>
-            <p className="text-deep-blue">{kmt}%</p>
+            <Counter
+              className="text-deep-blue"
+              to={kmt}
+            />
           </div>
           <div className="invoicing-information-candidate">
             <div className="invoicing-information-content">
@@ -53,7 +64,10 @@ function InvoicingInformation({ proportion }: Props) {
               />
               <p>宋楚瑜得票率</p>
             </div>
-            <p className="text-deep-orange">{pfp}%</p>
+            <Counter
+              className="text-deep-orange"
+              to={pfp}
+            />
           </div>
         </div>
       </div>

@@ -1,12 +1,13 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import Select from '@/components/common/select';
 import SearchBtn from '@/assets/images/svg/search-btn.svg';
 import Info from '@/assets/images/svg/info.svg';
 import type { SelectAreaOption } from '@/types/select';
+import type { MapTopologyProperties } from '@/types/map';
 
 interface ChangeSearchParams {
-  county?: SelectAreaOption;
-  town?: SelectAreaOption;
+  county?: MapTopologyProperties | null;
+  town?: MapTopologyProperties | null;
 }
 
 interface Props {
@@ -19,9 +20,13 @@ interface Props {
 
 function InvoicingSearch({ options: { countyOptions, townOptionsMap }, changeSearch }: Props) {
   const [selectedCounty, setSelectedCounty] = useState(countyOptions.at(0));
-  const [selectedTown, setSelectedTown] = useState<SelectAreaOption>();
+  const [selectedTown, setSelectedTown] = useState<SelectAreaOption | null>(null);
   const townOptions = useMemo(() => {
     return townOptionsMap[selectedCounty?.value?.countyId ?? ''];
+  }, [selectedCounty]);
+
+  useEffect(() => {
+    setSelectedTown(null);
   }, [selectedCounty]);
 
   return (
@@ -34,16 +39,16 @@ function InvoicingSearch({ options: { countyOptions, townOptionsMap }, changeSea
           options={countyOptions}
         />
         <Select
-          defaultValue={selectedTown}
+          value={selectedTown}
           onChange={setSelectedTown}
           options={townOptions}
         />
       </div>
       <SearchBtn
-        className="w-5"
-        onClick={() => changeSearch({ county: selectedCounty, town: selectedTown })}
+        className="icon w-5"
+        onClick={() => changeSearch({ county: selectedCounty?.value, town: selectedTown?.value })}
       />
-      <Info className="w-5" />
+      <Info className="icon w-5" />
     </div>
   );
 }

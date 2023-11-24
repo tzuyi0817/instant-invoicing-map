@@ -1,0 +1,7 @@
+@import 'tailwindcss/components';
+
+@layer components {
+  .icon {
+    @apply transition-all fill-black cursor-pointer hover:fill-primary-red;
+  }
+}

@@ -12,7 +12,8 @@ import Select, {
 import ExpandMore from '@/assets/images/svg/expand-more.svg';
 
 interface Props {
-  defaultValue: PropsValue<any> | undefined;
+  defaultValue?: PropsValue<any>;
+  value?: PropsValue<any>;
   onChange: ((newValue: any, actionMeta: ActionMeta<any>) => void) | undefined;
   options: OptionsOrGroups<any, GroupBase<any>> | undefined;
 }

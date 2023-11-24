@@ -6,7 +6,7 @@ interface Props {
   showProportion?: boolean;
 }
 
-const barStyle = 'h-full transition-all text-xs text-white flex items-center';
+const barStyle = 'h-full transition-all duration-300 text-xs text-white flex items-center';
 
 function InvoicingBar({ className, proportion, showProportion }: Props) {
   const { kmt, pfp, ddp } = proportion;

@@ -16,7 +16,6 @@ function TaiwanMap({ topology }: Props) {
   useEffect(() => {
     map.resetMap();
     map.drawMap();
-    document.documentElement.style.fontSize = '16px';
     return () => map.resetMap();
   }, []);
 
@@ -43,7 +42,7 @@ function TaiwanMap({ topology }: Props) {
       </div>
       <div className="tooltip"></div>
       <Arrow
-        className="absolute top-5 left-5 w-5 transition-all fill-black cursor-pointer hover:fill-primary-red"
+        className="icon absolute top-5 left-5 w-5"
         onClick={backToPreviousArea}
       />
     </div>
