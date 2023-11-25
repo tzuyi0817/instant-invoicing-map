@@ -6,5 +6,11 @@
     &-home {
       @apply btn border-l-transparent border-b-transparent;
     }
+    &-rounded {
+      @apply btn rounded-3xl border-2 border-[#D9D9D9];
+      &.active {
+        @apply bg-black text-white;
+      }
+    }
   }
 }

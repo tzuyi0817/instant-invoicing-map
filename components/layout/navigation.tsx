@@ -96,7 +96,7 @@ function Navigation({ toggle }: Props) {
           variants={liVariants}
           onClick={toggle}
         >
-          <Link href="/">候選人政見</Link>
+          <Link href="/poll">候選人政見</Link>
         </motion.li>
       </motion.ul>
     </>

@@ -7,3 +7,10 @@ export interface CreateSvgParams {
   width: number;
   height: number;
 }
+
+export interface D3BarItem {
+  name: string;
+  value: number;
+  fill: string;
+  image: string;
+}
