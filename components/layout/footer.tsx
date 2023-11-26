@@ -25,7 +25,7 @@ function Footer() {
                 viewBox="0 0 280 18"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-[262px]"
+                className="w-[262px] md:w-[350px]"
                 initial="rest"
                 whileHover="hover"
                 animate="rest"
@@ -55,9 +55,9 @@ function Footer() {
             </Link>
           </motion.h2>
         )}
-        <div>
-          <p className="text-xs px-[10px] mb-[10px]">樹懶設計 shulian@gmail.com</p>
-          <p className="text-xs px-[10px]">© 2023 樹懶設計 shulian 版權所有</p>
+        <div className="text-xs md:flex md:text-base">
+          <p className="px-[10px] mb-[10px]">樹懶設計 shulian@gmail.com</p>
+          <p className="px-[10px]">© 2023 樹懶設計 shulian 版權所有</p>
         </div>
       </footer>
     </AnimatePresence>

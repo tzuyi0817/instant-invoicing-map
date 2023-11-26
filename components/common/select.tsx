@@ -21,7 +21,7 @@ interface Props {
 const DropdownIndicator: React.FC<DropdownIndicatorProps> = props => {
   return (
     <components.DropdownIndicator {...props}>
-      <ExpandMore className="w-6" />
+      <ExpandMore className="w-6 md:w-8" />
     </components.DropdownIndicator>
   );
 };
@@ -34,7 +34,7 @@ function InvoicingSelect(props: Props) {
   return isMounted ? (
     <Select
       id={Date.now().toString()}
-      className="w-fit min-w-[92px] text-xs"
+      className="w-fit min-w-[92px] text-xs text-center md:text-lg md:min-w-[184px]"
       placeholder="-----"
       {...props}
       components={{ DropdownIndicator }}

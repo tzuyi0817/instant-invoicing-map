@@ -77,7 +77,7 @@ function Navigation({ toggle }: Props) {
       </motion.div>
 
       <motion.ul
-        className="fixed top-1/3 right-5 text-right text-white text-2xl font-bold flex flex-col gap-4"
+        className="fixed top-1/3 right-5 text-right text-white text-2xl font-bold flex flex-col gap-4 md:text-[32px] md:gap-8"
         variants={ulVariants}
       >
         <motion.li

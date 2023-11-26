@@ -9,17 +9,17 @@ import '@/styles/home/candidate.css';
 
 function HomeCandidate() {
   return (
-    <div className="pt-14 flex justify-center w-full relative">
+    <div className="pt-14 flex justify-center w-full relative md:pt-20">
       <div className="home-candidate-kmt">
         <Image
           src={Kmt}
           alt="KMT"
         />
-        <KmtBtn className="block absolute -bottom-10 left-7 w-[122px]" />
+        <KmtBtn className="block absolute -bottom-10 left-7 w-[122px] md:w-[205px]" />
       </div>
 
       <div className="home-candidate-ddp">
-        <DdpBtn className="block relative left-8 w-[140px]" />
+        <DdpBtn className="block relative left-8 w-[140px] md:w-[238px]" />
         <Image
           src={Ddp}
           alt="DDP"
@@ -30,7 +30,7 @@ function HomeCandidate() {
           src={Pfp}
           alt="PFP"
         />
-        <PfpBtn className="absolute bottom-3 right-7 w-[90px]" />
+        <PfpBtn className="absolute bottom-3 right-7 w-[90px] md:w-[160px] md:right-10" />
       </div>
     </div>
   );

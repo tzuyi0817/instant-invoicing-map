@@ -27,7 +27,6 @@ interface FilterContentProps {
 
 const filterStyle =
   'h-6 rounded-[24px] transition-all border border-white flex items-center overflow-hidden cursor-pointer hover:opacity-90';
-const filterText = 'text-white text-xs pl-5 flex-1 whitespace-nowrap';
 
 function InvoicingFilter({ filter, setFilter }: Props) {
   function resetFilter(event: MouseEvent<HTMLDivElement, globalThis.MouseEvent>, target: Filter) {
@@ -84,7 +83,7 @@ function InvoicingFilter({ filter, setFilter }: Props) {
 function FilterContent({ filter, avatar, candidate }: FilterContentProps) {
   return filter ? (
     <>
-      <p className={filterText}>{candidate}</p>
+      <p className="text-white text-xs pl-5 flex-1 whitespace-nowrap md:text-base">{candidate}</p>
       <Image
         src={avatar}
         alt="avatar"

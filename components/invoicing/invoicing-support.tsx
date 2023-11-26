@@ -36,8 +36,8 @@ function InvoicingSupport({ neighborhoods }: Props) {
       />
       <div className="mt-4">
         <div className="flex pr-3">
-          <p className="text-xs text-black/50 w-14">地區</p>
-          <p className="text-xs text-black/50">得票占比</p>
+          <p className="text-xs text-black/50 w-14 md:text-base md:w-20">地區</p>
+          <p className="text-xs text-black/50 md:text-base">得票占比</p>
         </div>
         <AnimatePresence mode="wait">
           <ul className="mt-4 flex flex-col gap-5 max-h-[280px] overflow-y-scroll">
@@ -50,12 +50,12 @@ function InvoicingSupport({ neighborhoods }: Props) {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="flex pr-1"
+                    className="flex pr-1 items-center"
                     key={`${countyId}-${townId}-${villageId}-${index}`}
                   >
-                    <p className="text-xs w-14">{villageName ?? townName ?? countyName}</p>
+                    <p className="text-xs w-14 md:text-base md:w-20">{villageName ?? townName ?? countyName}</p>
                     <InvoicingBar
-                      className="h-[14px] flex-1"
+                      className="h-[14px] flex-1 md:h-4"
                       proportion={proportion ?? INVOICING.default}
                     />
                   </motion.li>

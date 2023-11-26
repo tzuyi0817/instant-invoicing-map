@@ -1,7 +1,7 @@
 import { geoMercator, geoPath, select, type Selection } from 'd3';
 import { feature } from 'topojson-client';
 import { createSvg, createInvoicingInformation } from './d3';
-import { MAP_AREA_COLOR } from '@/configs/map';
+import { MAP_AREA_COLOR, MAP_CONFIG, type MapConfigKey } from '@/configs/map';
 import type { SelectionD3 } from '@/types/d3';
 import type { Topology, MapFeature, MapSelectArea, MapArea, MapBackArea } from '@/types/map';
 
@@ -18,15 +18,15 @@ class Map {
   tooltip: SelectionD3<HTMLDivElement> | null = null;
   currentPath: Selection<SVGPathElement, unknown, null, undefined> | null = null;
   previousPath: Selection<SVGPathElement, unknown, null, undefined> | null = null;
-  projection = geoMercator().center([123, 24]).scale(4500);
+  projection = geoMercator().center([123, 24]);
   path = geoPath(this.projection);
   width = 0;
   height = 0;
-  x = -110;
-  y = -100;
+  x = 0;
+  y = 0;
   scale = 1;
   translate = {
-    default: { x: this.x, y: this.y, scale: this.scale },
+    default: { x: 0, y: 0, scale: 1 },
     county: { x: 0, y: 0, scale: 1 },
     town: { x: 0, y: 0, scale: 1 },
   };
@@ -50,13 +50,16 @@ class Map {
 
   resetMap() {
     const container = document.querySelector('.map-container');
-    const { x, y, scale } = this.translate.default;
 
-    this.width = container?.clientWidth ?? 0;
-    this.height = container?.clientHeight ?? 0;
-    this.x = x;
-    this.y = y;
-    this.scale = scale;
+    if (!container) return;
+    this.width = container.clientWidth;
+    this.height = container.clientHeight;
+    const { x, y, scale } = MAP_CONFIG[this.height as MapConfigKey];
+
+    this.projection.scale(scale);
+    this.translate.default.x = this.x = x;
+    this.translate.default.y = this.y = y;
+    this.scale = 1;
     this.removeMap();
   }
 

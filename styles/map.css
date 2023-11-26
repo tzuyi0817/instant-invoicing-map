@@ -2,7 +2,7 @@
 
 @layer components {
   .map-container {
-    @apply bg-[#F5F2F2] w-screen h-[350px] relative mb-2;
+    @apply bg-[#F5F2F2] w-screen h-[350px] relative mb-2 md:h-[660px] md:mb-4;
     .map {
       @apply top-0 left-0 bottom-0 right-0;
       .county,

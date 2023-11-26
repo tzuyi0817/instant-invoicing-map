@@ -41,7 +41,7 @@ function TaiwanMap() {
       </div>
       <div className="tooltip"></div>
       <Arrow
-        className="icon absolute top-5 left-5 w-5"
+        className="icon absolute top-5 left-5 w-5 md:w-9"
         onClick={backToPreviousArea}
       />
     </div>

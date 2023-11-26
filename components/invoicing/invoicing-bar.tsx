@@ -6,13 +6,13 @@ interface Props {
   showProportion?: boolean;
 }
 
-const barStyle = 'h-full transition-all duration-300 text-xs text-white flex items-center';
+const barStyle = 'h-full transition-all duration-300 text-xs text-white flex items-center md:text-sm';
 
 function InvoicingBar({ className, proportion, showProportion }: Props) {
   const { kmt, pfp, ddp } = proportion;
 
   return (
-    <div className={`w-full overflow-hidden rounded-lg flex gap-[1px] ${className}`}>
+    <div className={`w-full overflow-hidden rounded-lg flex gap-[1px] ${className} md:rounded-2xl`}>
       <div
         className={`bg-deep-green pl-2 ${barStyle}`}
         style={{ width: `${ddp}%` }}

@@ -29,7 +29,7 @@ function InvoicingProportion() {
   }
 
   return (
-    <div className="px-[10px]">
+    <div className="px-[10px] md:px-[30px]">
       <InvoicingSearch
         options={{ townOptionsMap, countyOptions }}
         changeSearch={changeSearch}

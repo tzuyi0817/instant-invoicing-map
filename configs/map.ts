@@ -15,3 +15,18 @@ export const MAP_AREA_COLOR = {
     deep: '#F88545',
   },
 } as const;
+
+export const MAP_CONFIG = {
+  350: {
+    scale: 4500,
+    x: -110,
+    y: -100,
+  },
+  660: {
+    scale: 9000,
+    x: 200,
+    y: 20,
+  },
+};
+
+export type MapConfigKey = keyof typeof MAP_CONFIG;

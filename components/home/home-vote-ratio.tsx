@@ -11,10 +11,10 @@ function HomeVoteRatio() {
   const { kmt, ddp, pfp } = INVOICING.default;
 
   return (
-    <div className="px-4 border-b-[3px] border-black">
+    <div className="px-[4vw] border-b-[3px] border-black">
       <div className="pt-7 border-x border-black flex flex-col items-center">
-        <div className="w-[260px] h-[130px] bg-black rounded-t-full"></div>
-        <div className="relative h-[130px] w-full">
+        <div className="w-[62vw] h-[31vw] bg-black rounded-t-full"></div>
+        <div className="relative h-[31vw] w-full">
           <div className="absolute w-full bottom-[52px]">
             <Image
               src={PaperPresidential}
@@ -22,7 +22,7 @@ function HomeVoteRatio() {
               className="w-full object-cover"
             />
           </div>
-          <div className="absolute px-3 w-full bottom-5">
+          <div className="absolute px-[3vw] w-full bottom-5">
             <Image
               src={PresidentialPalace}
               alt="presidential palace"

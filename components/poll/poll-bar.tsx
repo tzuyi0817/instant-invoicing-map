@@ -25,7 +25,7 @@ function PollBar() {
             return (
               <button
                 key={date}
-                className={`btn-rounded text-xs whitespace-nowrap ${currentDate === date ? 'active' : ''}`}
+                className={`btn-rounded text-xs whitespace-nowrap md:text-lg ${currentDate === date ? 'active' : ''}`}
                 onClick={() => setDate(date)}
               >
                 {date}

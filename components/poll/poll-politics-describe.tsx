@@ -21,7 +21,7 @@ function PollPoliticsDescribe({ describe, border, bg }: Props) {
         {POLL_POLITICS.map(({ key, value }) => {
           return (
             <button
-              className={`btn-rounded text-xs mr-1 mb-1 ${type === key ? 'active' : ''}`}
+              className={`btn-rounded text-xs mr-1 mb-1 md:text-lg md:mr-2 md:mb-2 ${type === key ? 'active' : ''}`}
               key={key}
               onClick={() => setType(key)}
             >
@@ -39,11 +39,11 @@ function PollPoliticsDescribe({ describe, border, bg }: Props) {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className={`text-xs border rounded-[20px] mb-3 overflow-hidden ${border}`}
+                className={`text-xs border rounded-[20px] mb-3 overflow-hidden ${border} md:text-2xl md:rounded-[40px] md:mb-6`}
                 key={`${type}-${index}`}
               >
-                <p className={`p-2 px-6 text-white ${bg}`}>{question}</p>
-                <p className="py-3 px-6">{answer}</p>
+                <p className={`py-2 px-6 text-white ${bg} md:py-4 md:px-11`}>{question}</p>
+                <p className="py-3 px-6 md:py-7 md:px-11">{answer}</p>
               </motion.li>
             );
           })}
