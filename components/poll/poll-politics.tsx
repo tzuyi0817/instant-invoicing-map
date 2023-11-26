@@ -1,5 +1,7 @@
 import { PropsWithChildren } from 'react';
 import PollPoliticsHeader from '@/components/poll/poll-politics-header';
+import PollPoliticsDescribe from '@/components/poll/poll-politics-describe';
+import { POLL_POLITICS_MAP } from '@/configs/poll';
 import Pfp from '@/assets/images/candidate/pfp-dark.png';
 import PfpSymbol from '@/assets/images/icon/pfp-symbol.svg';
 import Kmt from '@/assets/images/candidate/kmt-dark.png';
@@ -20,6 +22,11 @@ function PollPolitics() {
         >
           宋楚瑜政見
         </PollPoliticsHeader>
+        <PollPoliticsDescribe
+          describe={POLL_POLITICS_MAP.pfp}
+          border="border-deep-orange"
+          bg="bg-deep-orange"
+        />
       </PollPoliticsContainer>
       <PollPoliticsContainer>
         <PollPoliticsHeader
@@ -31,6 +38,11 @@ function PollPolitics() {
         >
           韓國瑜政見
         </PollPoliticsHeader>
+        <PollPoliticsDescribe
+          describe={POLL_POLITICS_MAP.kmt}
+          border="border-deep-blue"
+          bg="bg-deep-blue"
+        />
       </PollPoliticsContainer>
       <PollPoliticsContainer>
         <PollPoliticsHeader
@@ -42,6 +54,11 @@ function PollPolitics() {
         >
           蔡英文政見
         </PollPoliticsHeader>
+        <PollPoliticsDescribe
+          describe={POLL_POLITICS_MAP.ddp}
+          border="border-deep-green"
+          bg="bg-deep-green"
+        />
       </PollPoliticsContainer>
     </div>
   );

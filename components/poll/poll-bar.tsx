@@ -1,13 +1,13 @@
 'use client';
 
 import { useState, useMemo, useEffect } from 'react';
-import { POLLS_DATE, POLL_MAP } from '@/configs/poll';
+import { POLL_DATE, POLL_MAP } from '@/configs/poll';
 import Bar from '@/utils/bar';
 
 const bar = new Bar();
 
 function PollBar() {
-  const [currentDate, setDate] = useState<keyof typeof POLL_MAP>(POLLS_DATE[0]);
+  const [currentDate, setDate] = useState<keyof typeof POLL_MAP>(POLL_DATE[0]);
   const currentPoll = useMemo(() => POLL_MAP[currentDate], [currentDate]);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ function PollBar() {
       <div className="flex justify-between gap-7">
         <svg className="bar"></svg>
         <div className="flex flex-col gap-2">
-          {POLLS_DATE.map(date => {
+          {POLL_DATE.map(date => {
             return (
               <button
                 key={date}

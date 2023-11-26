@@ -98,7 +98,7 @@ class Bar {
       .data(data)
       .enter()
       .append('image')
-      .attr('transform', `translate(-${width / 2},-${width / 2 + 5})`)
+      .attr('transform', `translate(-${width / 2},-${width / 2 + 10})`)
       .attr('xlink:href', item => item.image)
       .attr('x', item => `${(x(item.name) ?? 0) + bandwidth / 2}`)
       .attr('y', item => y(item.value))
