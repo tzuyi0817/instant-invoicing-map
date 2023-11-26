@@ -4,11 +4,6 @@ import { useState, useMemo, useEffect } from 'react';
 import { POLLS_DATE, POLL_MAP } from '@/configs/poll';
 import Bar from '@/utils/bar';
 
-interface Poll {
-  candidate: string;
-  popularity: number;
-}
-
 const bar = new Bar();
 
 function PollBar() {
