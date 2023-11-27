@@ -9,7 +9,7 @@ class Bar {
   duration = 750;
   width = 0;
   height = 0;
-  margin = 20;
+  margin = 0;
   fontSize = 12;
   padding = 0.3;
 
@@ -19,22 +19,20 @@ class Bar {
     return 'desktop';
   }
 
-  resetBar() {
+  resetBar(selector: string) {
     this.innerWidth = window.innerWidth;
+    const container = document.querySelector(selector);
     const { fontSize, margin } = BAR_CONFIG[this.device];
 
+    if (!container) return;
+    this.width = container.clientWidth;
+    this.height = container.clientHeight - margin;
     this.fontSize = fontSize;
     this.margin = margin;
   }
 
   createBar(selector: string) {
-    const container = document.querySelector(selector);
-    const width = container?.clientWidth ?? 0;
-    const height = container?.clientHeight ?? 0;
-
-    this.bar = createSvg({ selector, height, width });
-    this.width = width;
-    this.height = height - this.margin;
+    this.bar = createSvg({ selector, height: this.height + this.margin, width: this.width });
   }
 
   drawBar(data: Array<D3BarItem>) {
@@ -42,7 +40,7 @@ class Bar {
       .domain(data.map(item => item.name))
       .range([0, this.width])
       .padding(this.padding);
-    const y = scaleLinear().domain([0, 60]).range([this.height, 0]);
+    const y = scaleLinear().domain([0, 65]).range([this.height, 0]);
 
     this.drawAxisX(x);
     this.drawAxisY(y);

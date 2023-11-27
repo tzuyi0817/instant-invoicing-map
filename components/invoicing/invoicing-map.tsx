@@ -2,14 +2,16 @@
 
 import { useEffect } from 'react';
 import InvoicingGradientGrid from '@/components/invoicing/invoicing-gradient-grid';
+import { useMap } from '@/providers/map-provider';
+import useResize from '@/hooks/useResize';
 import Map from '@/utils/map';
 import Arrow from '@/assets/images/svg/arrow.svg';
-import { useMap } from '@/providers/map-provider';
 
 function TaiwanMap() {
   const { county, town, village } = useMap();
   const map = Map.getInstance();
 
+  useResize(rerenderMap);
   useEffect(() => {
     if (!county || !town || !village) return;
     map.setTopology({ county, town, village });
@@ -20,6 +22,13 @@ function TaiwanMap() {
 
   function backToPreviousArea() {
     map.backToPreviousArea();
+  }
+
+  function rerenderMap() {
+    map.resetMap();
+    requestAnimationFrame(() => {
+      map.drawMap();
+    });
   }
 
   return (

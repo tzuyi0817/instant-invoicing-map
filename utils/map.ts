@@ -56,11 +56,11 @@ class Map {
     this.height = container.clientHeight;
     const { x, y, scale } = MAP_CONFIG[this.height as MapConfigKey];
 
+    this.removeMap();
     this.projection.scale(scale);
     this.translate.default.x = this.x = x;
     this.translate.default.y = this.y = y;
     this.scale = 1;
-    this.removeMap();
   }
 
   drawMap() {
