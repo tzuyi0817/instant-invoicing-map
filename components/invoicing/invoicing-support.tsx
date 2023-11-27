@@ -66,7 +66,7 @@ function InvoicingSupport({ neighborhoods }: Props) {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="text-xs text-center"
+                className="text-xs text-center md:text-base"
               >
                 無最支持的縣市或鄉鎮
               </motion.li>

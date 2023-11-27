@@ -21,8 +21,7 @@ class Bar {
 
   resetBar() {
     this.innerWidth = window.innerWidth;
-    const device = this.device;
-    const { fontSize, margin } = BAR_CONFIG[device];
+    const { fontSize, margin } = BAR_CONFIG[this.device];
 
     this.fontSize = fontSize;
     this.margin = margin;

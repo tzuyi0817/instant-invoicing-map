@@ -35,7 +35,7 @@ function InvoicingSearch({ options: { countyOptions, townOptionsMap }, changeSea
       <p className="text-xs md:text-lg">搜尋鄰里</p>
       <div className="flex gap-2">
         <Select
-          defaultValue={selectedCounty}
+          value={selectedCounty}
           onChange={setSelectedCounty}
           options={countyOptions}
         />

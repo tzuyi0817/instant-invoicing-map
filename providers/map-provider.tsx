@@ -43,7 +43,7 @@ function MapProvider({ children }: PropsWithChildren) {
 
   const townOptionsMap = useMemo(() => {
     if (!town) return null;
-    town.objects.town.geometries.reduce(
+    return town.objects.town.geometries.reduce(
       (map, { properties }) => {
         const options = map[properties.countyId] ?? [];
 
@@ -56,7 +56,7 @@ function MapProvider({ children }: PropsWithChildren) {
 
   const villageMap = useMemo(() => {
     if (!village) return null;
-    village.objects.village.geometries.reduce(
+    return village.objects.village.geometries.reduce(
       (map, { properties }) => {
         const villages = map[properties.townId] ?? [];
 
