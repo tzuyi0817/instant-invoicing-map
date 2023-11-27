@@ -11,6 +11,10 @@ function PollBar() {
   const currentPoll = useMemo(() => POLL_MAP[currentDate], [currentDate]);
 
   useEffect(() => {
+    bar.resetBar();
+  }, []);
+
+  useEffect(() => {
     bar.createBar('.bar');
     bar.drawBar(currentPoll);
     return () => bar.removeBar();
@@ -19,8 +23,8 @@ function PollBar() {
   return (
     <div className="py-5">
       <div className="flex justify-between gap-7">
-        <svg className="bar"></svg>
-        <div className="flex flex-col gap-2">
+        <svg className="bar flex-1"></svg>
+        <div className="flex flex-col gap-2 md:gap-7">
           {POLL_DATE.map(date => {
             return (
               <button

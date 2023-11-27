@@ -1,14 +1,32 @@
 import { interpolateRound, scaleLinear, axisBottom, scaleBand, axisLeft, type ScaleBand, type ScaleLinear } from 'd3';
 import { createSvg } from './d3';
+import { BAR_CONFIG } from '@/configs/bar';
 import type { SelectionD3, D3BarItem } from '@/types/d3';
 
 class Bar {
   bar: SelectionD3<SVGSVGElement> | null = null;
+  innerWidth = 0;
   duration = 750;
   width = 0;
   height = 0;
   margin = 20;
   fontSize = 12;
+  padding = 0.3;
+
+  get device() {
+    if (this.innerWidth < 768) return 'mobile';
+    if (this.innerWidth < 1024) return 'table';
+    return 'desktop';
+  }
+
+  resetBar() {
+    this.innerWidth = window.innerWidth;
+    const device = this.device;
+    const { fontSize, margin } = BAR_CONFIG[device];
+
+    this.fontSize = fontSize;
+    this.margin = margin;
+  }
 
   createBar(selector: string) {
     const container = document.querySelector(selector);
@@ -24,7 +42,7 @@ class Bar {
     const x = scaleBand()
       .domain(data.map(item => item.name))
       .range([0, this.width])
-      .padding(0.3);
+      .padding(this.padding);
     const y = scaleLinear().domain([0, 60]).range([this.height, 0]);
 
     this.drawAxisX(x);
@@ -68,10 +86,8 @@ class Bar {
       .data(data)
       .enter()
       .append('text')
+      .classed('bar-value', true)
       .text('0%')
-      .attr('transform', function () {
-        return `translate(-${this.getBBox().width / 2},0)`;
-      })
       .attr('fill', '#fff')
       .attr('x', item => `${(x(item.name) ?? 0) + x.bandwidth() / 2}`)
       .attr('y', item => y(item.value))
@@ -86,6 +102,12 @@ class Bar {
           this.textContent = `${interpolate(t)}%`;
         };
       });
+
+    requestAnimationFrame(() => {
+      this.bar?.selectAll('.bar-value').attr('transform', function () {
+        return `translate(-${(<SVGTextElement>this).getBBox().width / 2},0)`;
+      });
+    });
   }
 
   drawImage(data: Array<D3BarItem>, x: ScaleBand<string>, y: ScaleLinear<number, number, never>) {
@@ -98,7 +120,7 @@ class Bar {
       .data(data)
       .enter()
       .append('image')
-      .attr('transform', `translate(-${width / 2},-${width / 2 + 10})`)
+      .attr('transform', `translate(-${width / 2},-${width / 1.2})`)
       .attr('xlink:href', item => item.image)
       .attr('x', item => `${(x(item.name) ?? 0) + bandwidth / 2}`)
       .attr('y', item => y(item.value))
