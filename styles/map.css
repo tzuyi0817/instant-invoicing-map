@@ -24,9 +24,9 @@
       }
     }
     .tooltip {
-      @apply absolute opacity-0 transition-all bg-white rounded shadow-lg w-fit z-[1] min-w-[240px] pointer-events-none;
+      @apply absolute opacity-0 transition-all bg-white rounded shadow-lg w-fit z-[1] min-w-[240px] pointer-events-none md:min-w-[250px];
       &-bar {
-        @apply h-full transition-all duration-300 text-xs text-white flex items-center;
+        @apply h-full transition-all duration-300 text-xs text-white flex items-center md:text-sm;
       }
       img {
         @apply w-[34px];

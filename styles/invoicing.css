@@ -3,6 +3,9 @@
 @layer components {
   .invoicing {
     &-information {
+      &-title {
+        @apply py-2 border-b border-b-black text-center md:text-lg;
+      }
       &-candidate {
         @apply flex items-center mb-2;
       }

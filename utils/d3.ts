@@ -18,7 +18,7 @@ export function createInvoicingInformation(properties: MapTopologyProperties) {
   const title = [countyName, townName, villageName].filter(Boolean).join('/') || '全台';
 
   return `
-  <div class="py-1 border-b border-b-black text-center">${title}</div>
+  <div class="invoicing-information-title">${title}</div>
   <div style="padding: 16px 16px 8px">
     <div class="w-full overflow-hidden flex gap-[1px]" style="height: 26px; border-radius: 16px">
       <div class="tooltip-bar bg-deep-green pl-2" style="width: ${ddp}%">${ddp}%</div>
