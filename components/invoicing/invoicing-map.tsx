@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import InvoicingGradientGrid from '@/components/invoicing/invoicing-gradient-grid';
 import { useMap } from '@/providers/map-provider';
 import useResize from '@/hooks/useResize';
@@ -8,8 +8,9 @@ import Map from '@/utils/map';
 import Arrow from '@/assets/images/svg/arrow.svg';
 
 function TaiwanMap() {
-  const { county, town, village, proportion } = useMap();
-  const map = Map.getInstance();
+  const { county, town, village, proportion, manualSelect } = useMap();
+  const map = Map.getInstance(manualSelect);
+  const isReturning = useRef(false);
 
   useResize(rerenderMap);
   useEffect(() => {
@@ -21,16 +22,21 @@ function TaiwanMap() {
   }, [county, town, village]);
 
   useEffect(() => {
+    if (isReturning.current) return;
     const { townId, countyId } = proportion;
-
-    map.selectArea({
+    const selectMap = {
       id: townId ?? countyId,
       parentId: countyId,
-    });
+    };
+
+    selectMap.id ? map.selectArea(selectMap) : backToPreviousArea(true);
   }, [proportion]);
 
-  function backToPreviousArea() {
-    map.backToPreviousArea();
+  async function backToPreviousArea(isTwice = false) {
+    isReturning.current = true;
+    await map.backToPreviousArea();
+    isReturning.current = false;
+    isTwice && backToPreviousArea();
   }
 
   function rerenderMap() {
@@ -60,7 +66,7 @@ function TaiwanMap() {
       <div className="tooltip"></div>
       <Arrow
         className="icon absolute top-5 left-5 w-5 md:w-9"
-        onClick={backToPreviousArea}
+        onClick={() => backToPreviousArea()}
       />
     </div>
   );

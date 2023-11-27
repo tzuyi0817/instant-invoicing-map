@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect } from 'react';
 import Select from '@/components/common/select';
 import SearchBtn from '@/assets/images/svg/search-btn.svg';
 import Info from '@/assets/images/svg/info.svg';
+import { useMap } from '@/providers/map-provider';
 import type { SelectAreaOption } from '@/types/select';
 import type { MapTopologyProperties } from '@/types/map';
 
@@ -19,8 +20,7 @@ interface Props {
 }
 
 function InvoicingSearch({ options: { countyOptions, townOptionsMap }, changeSearch }: Props) {
-  const [selectedCounty, setSelectedCounty] = useState(countyOptions.at(0));
-  const [selectedTown, setSelectedTown] = useState<SelectAreaOption | null>(null);
+  const { selectedCounty, selectedTown, setSelectedCounty, setSelectedTown } = useMap();
   const townOptions = useMemo(() => {
     if (!townOptionsMap) return [];
     return townOptionsMap[selectedCounty?.value?.countyId ?? ''];

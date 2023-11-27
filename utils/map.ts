@@ -2,8 +2,17 @@ import { geoMercator, geoPath, select, type Selection } from 'd3';
 import { feature } from 'topojson-client';
 import { createSvg, createInvoicingInformation } from './d3';
 import { MAP_AREA_COLOR, MAP_CONFIG, type MapConfigKey } from '@/configs/map';
+import { INVOICING } from '@/configs/Invoicing';
 import type { SelectionD3 } from '@/types/d3';
-import type { Topology, MapFeature, MapSelectArea, MapArea, MapBackArea, MapSelect } from '@/types/map';
+import type {
+  Topology,
+  MapFeature,
+  MapSelectArea,
+  MapArea,
+  MapBackArea,
+  MapSelect,
+  MapTopologyProperties,
+} from '@/types/map';
 
 class Map {
   static instance: Map | null = null;
@@ -11,6 +20,7 @@ class Map {
   countyFeature?: GeoJSON.FeatureCollection;
   townFeature?: GeoJSON.FeatureCollection;
   villageFeature?: GeoJSON.FeatureCollection;
+  manualSelect: (area: MapArea | 'default', properties: MapTopologyProperties) => void;
 
   map: SelectionD3<SVGSVGElement> | null = null;
   g: SelectionD3<SVGGElement> | null = null;
@@ -32,11 +42,15 @@ class Map {
   };
   currentArea: MapArea = 'county';
 
-  static getInstance() {
+  static getInstance(manualSelect: (area: MapArea | 'default', properties: MapTopologyProperties) => void) {
     if (Map.instance === null) {
-      Map.instance = new Map();
+      Map.instance = new Map(manualSelect);
     }
     return Map.instance;
+  }
+
+  constructor(manualSelect: (area: MapArea | 'default', properties: MapTopologyProperties) => void) {
+    this.manualSelect = manualSelect;
   }
 
   setTopology(topology: Topology) {
@@ -118,7 +132,7 @@ class Map {
         const instance = Map.instance;
 
         if (!instance) return;
-        instance.moveToArea(area, this, data);
+        instance.manualSelect(area, data.properties);
       })
       .on('mouseover', (_, data) => {
         this.tooltip?.style('opacity', 1).html(createInvoicingInformation(data.properties));
@@ -211,11 +225,13 @@ class Map {
       town: async () => {
         const { x, y, scale } = this.translate.default;
 
+        this.manualSelect('default', INVOICING.default);
         await this.backArea({ x, y, scale, from: 'town', to: 'county' });
       },
       village: async () => {
         const { x, y, scale } = this.translate.county;
 
+        this.manualSelect('town', (<MapFeature>this.previousPath?.data()[0])?.properties);
         await this.backArea({ x, y, scale, from: 'village', to: 'town' });
         this.currentPath = this.previousPath;
         this.drawBoundary('county', false);
@@ -225,11 +241,6 @@ class Map {
   }
 
   async selectArea({ id, parentId }: MapSelect) {
-    if (!id) {
-      await this.backToPreviousArea();
-      await this.backToPreviousArea();
-      return;
-    }
     const isTargetComplete = await this.checkArea(id);
 
     if (isTargetComplete) return;

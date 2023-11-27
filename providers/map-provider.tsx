@@ -9,7 +9,7 @@ import {
   type Dispatch,
   type SetStateAction,
 } from 'react';
-import { MapTopology, MapTopologyProperties } from '@/types/map';
+import { MapTopology, MapTopologyProperties, MapArea } from '@/types/map';
 import { INVOICING } from '@/configs/Invoicing';
 import type { SelectAreaOption } from '@/types/select';
 
@@ -21,10 +21,15 @@ interface MapContext {
   townOptionsMap?: Record<string, SelectAreaOption[]> | null;
   villageMap?: Record<string, MapTopologyProperties[]> | null;
   proportion: MapTopologyProperties;
+  selectedCounty: SelectAreaOption;
+  selectedTown: SelectAreaOption | null;
   setCounty: Dispatch<SetStateAction<MapTopology | undefined>>;
   setTown: Dispatch<SetStateAction<MapTopology | undefined>>;
   setVillage: Dispatch<SetStateAction<MapTopology | undefined>>;
   setProportion: Dispatch<SetStateAction<MapTopologyProperties>>;
+  setSelectedCounty: Dispatch<SetStateAction<SelectAreaOption>>;
+  setSelectedTown: Dispatch<SetStateAction<SelectAreaOption | null>>;
+  manualSelect: (area: MapArea | 'default', properties: MapTopologyProperties) => void;
 }
 
 const MapContext = createContext({} as MapContext);
@@ -34,6 +39,8 @@ function MapProvider({ children }: PropsWithChildren) {
   const [town, setTown] = useState<MapTopology>();
   const [village, setVillage] = useState<MapTopology>();
   const [proportion, setProportion] = useState<MapTopologyProperties>(INVOICING.default);
+  const [selectedCounty, setSelectedCounty] = useState<SelectAreaOption>({ value: null, label: '全台' });
+  const [selectedTown, setSelectedTown] = useState<SelectAreaOption | null>(null);
 
   const countyOptions = useMemo(() => {
     if (!county) return [{ value: null, label: '全台' }];
@@ -71,6 +78,18 @@ function MapProvider({ children }: PropsWithChildren) {
     );
   }, [village]);
 
+  function manualSelect(area: MapArea | 'default', properties: MapTopologyProperties) {
+    if (area === 'village') return;
+    const manualMap = {
+      county: () => setSelectedCounty({ value: properties, label: properties.countyName }),
+      town: () => setSelectedTown(properties.townName ? { value: properties, label: properties.townName } : null),
+      default: () => setSelectedCounty({ value: null, label: '全台' }),
+    } as const;
+
+    manualMap[area]();
+    setProportion(properties);
+  }
+
   return (
     <MapContext.Provider
       value={{
@@ -81,10 +100,15 @@ function MapProvider({ children }: PropsWithChildren) {
         townOptionsMap,
         villageMap,
         proportion,
+        selectedCounty,
+        selectedTown,
         setCounty,
         setTown,
         setVillage,
         setProportion,
+        setSelectedCounty,
+        setSelectedTown,
+        manualSelect,
       }}
     >
       {children}
