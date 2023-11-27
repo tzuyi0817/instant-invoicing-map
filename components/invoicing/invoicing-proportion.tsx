@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useMemo } from 'react';
 import InvoicingSearch from '@/components/invoicing/invoicing-search';
 import InvoicingInformation from '@/components/invoicing/invoicing-information';
 import InvoicingSupport from '@/components/invoicing/invoicing-support';
@@ -14,8 +14,7 @@ interface ChangeSearchParams {
 }
 
 function InvoicingProportion() {
-  const { townOptionsMap, villageMap, countyOptions } = useMap();
-  const [proportion, setProportion] = useState<MapTopologyProperties>(INVOICING.default);
+  const { townOptionsMap, villageMap, countyOptions, proportion, setProportion } = useMap();
   const neighborhoods = useMemo(() => {
     const { countyId, townId } = proportion;
 

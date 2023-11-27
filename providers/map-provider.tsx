@@ -10,6 +10,7 @@ import {
   type SetStateAction,
 } from 'react';
 import { MapTopology, MapTopologyProperties } from '@/types/map';
+import { INVOICING } from '@/configs/Invoicing';
 import type { SelectAreaOption } from '@/types/select';
 
 interface MapContext {
@@ -19,9 +20,11 @@ interface MapContext {
   countyOptions: Array<SelectAreaOption>;
   townOptionsMap?: Record<string, SelectAreaOption[]> | null;
   villageMap?: Record<string, MapTopologyProperties[]> | null;
+  proportion: MapTopologyProperties;
   setCounty: Dispatch<SetStateAction<MapTopology | undefined>>;
   setTown: Dispatch<SetStateAction<MapTopology | undefined>>;
   setVillage: Dispatch<SetStateAction<MapTopology | undefined>>;
+  setProportion: Dispatch<SetStateAction<MapTopologyProperties>>;
 }
 
 const MapContext = createContext({} as MapContext);
@@ -30,6 +33,7 @@ function MapProvider({ children }: PropsWithChildren) {
   const [county, setCounty] = useState<MapTopology>();
   const [town, setTown] = useState<MapTopology>();
   const [village, setVillage] = useState<MapTopology>();
+  const [proportion, setProportion] = useState<MapTopologyProperties>(INVOICING.default);
 
   const countyOptions = useMemo(() => {
     if (!county) return [{ value: null, label: '全台' }];
@@ -76,9 +80,11 @@ function MapProvider({ children }: PropsWithChildren) {
         countyOptions,
         townOptionsMap,
         villageMap,
+        proportion,
         setCounty,
         setTown,
         setVillage,
+        setProportion,
       }}
     >
       {children}

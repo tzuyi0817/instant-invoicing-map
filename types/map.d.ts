@@ -52,3 +52,8 @@ export interface MapTopologyProperties {
   villageName: string;
   villageId: string;
 }
+
+export interface MapSelect {
+  id: string;
+  parentId: string;
+}

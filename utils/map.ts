@@ -3,7 +3,7 @@ import { feature } from 'topojson-client';
 import { createSvg, createInvoicingInformation } from './d3';
 import { MAP_AREA_COLOR, MAP_CONFIG, type MapConfigKey } from '@/configs/map';
 import type { SelectionD3 } from '@/types/d3';
-import type { Topology, MapFeature, MapSelectArea, MapArea, MapBackArea } from '@/types/map';
+import type { Topology, MapFeature, MapSelectArea, MapArea, MapBackArea, MapSelect } from '@/types/map';
 
 class Map {
   static instance: Map | null = null;
@@ -107,22 +107,18 @@ class Map {
       .append('path')
       .classed(area, true)
       .attr('d', this.path)
+      .attr('data-area', area)
+      .attr('data-id', ({ properties: { countyId, townId, villageId } }) => villageId ?? townId ?? countyId)
       .style('fill', data => {
         const { winner, winnerRate } = data.properties;
 
         return MAP_AREA_COLOR[<'ddp' | 'kmt' | 'pfp'>winner]?.[fillLevel(winnerRate)];
       })
       .on('click', async function (_, data) {
-        if (area === 'village') return;
         const instance = Map.instance;
 
         if (!instance) return;
-        instance.clearBoundary(area);
-        instance.previousPath = instance.currentPath;
-        instance.currentPath = select(this);
-        instance.drawBoundary(area);
-        await instance.clearMap(area);
-        instance.boundsMap(area, data);
+        instance.moveToArea(area, this, data);
       })
       .on('mouseover', (_, data) => {
         this.tooltip?.style('opacity', 1).html(createInvoicingInformation(data.properties));
@@ -136,6 +132,16 @@ class Map {
       .on('mouseout', () => {
         this.tooltip?.style('opacity', 0);
       });
+  }
+
+  async moveToArea(area: MapArea, path: SVGPathElement, data: MapFeature) {
+    if (area === 'village') return;
+    this.clearBoundary(area);
+    this.previousPath = this.currentPath;
+    this.currentPath = select(path);
+    this.drawBoundary(area);
+    await this.clearMap(area);
+    await this.boundsMap(area, data);
   }
 
   clearArea(area: MapArea, duration = 300) {
@@ -189,33 +195,55 @@ class Map {
     this.currentPath.classed(`${area}-active`, false).classed('county-active', false);
   }
 
-  backArea({ x, y, scale, from, to }: MapBackArea) {
+  async backArea({ x, y, scale, from, to }: MapBackArea) {
     this.clearArea(from);
     this.x = x;
     this.y = y;
     this.scale = scale;
     this.clearBoundary(to);
-    this.translateMap();
+    await this.translateMap();
     this.currentArea = to;
   }
 
   backToPreviousArea() {
     const backAreaMap = {
       county: null,
-      town: () => {
+      town: async () => {
         const { x, y, scale } = this.translate.default;
 
-        this.backArea({ x, y, scale, from: 'town', to: 'county' });
+        await this.backArea({ x, y, scale, from: 'town', to: 'county' });
       },
-      village: () => {
+      village: async () => {
         const { x, y, scale } = this.translate.county;
 
-        this.backArea({ x, y, scale, from: 'village', to: 'town' });
+        await this.backArea({ x, y, scale, from: 'village', to: 'town' });
         this.currentPath = this.previousPath;
         this.drawBoundary('county', false);
       },
     };
-    backAreaMap[this.currentArea]?.();
+    return backAreaMap[this.currentArea]?.();
+  }
+
+  async selectArea({ id, parentId }: MapSelect) {
+    if (!id) {
+      await this.backToPreviousArea();
+      await this.backToPreviousArea();
+      return;
+    }
+    const isTargetComplete = await this.checkArea(id);
+
+    if (isTargetComplete) return;
+    await this.checkArea(parentId);
+    this.checkArea(id);
+  }
+
+  async checkArea(id: string) {
+    const target = document.querySelector<SVGPathElement>(`[data-id="${id}"]`);
+    if (!target) return false;
+    const area = target.dataset.area as MapArea;
+
+    await this.moveToArea(area, target, (<MapFeature>target).__data__);
+    return true;
   }
 
   translateMap(duration = 800) {

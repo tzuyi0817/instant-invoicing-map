@@ -8,7 +8,7 @@ import Map from '@/utils/map';
 import Arrow from '@/assets/images/svg/arrow.svg';
 
 function TaiwanMap() {
-  const { county, town, village } = useMap();
+  const { county, town, village, proportion } = useMap();
   const map = Map.getInstance();
 
   useResize(rerenderMap);
@@ -19,6 +19,15 @@ function TaiwanMap() {
     map.drawMap();
     return () => map.resetMap();
   }, [county, town, village]);
+
+  useEffect(() => {
+    const { townId, countyId } = proportion;
+
+    map.selectArea({
+      id: townId ?? countyId,
+      parentId: countyId,
+    });
+  }, [proportion]);
 
   function backToPreviousArea() {
     map.backToPreviousArea();
