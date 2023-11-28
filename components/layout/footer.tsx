@@ -55,7 +55,7 @@ function Footer() {
             </motion.h2>
           </Link>
         )}
-        <div className="text-xs md:flex md:text-base">
+        <div className={`text-xs md:flex md:text-base ${isHomePage ? '' : 'lg:justify-center lg:flex-1'}`}>
           <p className="px-[10px] mb-[10px] md:mb-0">樹懶設計 shulian@gmail.com</p>
           <p className="px-[10px]">© 2023 樹懶設計 shulian 版權所有</p>
         </div>

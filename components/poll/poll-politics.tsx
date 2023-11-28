@@ -36,6 +36,7 @@ function PollPolitics() {
       className="flex overflow-x-scroll snap-x snap-mandatory px-4 gap-4 no-scrollbar md:px-[30px] md:gap-[30px] lg:px-[100px] lg:gap-[100px]"
     >
       <PollPoliticsContainer ref={pfpRef}>
+        <section id="pfp"></section>
         <PollPoliticsHeader
           image={Pfp}
           Symbol={PfpSymbol}
@@ -53,6 +54,7 @@ function PollPolitics() {
         <ArrowIcon scrollNext={() => scrollNext(kmtRef)} />
       </PollPoliticsContainer>
       <PollPoliticsContainer ref={kmtRef}>
+        <section id="kmt"></section>
         <PollPoliticsHeader
           image={Kmt}
           Symbol={KmtSymbol}
@@ -70,6 +72,7 @@ function PollPolitics() {
         <ArrowIcon scrollNext={() => scrollNext(ddpRef)} />
       </PollPoliticsContainer>
       <PollPoliticsContainer ref={ddpRef}>
+        <section id="ddp"></section>
         <PollPoliticsHeader
           image={Ddp}
           Symbol={DdpSymbol}
