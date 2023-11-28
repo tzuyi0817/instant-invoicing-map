@@ -18,7 +18,7 @@ function InvoicingInformation({ proportion }: Props) {
   }, [proportion]);
 
   return (
-    <div className="border-2 border-black mt-4">
+    <div className="border-2 border-black">
       <div className="invoicing-information-title">{title}</div>
       <div className="px-4 py-8">
         <InvoicingBar

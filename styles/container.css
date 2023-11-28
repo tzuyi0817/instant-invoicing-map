@@ -2,6 +2,6 @@
 
 @layer components {
   .container {
-    @apply min-h-[calc(100vh-138px)] mx-auto pt-14 overflow-hidden md:pt-16 lg:pt-[76px] lg:min-h-[calc(100vh-90px)];
+    @apply min-h-[calc(100vh-138px)] mx-auto pt-14 overflow-hidden md:pt-16 lg:pt-[76px] lg:min-h-[calc(100vh-68px)];
   }
 }

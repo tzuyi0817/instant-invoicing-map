@@ -1,6 +1,7 @@
 'use client';
 
 import { useMemo } from 'react';
+import { motion } from 'framer-motion';
 import InvoicingMap from '@/components/invoicing/invoicing-map';
 import InvoicingSearch from '@/components/invoicing/invoicing-search';
 import InvoicingInformation from '@/components/invoicing/invoicing-information';
@@ -29,8 +30,15 @@ function InvoicingProportion() {
   }
 
   return (
-    <div className="flex flex-col lg:gap-6 lg:flex-row-reverse">
-      <div className="flex flex-col gap-2 md:gap-4 lg:flex-col-reverse lg:flex-1">
+    <div className="flex flex-col gap-4 lg:gap-6 lg:flex-row-reverse lg:items-center">
+      <motion.div
+        className="flex flex-col gap-2 md:gap-4 lg:flex-col-reverse lg:flex-1"
+        initial={{ translateX: '30%' }}
+        animate={{
+          translateX: '0%',
+          transition: { type: 'spring', stiffness: 500 },
+        }}
+      >
         <InvoicingMap />
         <div className="px-[10px] md:px-[30px] lg:px-0">
           <InvoicingSearch
@@ -38,11 +46,18 @@ function InvoicingProportion() {
             changeSearch={changeSearch}
           />
         </div>
-      </div>
-      <div className="px-[10px] md:px-[30px] lg:px-0 lg:w-[480px]">
+      </motion.div>
+      <motion.div
+        className="px-[10px] md:px-[30px] lg:px-0 lg:w-[480px]"
+        initial={{ translateX: '-30%' }}
+        animate={{
+          translateX: '0%',
+          transition: { type: 'spring', stiffness: 500 },
+        }}
+      >
         <InvoicingInformation proportion={proportion} />
         <InvoicingSupport neighborhoods={neighborhoods} />
-      </div>
+      </motion.div>
     </div>
   );
 }
