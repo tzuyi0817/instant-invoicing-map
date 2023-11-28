@@ -4,7 +4,7 @@
   .home-vote-ratio {
     @apply px-[4vw] 
     border-b-[3px] 
-    border-black 
+    border-black
     lg:w-[364px] 
     lg:h-[364px]
     lg:absolute 

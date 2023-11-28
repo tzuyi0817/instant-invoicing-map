@@ -1,5 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import PaperPresidential from '@/assets/images/layout/paper-presidential.png';
 import PresidentialPalace from '@/assets/images/layout/presidential-palace.png';
 import { INVOICING } from '@/configs/Invoicing';
@@ -9,7 +12,14 @@ function HomeVoteRatio() {
   const { kmt, ddp, pfp } = INVOICING.default;
 
   return (
-    <div className="home-vote-ratio">
+    <motion.div
+      className="home-vote-ratio"
+      initial={{ translateX: '70%' }}
+      animate={{
+        translateX: '0%',
+        transition: { type: 'spring', stiffness: 500 },
+      }}
+    >
       <div className="pt-7 border-x border-black flex flex-col items-center h-full lg:border-none">
         <div className="w-[62vw] h-[31vw] bg-black rounded-t-full lg:w-3/4"></div>
         <div className="relative h-[31vw] w-full">
@@ -67,7 +77,7 @@ function HomeVoteRatio() {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

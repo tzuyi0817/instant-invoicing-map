@@ -15,7 +15,7 @@ function Footer() {
         {isHomePage && (
           <motion.h2
             className="px-[10px] flex gap-1 items-center"
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
