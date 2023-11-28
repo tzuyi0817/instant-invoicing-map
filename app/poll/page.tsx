@@ -3,8 +3,8 @@ import PollPolitics from '@/components/poll/poll-politics';
 
 function Page() {
   return (
-    <div>
-      <div className="p-4 md:p-[30px]">
+    <div className="pb-4 md:pb-12 lg:pb-16">
+      <div className="p-4 max-w-[1079px] mx-auto md:px-[30px] md:py-[50px] lg:py-[85px]">
         <h1>2019年選前民調</h1>
         <PollBar />
         <p className="text-xs md:text-2xl">

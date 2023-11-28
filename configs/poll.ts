@@ -60,8 +60,8 @@ export const POLL_POLITICS_MAP = {
     ],
     labour: [
       { question: '對一例一休的看法為何？', answer: '不同產業能用不同標準，勞資相互和諧協調。' },
-      { question: '如何解決台灣勞工低薪問題？', answer: '' },
-      { question: '對青年就業問題有何規劃？', answer: '' },
+      { question: '如何解決台灣勞工低薪問題？', answer: '-----' },
+      { question: '對青年就業問題有何規劃？', answer: '-----' },
     ],
     industrialEconomy: [
       { question: '對區域經濟整合有何主張？', answer: '持續用力推動簽署CPTPP、RCEP等區域經濟協議。' },
@@ -76,7 +76,7 @@ export const POLL_POLITICS_MAP = {
       { question: '如何規劃整體觀光政策？', answer: '我已經台灣走透透，規劃兩岸旅遊一定沒問題。' },
     ],
     energyPolicy: [
-      { question: '對台灣能源發展的目標策略為何？', answer: '' },
+      { question: '對台灣能源發展的目標策略為何？', answer: '-----' },
       { question: '對核能的看法為何？', answer: '擔心怕怕。' },
     ],
     diplomacyAndCrossStrait: [
@@ -86,7 +86,7 @@ export const POLL_POLITICS_MAP = {
         answer:
           '兩岸爭議須堅持以和平、非武力、對等協商的方式解決，對台灣自由、民主、法治、多元的生活方式也絕不妥協退讓。',
       },
-      { question: '如何因應斷交危機？', answer: '' },
+      { question: '如何因應斷交危機？', answer: '-----' },
       { question: '如何看待香港抗爭？', answer: '相互硬槓對撞，對香港一點好處都沒有。' },
     ],
     sameMarriage: [{ question: '對同婚的看法為何？', answer: '台灣多元有包容心，大家慢慢成長也ok。' }],
@@ -161,7 +161,7 @@ export const POLL_POLITICS_MAP = {
         answer:
           '「2025非核家園」的目標期程延至2035年，屆時能源配比50%是沒有污染的能源、50%是燃煤與天然氣，並落實以核養綠策略。',
       },
-      { question: '對核能的看法為何？', answer: '' },
+      { question: '對核能的看法為何？', answer: '-----' },
     ],
     diplomacyAndCrossStrait: [
       {
@@ -206,20 +206,20 @@ export const POLL_POLITICS_MAP = {
   },
   ddp: {
     education: [
-      { question: '對雙語教育的規劃為何？', answer: '' },
+      { question: '對雙語教育的規劃為何？', answer: '-----' },
       {
         question: '如何看待12年國教新課綱？',
-        answer: '',
+        answer: '-----',
       },
       {
         question: '對於學生國際交流政策的看法為何？',
-        answer: '',
+        answer: '-----',
       },
     ],
     labour: [
-      { question: '對一例一休的看法為何？', answer: '' },
-      { question: '如何解決台灣勞工低薪問題？', answer: '' },
-      { question: '對青年就業問題有何規劃？', answer: '' },
+      { question: '對一例一休的看法為何？', answer: '-----' },
+      { question: '如何解決台灣勞工低薪問題？', answer: '-----' },
+      { question: '對青年就業問題有何規劃？', answer: '-----' },
     ],
     industrialEconomy: [
       { question: '對區域經濟整合有何主張？', answer: '亞洲各國必須加速並確保區域經濟整合持續進行。' },
@@ -245,14 +245,14 @@ export const POLL_POLITICS_MAP = {
           '除「長照2.0」提供失能身障人士「個別化服務計畫」，蔡政府另修法，減輕重度以上身心障礙者分期繳內國民年金的經濟壓力。未來4年目標則包括整合身心障礙者福利服務與失能者長期照顧服務、減輕身心障礙機構經營壓力、增置人力，提升照顧品質等等。',
       },
     ],
-    transportationAndTourism: [{ question: '如何規劃整體觀光政策？', answer: '' }],
+    transportationAndTourism: [{ question: '如何規劃整體觀光政策？', answer: '-----' }],
     energyPolicy: [
       {
         question: '對台灣能源發展的目標策略為何？',
         answer:
           '目前是「非核家園」，下一步希望成為「亞洲綠能發展中心」，主推太陽能與離岸風電，同時，為因應氣候變遷帶來的挑戰，須努力建構下世代智慧電網，以提升電力品質，滿足大量綠能併網的需求。',
       },
-      { question: '對核能的看法為何？', answer: '' },
+      { question: '對核能的看法為何？', answer: '-----' },
     ],
     diplomacyAndCrossStrait: [
       {
@@ -271,13 +271,13 @@ export const POLL_POLITICS_MAP = {
       },
       { question: '如何看待香港抗爭？', answer: '希望香港社會可以趕快回歸穩定狀態，呼籲對方政府傾聽人民要求。' },
     ],
-    sameMarriage: [{ question: '對同婚的看法為何？', answer: '' }],
-    newResidentPolicy: [{ question: '有何新住民政策？', answer: '' }],
-    nationalDefense: [{ question: '整體國防政策為何？', answer: '' }],
+    sameMarriage: [{ question: '對同婚的看法為何？', answer: '-----' }],
+    newResidentPolicy: [{ question: '有何新住民政策？', answer: '-----' }],
+    nationalDefense: [{ question: '整體國防政策為何？', answer: '-----' }],
     constitutionalReform: [
       {
         question: '對憲改的看法為何？',
-        answer: '',
+        answer: '-----',
       },
     ],
   },

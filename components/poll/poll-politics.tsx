@@ -1,4 +1,6 @@
-import { PropsWithChildren } from 'react';
+'use client';
+
+import { useRef, forwardRef, type PropsWithChildren, type RefObject, type LegacyRef } from 'react';
 import PollPoliticsHeader from '@/components/poll/poll-politics-header';
 import PollPoliticsDescribe from '@/components/poll/poll-politics-describe';
 import { POLL_POLITICS_MAP } from '@/configs/poll';
@@ -8,11 +10,32 @@ import Kmt from '@/assets/images/candidate/kmt-dark.png';
 import KmtSymbol from '@/assets/images/icon/kmt-symbol.svg';
 import Ddp from '@/assets/images/candidate/ddp-dark.png';
 import DdpSymbol from '@/assets/images/icon/ddp-symbol.svg';
+import Arrow from '@/assets/images/svg/arrow.svg';
+
+const PollPoliticsContainer = forwardRef(PollPoliticsDom);
 
 function PollPolitics() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const pfpRef = useRef<HTMLDivElement>(null);
+  const kmtRef = useRef<HTMLDivElement>(null);
+  const ddpRef = useRef<HTMLDivElement>(null);
+
+  function scrollNext(to: RefObject<HTMLDivElement>) {
+    requestAnimationFrame(() => {
+      if (!to.current) return;
+      scrollRef.current?.scrollTo({
+        left: to.current.offsetLeft,
+        behavior: 'smooth',
+      });
+    });
+  }
+
   return (
-    <div className="flex overflow-x-scroll snap-x snap-mandatory">
-      <PollPoliticsContainer>
+    <div
+      ref={scrollRef}
+      className="flex overflow-x-scroll snap-x snap-mandatory px-4 gap-4 no-scrollbar md:px-[30px] md:gap-[30px] lg:px-[100px] lg:gap-[100px]"
+    >
+      <PollPoliticsContainer ref={pfpRef}>
         <PollPoliticsHeader
           image={Pfp}
           Symbol={PfpSymbol}
@@ -27,8 +50,9 @@ function PollPolitics() {
           border="border-deep-orange"
           bg="bg-deep-orange"
         />
+        <ArrowIcon scrollNext={() => scrollNext(kmtRef)} />
       </PollPoliticsContainer>
-      <PollPoliticsContainer>
+      <PollPoliticsContainer ref={kmtRef}>
         <PollPoliticsHeader
           image={Kmt}
           Symbol={KmtSymbol}
@@ -43,8 +67,9 @@ function PollPolitics() {
           border="border-deep-blue"
           bg="bg-deep-blue"
         />
+        <ArrowIcon scrollNext={() => scrollNext(ddpRef)} />
       </PollPoliticsContainer>
-      <PollPoliticsContainer>
+      <PollPoliticsContainer ref={ddpRef}>
         <PollPoliticsHeader
           image={Ddp}
           Symbol={DdpSymbol}
@@ -59,13 +84,30 @@ function PollPolitics() {
           border="border-deep-green"
           bg="bg-deep-green"
         />
+        <ArrowIcon scrollNext={() => scrollNext(pfpRef)} />
       </PollPoliticsContainer>
     </div>
   );
 }
 
-function PollPoliticsContainer({ children }: PropsWithChildren) {
-  return <div className="px-4 min-w-full snap-center">{children}</div>;
+function PollPoliticsDom({ children }: PropsWithChildren, ref: LegacyRef<HTMLDivElement>) {
+  return (
+    <div
+      className="min-w-full snap-center lg:min-w-[1200px]"
+      ref={ref}
+    >
+      {children}
+    </div>
+  );
+}
+
+function ArrowIcon({ scrollNext }: { scrollNext: () => void }) {
+  return (
+    <Arrow
+      className="icon w-4 fill-black rotate-180 md:w-9"
+      onClick={scrollNext}
+    />
+  );
 }
 
 export default PollPolitics;

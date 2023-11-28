@@ -32,9 +32,9 @@ function PollBar() {
   }
 
   return (
-    <div className="py-5">
-      <div className="flex justify-between gap-7 h-fit">
-        <div className="poll-bar-container flex-1">
+    <div className="py-5 md:py-10 lg:py-[60px]">
+      <div className="flex justify-between gap-7 h-fit lg:items-center">
+        <div className="poll-bar-container flex-1 lg:min-h-[490px]">
           <svg className="poll-bar w-full h-full"></svg>
         </div>
         <div className="flex flex-col gap-2 md:gap-7">
