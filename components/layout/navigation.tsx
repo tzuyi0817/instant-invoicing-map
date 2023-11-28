@@ -62,7 +62,7 @@ function Navigation({ toggle }: Props) {
 
   return (
     <>
-      <ul className="hidden lg:text-lg lg:flex lg:gap-10 lg:px-20">
+      <ul className="hidden lg:text-lg lg:flex lg:gap-10 lg:pr-20">
         <li className={`${segment === 'invoicing' ? 'text-primary-red' : 'hover:text-primary-red'} transition-colors`}>
           <Link href="/invoicing">開票地圖</Link>
         </li>

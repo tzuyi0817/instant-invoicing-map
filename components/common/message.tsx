@@ -1,5 +1,5 @@
-import { useEffect, type PropsWithChildren } from 'react';
-import { motion, useAnimationControls } from 'framer-motion';
+import type { PropsWithChildren } from 'react';
+import { motion } from 'framer-motion';
 import BlackMessage from '@/assets/images/loading/black-message.svg';
 import WhiteMessage from '@/assets/images/loading/white-message.svg';
 
@@ -13,23 +13,14 @@ interface Props {
 }
 
 function Message({ children, isWhite, className, rotateClass, ...translate }: PropsWithChildren<Props>) {
-  const controls = useAnimationControls();
-
-  async function messageEffect() {
-    controls.start({
-      ...translate,
-      scale: 1.5,
-      transition: { type: 'spring', stiffness: 500, repeat: Infinity, repeatType: 'mirror' },
-    });
-  }
-
-  useEffect(() => {
-    messageEffect();
-  }, []);
   return (
     <motion.div
       className={className}
-      animate={controls}
+      animate={{
+        ...translate,
+        scale: 1.5,
+        transition: { type: 'spring', stiffness: 500, repeat: Infinity, repeatType: 'mirror' },
+      }}
     >
       <div className="relative text-center">
         {isWhite ? <WhiteMessage className={rotateClass} /> : <BlackMessage className={rotateClass} />}

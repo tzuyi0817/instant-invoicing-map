@@ -3,26 +3,24 @@ import Link from 'next/link';
 import PaperPresidential from '@/assets/images/layout/paper-presidential.png';
 import PresidentialPalace from '@/assets/images/layout/presidential-palace.png';
 import { INVOICING } from '@/configs/Invoicing';
-
-const PseudoElement =
-  'before:content-[""] before:transition-transform before:h-4 before:border-l-[0.5px] before:absolute before:border-black before:-top-4';
+import '@/styles/home/vote-ratio.css';
 
 function HomeVoteRatio() {
   const { kmt, ddp, pfp } = INVOICING.default;
 
   return (
-    <div className="px-[4vw] border-b-[3px] border-black">
-      <div className="pt-7 border-x border-black flex flex-col items-center">
-        <div className="w-[62vw] h-[31vw] bg-black rounded-t-full"></div>
+    <div className="home-vote-ratio">
+      <div className="pt-7 border-x border-black flex flex-col items-center h-full lg:border-none">
+        <div className="w-[62vw] h-[31vw] bg-black rounded-t-full lg:w-3/4"></div>
         <div className="relative h-[31vw] w-full">
-          <div className="absolute w-full bottom-[52px]">
+          <div className="absolute w-full bottom-[52px] md:bottom-[70px] lg:bottom-[52px]">
             <Image
               src={PaperPresidential}
               alt="paper presidential"
               className="w-full object-cover"
             />
           </div>
-          <div className="absolute px-[3vw] w-full bottom-5">
+          <div className="absolute px-[3vw] w-full bottom-5 lg:px-3">
             <Image
               src={PresidentialPalace}
               alt="presidential palace"
@@ -43,19 +41,19 @@ function HomeVoteRatio() {
             ></div>
             <ul className="w-full absolute bottom-0 left-0 flex text-xs px-4">
               <li
-                className={`${PseudoElement}`}
+                className="home-vote-ratio-line"
                 style={{ width: `${ddp}%` }}
               >
                 蔡英文 {ddp}%
               </li>
               <li
-                className={`${PseudoElement}`}
+                className="home-vote-ratio-line"
                 style={{ width: `${kmt}%` }}
               >
                 韓國瑜 {kmt}%
               </li>
               <li
-                className={`whitespace-nowrap ${PseudoElement}`}
+                className="home-vote-ratio-line whitespace-nowrap"
                 style={{ width: `${pfp}%` }}
               >
                 <p className="-translate-x-[300%]">宋楚瑜 {pfp}%</p>

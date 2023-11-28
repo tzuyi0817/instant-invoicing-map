@@ -11,7 +11,7 @@ function Footer() {
 
   return (
     <AnimatePresence mode="wait">
-      <footer className="w-full px-6 py-[22px] bg-black text-white overflow-hidden flex flex-col gap-7">
+      <footer className="w-full px-6 py-[22px] bg-black text-white overflow-hidden flex flex-col gap-7 lg:flex-row lg:items-center lg:justify-between">
         {isHomePage && (
           <motion.h2
             className="px-[10px] flex gap-1 items-center"
@@ -56,7 +56,7 @@ function Footer() {
           </motion.h2>
         )}
         <div className="text-xs md:flex md:text-base">
-          <p className="px-[10px] mb-[10px]">樹懶設計 shulian@gmail.com</p>
+          <p className="px-[10px] mb-[10px] md:mb-0">樹懶設計 shulian@gmail.com</p>
           <p className="px-[10px]">© 2023 樹懶設計 shulian 版權所有</p>
         </div>
       </footer>

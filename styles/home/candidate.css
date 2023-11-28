@@ -3,26 +3,26 @@
 @layer components {
   .home-candidate {
     &-kmt {
-      @apply w-1/2 relative -top-10 -left-3 transition-transform;
+      @apply w-1/2 relative -top-10 -left-3 cursor-pointer lg:left-[5%] lg:top-0;
       &:hover > img {
-        @apply -translate-y-3;
+        @apply -translate-y-3 transition-all;
       }
     }
     &-ddp {
-      @apply w-1/2 absolute bottom-0 z-[1];
+      @apply w-1/2 absolute bottom-0 z-[1] cursor-pointer;
       &:hover {
         img {
-          @apply -translate-y-3;
+          @apply -translate-y-3 transition-all;
         }
         svg {
-          @apply rotate-12;
+          @apply rotate-12 transition-all;
         }
       }
     }
     &-pfp {
-      @apply w-1/2 relative -right-3 -top-2 scale-[1.2];
+      @apply w-1/2 relative -right-3 -top-2 scale-[1.2] cursor-pointer lg:scale-100 lg:right-[10%];
       &:hover > img {
-        @apply -rotate-6;
+        @apply -rotate-6 transition-all;
       }
     }
   }

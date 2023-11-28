@@ -1,0 +1,31 @@
+@import 'tailwindcss/components';
+
+@layer components {
+  .home-vote-ratio {
+    @apply px-[4vw] 
+    border-b-[3px] 
+    border-black 
+    lg:w-[364px] 
+    lg:h-[364px]
+    lg:absolute 
+    lg:z-[15] 
+    lg:px-0
+    lg:border-[3px] 
+    lg:right-[15%]
+    lg:top-24
+    lg:bg-white;
+    &-line {
+      @apply before:content-[""]
+       before:transition-transform 
+       before:h-4 
+       before:border-l-[0.5px] 
+       before:absolute 
+       before:border-black 
+       before:-top-4
+       md:before:h-6
+       md:before:-top-6
+       lg:before:-top-4
+       lg:before:h-4;
+    }
+  }
+}
