@@ -26,7 +26,7 @@ function InvoicingInformation({ proportion }: Props) {
           proportion={proportion}
           showProportion
         />
-        <div className="py-3">
+        <div className="pt-3">
           <div className="invoicing-information-candidate">
             <div className="invoicing-information-content">
               <Image

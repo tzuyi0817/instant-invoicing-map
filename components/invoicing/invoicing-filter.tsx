@@ -39,7 +39,7 @@ function InvoicingFilter({ filter, setFilter }: Props) {
       className="border border-black py-3 px-7 flex items-center gap-2 mr-3 cursor-pointer hover:bg-gray-100 transition-colors"
       onClick={event => resetFilter(event, { ddp: false, kmt: false, pfp: false })}
     >
-      <p>最支持</p>
+      <p className="lg:text-lg">最支持</p>
       <div className="flex">
         <div
           className={`bg-deep-green ${filterStyle} ${filter.ddp ? 'w-[104px] duration-300' : 'w-6 duration-0'} z-[2]`}

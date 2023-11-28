@@ -138,10 +138,10 @@ class Map {
         this.tooltip?.style('opacity', 1).html(createInvoicingInformation(data.properties));
       })
       .on('mousemove', event => {
-        const x = event.pageX + 10;
+        const x = event.offsetX + 10;
         const max = this.width - 240;
 
-        this.tooltip?.style('left', `${x > max ? max : x}px`).style('top', `${event.pageY + 10}px`);
+        this.tooltip?.style('left', `${x > max ? max : x}px`).style('top', `${event.offsetY + 10}px`);
       })
       .on('mouseout', () => {
         this.tooltip?.style('opacity', 0);

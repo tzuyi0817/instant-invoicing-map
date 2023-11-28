@@ -29,18 +29,18 @@ function InvoicingSupport({ neighborhoods }: Props) {
   }, [filter, neighborhoods]);
 
   return (
-    <div className="pl-6 pr-3 py-8 border-black border-x-2 border-b-2">
+    <div className="pl-6 pr-3 pt-8 pb-3 border-black border-x-2 border-b-2">
       <InvoicingFilter
         filter={filter}
         setFilter={setFilter}
       />
-      <div className="mt-4">
+      <div className="mt-3">
         <div className="flex pr-3">
           <p className="text-xs text-black/50 w-14 md:text-base md:w-20">地區</p>
           <p className="text-xs text-black/50 md:text-base">得票占比</p>
         </div>
         <AnimatePresence mode="wait">
-          <ul className="mt-4 flex flex-col gap-5 max-h-[280px] overflow-y-scroll">
+          <ul className="mt-3 flex flex-col gap-4 h-[260px] overflow-y-scroll">
             {filterNeighborhoods.length ? (
               filterNeighborhoods.map((proportion, index) => {
                 const { countyId, townId, villageId, countyName, townName, villageName } = proportion ?? {};

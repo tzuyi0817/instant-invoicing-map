@@ -1,6 +1,7 @@
 'use client';
 
 import { useMemo } from 'react';
+import InvoicingMap from '@/components/invoicing/invoicing-map';
 import InvoicingSearch from '@/components/invoicing/invoicing-search';
 import InvoicingInformation from '@/components/invoicing/invoicing-information';
 import InvoicingSupport from '@/components/invoicing/invoicing-support';
@@ -28,13 +29,20 @@ function InvoicingProportion() {
   }
 
   return (
-    <div className="px-[10px] md:px-[30px]">
-      <InvoicingSearch
-        options={{ townOptionsMap, countyOptions }}
-        changeSearch={changeSearch}
-      />
-      <InvoicingInformation proportion={proportion} />
-      <InvoicingSupport neighborhoods={neighborhoods} />
+    <div className="flex flex-col lg:gap-6 lg:flex-row-reverse">
+      <div className="flex flex-col gap-2 md:gap-4 lg:flex-col-reverse lg:flex-1">
+        <InvoicingMap />
+        <div className="px-[10px] md:px-[30px] lg:px-0">
+          <InvoicingSearch
+            options={{ townOptionsMap, countyOptions }}
+            changeSearch={changeSearch}
+          />
+        </div>
+      </div>
+      <div className="px-[10px] md:px-[30px] lg:px-0 lg:w-[480px]">
+        <InvoicingInformation proportion={proportion} />
+        <InvoicingSupport neighborhoods={neighborhoods} />
+      </div>
     </div>
   );
 }

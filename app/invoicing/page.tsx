@@ -1,12 +1,10 @@
-import InvoicingMap from '@/components/invoicing/invoicing-map';
 import InvoicingProportion from '@/components/invoicing/invoicing-proportion';
 
 function Invoicing() {
   return (
-    <>
-      <InvoicingMap />
+    <div className="pb-4 md:pb-12">
       <InvoicingProportion />
-    </>
+    </div>
   );
 }
 

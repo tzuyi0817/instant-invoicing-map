@@ -31,7 +31,7 @@ function InvoicingSearch({ options: { countyOptions, townOptionsMap }, changeSea
   }, [selectedCounty]);
 
   return (
-    <div className="flex items-center justify-between border-2 border-x-black border-t-black border-b-transparent px-5 pt-4 pb-3">
+    <div className="flex items-center justify-between border-2 border-x-black border-t-black border-b-transparent px-5 pt-3 pb-2 lg:px-20">
       <p className="text-xs md:text-lg">搜尋鄰里</p>
       <div className="flex gap-2">
         <Select
