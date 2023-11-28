@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { useSelectedLayoutSegment } from 'next/navigation';
 import { motion } from 'framer-motion';
 import MenuPresidential from '@/assets/images/layout/menu-presidential.png';
 import MenuBackground from '@/assets/images/layout/menu-background.svg';
@@ -57,8 +58,19 @@ const liVariants = {
 };
 
 function Navigation({ toggle }: Props) {
+  const segment = useSelectedLayoutSegment();
+
   return (
     <>
+      <ul className="hidden lg:text-lg lg:flex lg:gap-10 lg:px-20">
+        <li className={`${segment === 'invoicing' ? 'text-primary-red' : 'hover:text-primary-red'} transition-colors`}>
+          <Link href="/invoicing">開票地圖</Link>
+        </li>
+        <li className={`${segment === 'poll' ? 'text-primary-red' : 'hover:text-primary-red'} transition-colors`}>
+          <Link href="/poll">候選人政見</Link>
+        </li>
+      </ul>
+
       <motion.div
         className="bg-primary-red fixed top-0 left-0 right-0 bottom-0 -z-[1]"
         variants={sidebar}

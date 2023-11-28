@@ -13,7 +13,7 @@ function Header() {
       <motion.nav
         initial={false}
         animate={isOpen ? 'open' : 'closed'}
-        className="flex justify-between items-center px-4 py-3"
+        className="flex justify-between items-center px-4 py-3 lg:px-6"
       >
         <Logo />
         <Navigation toggle={() => toggleOpen()} />

@@ -22,7 +22,10 @@ const Path = (props: PathProps) => (
 
 function MenuToggle({ toggle }: Props) {
   return (
-    <button onClick={toggle}>
+    <button
+      className="lg:hidden"
+      onClick={toggle}
+    >
       <svg
         width="33"
         height="32"
