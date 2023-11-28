@@ -35,8 +35,9 @@ function InvoicingProportion() {
         className="flex flex-col gap-2 md:gap-4 lg:flex-col-reverse lg:flex-1"
         initial={{ translateX: '30%' }}
         animate={{
-          translateX: '0%',
+          translateX: 'none',
           transition: { type: 'spring', stiffness: 500 },
+          transitionEnd: { transform: 'none' },
         }}
       >
         <InvoicingMap />

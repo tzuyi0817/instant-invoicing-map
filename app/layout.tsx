@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <PrefetchMap />
         </MapProvider>
         <Footer />
-        {/* <Loading /> */}
+        <Loading />
       </body>
     </html>
   );
