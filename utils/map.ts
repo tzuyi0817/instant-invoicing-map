@@ -186,8 +186,8 @@ class Map {
     const [[x1, y1], [x2, y2]] = bounds;
     const distanceX = x2 - x1;
     const distanceY = y2 - y1;
-    const centerX = x1 + distanceX / 2;
-    const centerY = y1 + distanceY / 2;
+    const centerX = (x1 + x2) / 2;
+    const centerY = (y1 + y2) / 2;
 
     this.scale = 0.8 / Math.max(distanceX / this.width, distanceY / this.height);
     this.x = this.width / 2 - this.scale * centerX;
