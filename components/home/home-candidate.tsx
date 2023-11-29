@@ -38,6 +38,7 @@ function HomeCandidate() {
             src={Kmt}
             alt="KMT"
             priority
+            placeholder="blur"
           />
           <KmtBtn className="block absolute -bottom-10 left-7 w-[122px] md:w-[205px] lg:w-[302px] lg:left-[10%]" />
         </Link>
@@ -52,6 +53,7 @@ function HomeCandidate() {
             src={Ddp}
             alt="DDP"
             priority
+            placeholder="blur"
           />
         </Link>
         <Link
@@ -63,6 +65,7 @@ function HomeCandidate() {
             src={Pfp}
             alt="PFP"
             priority
+            placeholder="blur"
           />
           <PfpBtn className="absolute bottom-3 right-0 w-[120px] md:w-[202px] md:bottom-8 lg:w-[298px] lg:right-[15%] lg:bottom-0" />
         </Link>

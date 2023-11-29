@@ -33,6 +33,7 @@ function InvoicingInformation({ proportion }: Props) {
                 src={ddpAvatar}
                 alt="ddp avatar"
                 className="w-12"
+                placeholder="blur"
               />
               <p>蔡英文得票率</p>
             </div>
@@ -47,6 +48,7 @@ function InvoicingInformation({ proportion }: Props) {
                 src={kmtAvatar}
                 alt="kmt avatar"
                 className="w-12"
+                placeholder="blur"
               />
               <p>韓國瑜得票率</p>
             </div>
@@ -61,6 +63,7 @@ function InvoicingInformation({ proportion }: Props) {
                 src={pfpAvatar}
                 alt="pfp avatar"
                 className="w-12"
+                placeholder="blur"
               />
               <p>宋楚瑜得票率</p>
             </div>

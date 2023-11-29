@@ -28,6 +28,7 @@ function HomeVoteRatio() {
               src={PaperPresidential}
               alt="paper presidential"
               className="w-full object-cover"
+              placeholder="blur"
             />
           </div>
           <div className="absolute px-[3vw] w-full bottom-5 lg:px-3">
@@ -36,6 +37,7 @@ function HomeVoteRatio() {
               alt="presidential palace"
               className="w-full object-cover"
               priority
+              placeholder="blur"
             />
             <div
               className="absolute bottom-0 left-3 w-[calc(100%-24px)] h-full opacity-50"

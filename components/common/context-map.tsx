@@ -15,7 +15,7 @@ function ContextMap({ topology }: Props) {
     setCounty(topology.county);
     setTown(topology.town);
     setVillage(topology.village);
-  }, []);
+  }, [topology]);
 
   return null;
 }

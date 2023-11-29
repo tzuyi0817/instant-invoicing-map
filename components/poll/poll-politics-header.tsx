@@ -16,6 +16,7 @@ function PollPoliticsHeader({ image, Symbol, number, border, bg, children }: Pro
         src={image}
         alt="candidate"
         className="w-24 h-[93px] md:w-[182px] md:h-[177px] lg:w-[194px] lg:h-[189px]"
+        placeholder="blur"
       />
       <div
         className={`absolute bottom-1 flex items-center gap-4 w-[calc(100%-96px)] pl-16 pt-[14px] pb-[10px] -z-[1] left-12 ${bg} md:w-[calc(100%-144px)] md:pl-32 md:left-[72px] lg:w-[650px] lg:pl-36 lg:pt-7 lg:pb-[22px]`}

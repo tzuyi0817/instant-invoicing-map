@@ -88,6 +88,7 @@ function FilterContent({ filter, avatar, candidate }: FilterContentProps) {
         src={avatar}
         alt="avatar"
         className="w-6"
+        placeholder="blur"
       />
     </>
   ) : null;

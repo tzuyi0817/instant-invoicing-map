@@ -85,6 +85,7 @@ function Navigation({ toggle }: Props) {
           src={MenuPresidential}
           alt="menu background"
           className="object-cover w-full"
+          placeholder="blur"
         />
       </motion.div>
 
