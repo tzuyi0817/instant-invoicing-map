@@ -14,6 +14,20 @@ const notoSansTC = Noto_Sans_TC({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Presidential election vote map',
   description: 'The 2020 President instantly opens a map of Taiwan.',
+  openGraph: {
+    title: 'Presidential election vote map',
+    description: 'The 2020 President instantly opens a map of Taiwan.',
+    url: 'https://instant-invoicing-map.vercel.app',
+    siteName: 'Presidential election vote map',
+    images: [
+      {
+        url: 'cover.png',
+        width: 800,
+        height: 600,
+      },
+    ],
+    type: 'website',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
