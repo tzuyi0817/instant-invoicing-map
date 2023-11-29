@@ -110,3 +110,8 @@ Clone this repository and install dependencies by running `pnpm`(Node.js version
 - react-select
 - topojson-client
 - @svgr/webpack
+
+## Reference resources
+
+- [中選會](https://db.cec.gov.tw/ElecTable/Election?type=President)
+- [政府資料開放平臺](https://data.gov.tw/)
