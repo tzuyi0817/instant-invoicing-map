@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useMemo } from 'react';
 import InvoicingGradientGrid from '@/components/invoicing/invoicing-gradient-grid';
 import { useMap } from '@/providers/map-provider';
 import useResize from '@/hooks/useResize';
@@ -11,6 +11,9 @@ function TaiwanMap() {
   const { county, town, village, proportion, manualSelect } = useMap();
   const map = Map.getInstance(manualSelect);
   const isReturning = useRef(false);
+  const backIconClass = useMemo(() => {
+    return proportion.countyId ? 'opacity-100' : 'opacity-0 pointer-events-none';
+  }, [proportion]);
 
   useResize(rerenderMap);
   useEffect(() => {
@@ -65,7 +68,7 @@ function TaiwanMap() {
       </div>
       <div className="tooltip"></div>
       <Arrow
-        className="icon absolute top-5 left-5 w-5 md:w-9"
+        className={`icon absolute top-5 left-5 w-5 ${backIconClass} md:w-9`}
         onClick={() => backToPreviousArea()}
       />
     </div>

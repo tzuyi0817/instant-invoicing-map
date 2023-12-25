@@ -76,7 +76,7 @@ devDependencies:
     specifier: ^9.0.0
     version: 9.0.0(eslint@8.0.0)
   eslint-plugin-security:
-    specifier: ^2.0.0
+    specifier: ^2.1.0
     version: 2.1.0
   postcss:
     specifier: ^8
