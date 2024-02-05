@@ -12,7 +12,7 @@
   "dependencies": {
     "@svgr/webpack": "^8.1.0",
     "d3": "^7.8.5",
-    "framer-motion": "^10.16.5",
+    "framer-motion": "^11.0.0",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
@@ -46,7 +46,7 @@
   "optionalDependencies": {
     "@commitlint/cli": "^18.4.0",
     "@commitlint/config-conventional": "^18.4.0",
-    "husky": "^8.0.3",
+    "husky": "^9.0.0",
     "lint-staged": "^15.0.2"
   }
 }

@@ -12,8 +12,8 @@ dependencies:
     specifier: ^7.8.5
     version: 7.8.5
   framer-motion:
-    specifier: ^10.16.5
-    version: 10.16.5(react-dom@18.0.0)(react@18.0.0)
+    specifier: ^11.0.0
+    version: 11.0.3(react-dom@18.0.0)(react@18.0.0)
   next:
     specifier: 14.1.0
     version: 14.1.0(@babel/core@7.23.3)(react-dom@18.0.0)(react@18.0.0)
@@ -38,8 +38,8 @@ optionalDependencies:
     specifier: ^18.4.0
     version: 18.4.0
   husky:
-    specifier: ^8.0.3
-    version: 8.0.3
+    specifier: ^9.0.0
+    version: 9.0.10
   lint-staged:
     specifier: ^15.0.2
     version: 15.0.2
@@ -4127,8 +4127,8 @@ packages:
       signal-exit: 4.1.0
     dev: true
 
-  /framer-motion@10.16.5(react-dom@18.0.0)(react@18.0.0):
-    resolution: {integrity: sha512-GEzVjOYP2MIpV9bT/GbhcsBNoImG3/2X3O/xVNWmktkv9MdJ7P/44zELm/7Fjb+O3v39SmKFnoDQB32giThzpg==}
+  /framer-motion@11.0.3(react-dom@18.0.0)(react@18.0.0):
+    resolution: {integrity: sha512-6x2poQpIWBdbZwLd73w6cKZ1I9IEPIU94C6/Swp1Zt3LJ+sB5bPe1E2wC6EH5hSISXNkMJ4afH7AdwS7MrtkWw==}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0
@@ -4434,9 +4434,9 @@ packages:
     dev: false
     optional: true
 
-  /husky@8.0.3:
-    resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
-    engines: {node: '>=14'}
+  /husky@9.0.10:
+    resolution: {integrity: sha512-TQGNknoiy6bURzIO77pPRu+XHi6zI7T93rX+QnJsoYFf3xdjKOur+IlfqzJGMHIK/wXrLg+GsvMs8Op7vI2jVA==}
+    engines: {node: '>=18'}
     hasBin: true
     requiresBuild: true
     dev: false
