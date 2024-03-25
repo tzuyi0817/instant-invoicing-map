@@ -41,7 +41,10 @@ function InvoicingProportion() {
         ref={mapContainerRef}
         className="flex flex-col gap-2 md:gap-4 lg:flex-col-reverse lg:flex-1"
         initial={{ translateX: '30%' }}
-        animate={{ translateX: '0%' }}
+        animate={{
+          translateX: '0%',
+          transitionEnd: { transform: 'none' },
+        }}
         transition={{ type: 'spring', stiffness: 500 }}
         onAnimationComplete={onAnimationComplete}
       >
