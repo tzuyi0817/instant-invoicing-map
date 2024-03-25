@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useMemo, useRef } from 'react';
 import { motion } from 'framer-motion';
 import InvoicingMap from '@/components/invoicing/invoicing-map';
 import InvoicingSearch from '@/components/invoicing/invoicing-search';
@@ -17,6 +17,7 @@ interface ChangeSearchParams {
 
 function InvoicingProportion() {
   const { townOptionsMap, villageMap, countyOptions, proportion, setProportion } = useMap();
+  const mapContainerRef = useRef<HTMLDivElement>(null);
   const neighborhoods = useMemo(() => {
     const { countyId, townId } = proportion;
 
@@ -29,16 +30,20 @@ function InvoicingProportion() {
     setProportion(town ?? county ?? INVOICING.default);
   }
 
+  function onAnimationComplete() {
+    if (!mapContainerRef.current) return;
+    mapContainerRef.current.style.transform = 'none';
+  }
+
   return (
     <div className="flex flex-col gap-4 lg:gap-6 lg:flex-row-reverse lg:items-center">
       <motion.div
+        ref={mapContainerRef}
         className="flex flex-col gap-2 md:gap-4 lg:flex-col-reverse lg:flex-1"
         initial={{ translateX: '30%' }}
-        animate={{
-          translateX: 'none',
-          transition: { type: 'spring', stiffness: 500 },
-          transitionEnd: { transform: 'none' },
-        }}
+        animate={{ translateX: '0%' }}
+        transition={{ type: 'spring', stiffness: 500 }}
+        onAnimationComplete={onAnimationComplete}
       >
         <InvoicingMap />
         <div className="px-[10px] md:px-[30px] lg:px-0">
@@ -51,10 +56,8 @@ function InvoicingProportion() {
       <motion.div
         className="px-[10px] md:px-[30px] lg:px-0 lg:w-[480px]"
         initial={{ translateX: '-30%' }}
-        animate={{
-          translateX: '0%',
-          transition: { type: 'spring', stiffness: 500 },
-        }}
+        animate={{ translateX: '0%' }}
+        transition={{ type: 'spring', stiffness: 500 }}
       >
         <InvoicingInformation proportion={proportion} />
         <InvoicingSupport neighborhoods={neighborhoods} />
