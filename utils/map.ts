@@ -68,6 +68,7 @@ class Map {
     if (!container) return;
     this.width = container.clientWidth;
     this.height = container.clientHeight;
+    if (!this.height) return;
     const { x, y, scale } = MAP_CONFIG[this.height as MapConfigKey];
 
     this.removeMap();
