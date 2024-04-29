@@ -20,6 +20,7 @@
     "topojson-client": "^3.1.0"
   },
   "devDependencies": {
+    "@emotion/react": "^11.11.4",
     "@types/d3": "^7.4.3",
     "@types/node": "^20",
     "@types/react": "^18.2.38",
@@ -48,10 +49,5 @@
     "@commitlint/config-conventional": "^19.0.0",
     "husky": "^9.0.0",
     "lint-staged": "^15.0.2"
-  },
-  "pnpm": {
-    "overrides": {
-      "csstype": "3.1.3"
-    }
   }
 }
