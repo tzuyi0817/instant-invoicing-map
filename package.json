@@ -12,8 +12,8 @@
   "dependencies": {
     "@svgr/webpack": "^8.1.0",
     "d3": "^7.9.0",
-    "framer-motion": "^11.3.30",
-    "next": "14.2.7",
+    "framer-motion": "^11.5.4",
+    "next": "14.2.11",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-select": "^5.8.0",
@@ -22,22 +22,22 @@
   "devDependencies": {
     "@emotion/react": "^11.13.3",
     "@types/d3": "^7.4.3",
-    "@types/node": "^20.16.2",
-    "@types/react": "^18.3.4",
+    "@types/node": "^20.16.5",
+    "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "@types/topojson-client": "^3.1.4",
     "autoprefixer": "^10.4.20",
-    "cssnano": "^7.0.5",
-    "eslint": "^9.9.1",
-    "eslint-config-next": "14.2.7",
+    "cssnano": "^7.0.6",
+    "eslint": "^9.10.0",
+    "eslint-config-next": "14.2.11",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-security": "^3.0.1",
-    "postcss": "^8.4.41",
+    "postcss": "^8.4.45",
     "postcss-nesting": "^13.0.0",
     "postcss-pxtorem": "^6.1.0",
     "prettier": "^3.3.3",
-    "tailwindcss": "^3.4.10",
-    "typescript": "^5.5.4"
+    "tailwindcss": "^3.4.11",
+    "typescript": "^5.6.2"
   },
   "browserslist": [
     "> 1%",
@@ -45,9 +45,9 @@
     "not dead"
   ],
   "optionalDependencies": {
-    "@commitlint/cli": "^19.4.1",
-    "@commitlint/config-conventional": "^19.4.1",
-    "husky": "^9.1.5",
-    "lint-staged": "^15.2.9"
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10"
   }
 }
