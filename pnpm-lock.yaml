@@ -12,8 +12,8 @@ dependencies:
     specifier: ^7.9.0
     version: 7.9.0
   framer-motion:
-    specifier: ^11.11.9
-    version: 11.11.9(react-dom@18.3.1)(react@18.3.1)
+    specifier: ^11.11.11
+    version: 11.11.11(react-dom@18.3.1)(react@18.3.1)
   next:
     specifier: 14.2.16
     version: 14.2.16(@babel/core@7.23.3)(react-dom@18.3.1)(react@18.3.1)
@@ -24,8 +24,8 @@ dependencies:
     specifier: ^18.3.1
     version: 18.3.1(react@18.3.1)
   react-select:
-    specifier: ^5.8.1
-    version: 5.8.1(@types/react@18.3.12)(react-dom@18.3.1)(react@18.3.1)
+    specifier: ^5.8.2
+    version: 5.8.2(@types/react@18.3.12)(react-dom@18.3.1)(react@18.3.1)
   topojson-client:
     specifier: ^3.1.0
     version: 3.1.0
@@ -33,7 +33,7 @@ dependencies:
 optionalDependencies:
   '@commitlint/cli':
     specifier: ^19.5.0
-    version: 19.5.0(@types/node@20.17.0)(typescript@5.6.3)
+    version: 19.5.0(@types/node@20.17.5)(typescript@5.6.3)
   '@commitlint/config-conventional':
     specifier: ^19.5.0
     version: 19.5.0
@@ -52,8 +52,8 @@ devDependencies:
     specifier: ^7.4.3
     version: 7.4.3
   '@types/node':
-    specifier: ^20.17.0
-    version: 20.17.0
+    specifier: ^20.17.5
+    version: 20.17.5
   '@types/react':
     specifier: ^18.3.12
     version: 18.3.12
@@ -1394,7 +1394,7 @@ packages:
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
 
-  /@commitlint/cli@19.5.0(@types/node@20.17.0)(typescript@5.6.3):
+  /@commitlint/cli@19.5.0(@types/node@20.17.5)(typescript@5.6.3):
     resolution: {integrity: sha512-gaGqSliGwB86MDmAAKAtV9SV1SHdmN8pnGq4EJU4+hLisQ7IFfx4jvU4s+pk6tl0+9bv6yT+CaZkufOinkSJIQ==}
     engines: {node: '>=v18'}
     hasBin: true
@@ -1402,7 +1402,7 @@ packages:
     dependencies:
       '@commitlint/format': 19.5.0
       '@commitlint/lint': 19.5.0
-      '@commitlint/load': 19.5.0(@types/node@20.17.0)(typescript@5.6.3)
+      '@commitlint/load': 19.5.0(@types/node@20.17.5)(typescript@5.6.3)
       '@commitlint/read': 19.5.0
       '@commitlint/types': 19.5.0
       tinyexec: 0.3.0
@@ -1486,7 +1486,7 @@ packages:
     dev: false
     optional: true
 
-  /@commitlint/load@19.5.0(@types/node@20.17.0)(typescript@5.6.3):
+  /@commitlint/load@19.5.0(@types/node@20.17.5)(typescript@5.6.3):
     resolution: {integrity: sha512-INOUhkL/qaKqwcTUvCE8iIUf5XHsEPCLY9looJ/ipzi7jtGhgmtH7OOFiNvwYgH7mA8osUWOUDV8t4E2HAi4xA==}
     engines: {node: '>=v18'}
     requiresBuild: true
@@ -1497,7 +1497,7 @@ packages:
       '@commitlint/types': 19.5.0
       chalk: 5.3.0
       cosmiconfig: 9.0.0(typescript@5.6.3)
-      cosmiconfig-typescript-loader: 5.0.0(@types/node@20.17.0)(cosmiconfig@9.0.0)(typescript@5.6.3)
+      cosmiconfig-typescript-loader: 5.0.0(@types/node@20.17.5)(cosmiconfig@9.0.0)(typescript@5.6.3)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -2127,7 +2127,7 @@ packages:
     resolution: {integrity: sha512-loB369iXNmAZglwWATL+WRe+CRMmmBPtpolYzIebFaX4YA3x+BEfLqhUAV9WanycKI3TG1IMr5bMJDajDKLlUQ==}
     requiresBuild: true
     dependencies:
-      '@types/node': 20.17.0
+      '@types/node': 20.17.5
     dev: false
     optional: true
 
@@ -2326,8 +2326,8 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: true
 
-  /@types/node@20.17.0:
-    resolution: {integrity: sha512-a7zRo0f0eLo9K5X9Wp5cAqTUNGzuFLDG2R7C4HY2BhcMAsxgSPuRvAC1ZB6QkuUQXf0YZAgfOX2ZyrBa2n4nHQ==}
+  /@types/node@20.17.5:
+    resolution: {integrity: sha512-n8FYY/pRxu496441gIcAQFZPKXbhsd6VZygcq+PTSZ75eMh/Ke0hCAROdUa21qiFqKNsPPYic46yXDO1JGiPBQ==}
     dependencies:
       undici-types: 6.19.6
 
@@ -3087,7 +3087,7 @@ packages:
       browserslist: 4.23.3
     dev: false
 
-  /cosmiconfig-typescript-loader@5.0.0(@types/node@20.17.0)(cosmiconfig@9.0.0)(typescript@5.6.3):
+  /cosmiconfig-typescript-loader@5.0.0(@types/node@20.17.5)(cosmiconfig@9.0.0)(typescript@5.6.3):
     resolution: {integrity: sha512-+8cK7jRAReYkMwMiG+bxhcNKiHJDM6bR9FD/nGBXOWdMLuYawjF5cGrtLilJ+LGd3ZjCXnJjR5DkfWPoIVlqJA==}
     engines: {node: '>=v16'}
     requiresBuild: true
@@ -3096,7 +3096,7 @@ packages:
       cosmiconfig: '>=8.2'
       typescript: '>=4'
     dependencies:
-      '@types/node': 20.17.0
+      '@types/node': 20.17.5
       cosmiconfig: 9.0.0(typescript@5.6.3)
       jiti: 1.21.0
       typescript: 5.6.3
@@ -4225,8 +4225,8 @@ packages:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
     dev: true
 
-  /framer-motion@11.11.9(react-dom@18.3.1)(react@18.3.1):
-    resolution: {integrity: sha512-XpdZseuCrZehdHGuW22zZt3SF5g6AHJHJi7JwQIigOznW4Jg1n0oGPMJQheMaKLC+0rp5gxUKMRYI6ytd3q4RQ==}
+  /framer-motion@11.11.11(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-tuDH23ptJAKUHGydJQII9PhABNJBpB+z0P1bmgKK9QFIssHGlfPd6kxMq00LSKwE27WFsb2z0ovY0bpUyMvfRw==}
     peerDependencies:
       '@emotion/is-prop-valid': '*'
       react: ^18.0.0
@@ -5857,8 +5857,8 @@ packages:
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
-  /react-select@5.8.1(@types/react@18.3.12)(react-dom@18.3.1)(react@18.3.1):
-    resolution: {integrity: sha512-RT1CJmuc+ejqm5MPgzyZujqDskdvB9a9ZqrdnVLsvAHjJ3Tj0hELnLeVPQlmYdVKCdCpxanepl6z7R5KhXhWzg==}
+  /react-select@5.8.2(@types/react@18.3.12)(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-a/LkOckoI62710gGPQSQqUp7A10fGbH/ya3/IR49qaq3XoBvwymgD5mJgtiHxBDsutyEQfdKNycWVh8Cg8UCjw==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
