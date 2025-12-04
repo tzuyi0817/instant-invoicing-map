@@ -5,8 +5,8 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import PaperPresidential from '@/assets/images/layout/paper-presidential.png';
 import PresidentialPalace from '@/assets/images/layout/presidential-palace.png';
-import { INVOICING } from '@/configs/Invoicing';
-import '@/styles/home/vote-ratio.css';
+import { INVOICING } from '@/constants/Invoicing';
+import '../styles/vote-ratio.css';
 
 function HomeVoteRatio() {
   const { kmt, ddp, pfp } = INVOICING.default;
@@ -20,10 +20,10 @@ function HomeVoteRatio() {
         transition: { type: 'spring', stiffness: 500 },
       }}
     >
-      <div className="pt-7 border-x border-black flex flex-col items-center h-full lg:border-none">
-        <div className="w-[62vw] h-[31vw] bg-black rounded-t-full lg:w-3/4"></div>
+      <div className="flex h-full flex-col items-center border-x border-black pt-7 lg:border-none">
+        <div className="h-[31vw] w-[62vw] rounded-t-full bg-black lg:w-3/4"></div>
         <div className="relative h-[31vw] w-full">
-          <div className="absolute w-full bottom-[52px] md:bottom-[70px] lg:bottom-[52px]">
+          <div className="absolute bottom-[52px] w-full md:bottom-[70px] lg:bottom-[52px]">
             <Image
               src={PaperPresidential}
               alt="paper presidential"
@@ -31,7 +31,7 @@ function HomeVoteRatio() {
               placeholder="blur"
             />
           </div>
-          <div className="absolute px-[3vw] w-full bottom-5 lg:px-3">
+          <div className="absolute bottom-5 w-full px-[3vw] lg:px-3">
             <Image
               src={PresidentialPalace}
               alt="presidential palace"
@@ -40,7 +40,7 @@ function HomeVoteRatio() {
               placeholder="blur"
             />
             <div
-              className="absolute bottom-0 left-3 w-[calc(100%-24px)] h-full opacity-50"
+              className="absolute bottom-0 left-3 h-full w-[calc(100%-24px)] opacity-50"
               style={{
                 maskImage: `url(${PresidentialPalace.src})`,
                 WebkitMaskImage: `url(${PresidentialPalace.src})`,
@@ -51,7 +51,7 @@ function HomeVoteRatio() {
                 }%,#f88545 ${ddp + kmt}%,#f88545 100%)`,
               }}
             ></div>
-            <ul className="w-full absolute bottom-0 left-0 flex text-xs px-4">
+            <ul className="absolute bottom-0 left-0 flex w-full px-4 text-xs">
               <li
                 className="home-vote-ratio-line"
                 style={{ width: `${ddp}%` }}

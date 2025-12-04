@@ -1,8 +1,8 @@
 import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import InvoicingFilter from '@/components/invoicing/invoicing-filter';
-import InvoicingBar from '@/components/invoicing/invoicing-bar';
-import { INVOICING } from '@/configs/Invoicing';
+import InvoicingFilter from './invoicing-filter';
+import InvoicingBar from './invoicing-bar';
+import { INVOICING } from '@/constants/Invoicing';
 import type { MapTopologyProperties } from '@/types/map';
 
 interface Props {
@@ -29,18 +29,18 @@ function InvoicingSupport({ neighborhoods }: Props) {
   }, [filter, neighborhoods]);
 
   return (
-    <div className="pl-6 pr-3 pt-8 pb-3 border-black border-x-2 border-b-2">
+    <div className="border-x-2 border-b-2 border-black pb-3 pl-6 pr-3 pt-8">
       <InvoicingFilter
         filter={filter}
         setFilter={setFilter}
       />
       <div className="mt-3">
         <div className="flex pr-3">
-          <p className="text-xs text-black/50 w-14 md:text-base md:w-20">地區</p>
+          <p className="w-14 text-xs text-black/50 md:w-20 md:text-base">地區</p>
           <p className="text-xs text-black/50 md:text-base">得票占比</p>
         </div>
         <AnimatePresence mode="wait">
-          <ul className="mt-3 flex flex-col gap-4 h-[260px] overflow-y-scroll">
+          <ul className="mt-3 flex h-[260px] flex-col gap-4 overflow-y-scroll">
             {filterNeighborhoods.length ? (
               filterNeighborhoods.map((proportion, index) => {
                 const { countyId, townId, villageId, countyName, townName, villageName } = proportion ?? {};
@@ -50,10 +50,10 @@ function InvoicingSupport({ neighborhoods }: Props) {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="flex pr-1 items-center"
+                    className="flex items-center pr-1"
                     key={`${countyId}-${townId}-${villageId}-${index}`}
                   >
-                    <p className="text-xs w-14 md:text-base md:w-20">{villageName ?? townName ?? countyName}</p>
+                    <p className="w-14 text-xs md:w-20 md:text-base">{villageName ?? townName ?? countyName}</p>
                     <InvoicingBar
                       className="h-[14px] flex-1 md:h-4"
                       proportion={proportion ?? INVOICING.default}
@@ -66,7 +66,7 @@ function InvoicingSupport({ neighborhoods }: Props) {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="text-xs text-center md:text-base"
+                className="text-center text-xs md:text-base"
               >
                 無最支持的縣市或鄉鎮
               </motion.li>

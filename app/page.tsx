@@ -1,5 +1,5 @@
-import HomeVoteRatio from '@/components/home/home-vote-ratio';
-import HomeCandidate from '@/components/home/home-candidate';
+import HomeVoteRatio from './home/components/home-vote-ratio';
+import HomeCandidate from './home/components/home-candidate';
 
 function Home() {
   return (

@@ -2,11 +2,11 @@
 
 import { useMemo, useRef } from 'react';
 import { motion } from 'framer-motion';
-import InvoicingMap from '@/components/invoicing/invoicing-map';
-import InvoicingSearch from '@/components/invoicing/invoicing-search';
-import InvoicingInformation from '@/components/invoicing/invoicing-information';
-import InvoicingSupport from '@/components/invoicing/invoicing-support';
-import { INVOICING } from '@/configs/Invoicing';
+import InvoicingMap from './invoicing-map';
+import InvoicingSearch from './invoicing-search';
+import InvoicingInformation from './invoicing-information';
+import InvoicingSupport from './invoicing-support';
+import { INVOICING } from '@/constants/Invoicing';
 import { useMap } from '@/providers/map-provider';
 import type { MapTopologyProperties } from '@/types/map';
 
@@ -36,10 +36,10 @@ function InvoicingProportion() {
   }
 
   return (
-    <div className="flex flex-col gap-4 lg:gap-6 lg:flex-row-reverse lg:items-center">
+    <div className="flex flex-col gap-4 lg:flex-row-reverse lg:items-center lg:gap-6">
       <motion.div
         ref={mapContainerRef}
-        className="flex flex-col gap-2 md:gap-4 lg:flex-col-reverse lg:flex-1"
+        className="flex flex-col gap-2 md:gap-4 lg:flex-1 lg:flex-col-reverse"
         initial={{ translateX: '30%' }}
         animate={{
           translateX: '0%',
@@ -57,7 +57,7 @@ function InvoicingProportion() {
         </div>
       </motion.div>
       <motion.div
-        className="px-[10px] md:px-[30px] lg:px-0 lg:w-[480px]"
+        className="px-[10px] md:px-[30px] lg:w-[480px] lg:px-0"
         initial={{ translateX: '-30%' }}
         animate={{ translateX: '0%' }}
         transition={{ type: 'spring', stiffness: 500 }}

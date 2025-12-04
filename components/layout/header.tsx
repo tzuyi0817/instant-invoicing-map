@@ -1,19 +1,19 @@
 'use client';
 
 import { motion, useCycle } from 'framer-motion';
-import Logo from '@/components/layout/navigation-logo';
-import Navigation from '@/components/layout/navigation';
+import Logo from './navigation-logo';
+import Navigation from './navigation';
 import MenuToggle from '@/components/common/menu-toggle';
 
 function Header() {
   const [isOpen, toggleOpen] = useCycle(false, true);
 
   return (
-    <header className="fixed w-full bg-white z-20">
+    <header className="fixed z-20 w-full bg-white">
       <motion.nav
         initial={false}
         animate={isOpen ? 'open' : 'closed'}
-        className="flex justify-between items-center px-4 py-3 lg:px-6"
+        className="flex items-center justify-between px-4 py-3 lg:px-6"
       >
         <Logo />
         <Navigation toggle={() => toggleOpen()} />

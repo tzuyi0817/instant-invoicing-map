@@ -1,10 +1,10 @@
-import PollBar from '@/components/poll/poll-bar';
-import PollPolitics from '@/components/poll/poll-politics';
+import PollBar from './components/poll-bar';
+import PollPolitics from './components/poll-politics';
 
 function Page() {
   return (
     <div className="pb-4 md:pb-12 lg:pb-16">
-      <div className="p-4 max-w-[1079px] mx-auto md:px-[30px] md:py-[50px] lg:py-[85px]">
+      <div className="mx-auto max-w-[1079px] p-4 md:px-[30px] md:py-[50px] lg:py-[85px]">
         <h1>2019年選前民調</h1>
         <PollBar />
         <p className="text-xs md:text-2xl">

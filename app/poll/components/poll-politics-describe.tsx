@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { POLL_POLITICS } from '@/configs/poll';
+import { POLL_POLITICS } from '@/constants/poll';
 
 type PollPolitics = (typeof POLL_POLITICS)[number]['key'];
 
@@ -21,7 +21,7 @@ function PollPoliticsDescribe({ describe, border, bg }: Props) {
         {POLL_POLITICS.map(({ key, value }) => {
           return (
             <button
-              className={`btn-rounded text-xs mr-1 mb-1 md:text-lg md:mr-2 md:mb-2 ${type === key ? 'active' : ''}`}
+              className={`btn-rounded mb-1 mr-1 text-xs md:mb-2 md:mr-2 md:text-lg ${type === key ? 'active' : ''}`}
               key={key}
               onClick={() => setType(key)}
             >
@@ -39,11 +39,11 @@ function PollPoliticsDescribe({ describe, border, bg }: Props) {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className={`text-xs border rounded-[20px] mb-3 overflow-hidden ${border} md:text-2xl md:rounded-[40px] md:mb-6`}
+                className={`mb-3 overflow-hidden rounded-[20px] border text-xs ${border} md:mb-6 md:rounded-[40px] md:text-2xl`}
                 key={`${type}-${index}`}
               >
-                <p className={`py-2 px-6 text-white ${bg} md:py-4 md:px-11`}>{question}</p>
-                <p className="py-3 px-6 md:py-7 md:px-11">{answer}</p>
+                <p className={`px-6 py-2 text-white ${bg} md:px-11 md:py-4`}>{question}</p>
+                <p className="px-6 py-3 md:px-11 md:py-7">{answer}</p>
               </motion.li>
             );
           })}

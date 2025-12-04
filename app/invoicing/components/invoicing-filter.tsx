@@ -36,7 +36,7 @@ function InvoicingFilter({ filter, setFilter }: Props) {
 
   return (
     <div
-      className="border border-black py-3 px-7 flex items-center gap-2 mr-3 cursor-pointer hover:bg-gray-100 transition-colors"
+      className="mr-3 flex cursor-pointer items-center gap-2 border border-black px-7 py-3 transition-colors hover:bg-gray-100"
       onClick={event => resetFilter(event, { ddp: false, kmt: false, pfp: false })}
     >
       <p className="lg:text-lg">最支持</p>
@@ -54,7 +54,7 @@ function InvoicingFilter({ filter, setFilter }: Props) {
         <div
           className={`bg-deep-blue ${filterStyle} ${
             filter.kmt ? 'w-[104px] duration-300' : 'w-6 duration-0'
-          } -translate-x-3 z-[1]`}
+          } z-[1] -translate-x-3`}
           onClick={event => resetFilter(event, { ddp: false, kmt: true, pfp: false })}
         >
           <FilterContent
@@ -83,7 +83,7 @@ function InvoicingFilter({ filter, setFilter }: Props) {
 function FilterContent({ filter, avatar, candidate }: FilterContentProps) {
   return filter ? (
     <>
-      <p className="text-white text-xs pl-5 flex-1 whitespace-nowrap md:text-base">{candidate}</p>
+      <p className="flex-1 whitespace-nowrap pl-5 text-xs text-white md:text-base">{candidate}</p>
       <Image
         src={avatar}
         alt="avatar"

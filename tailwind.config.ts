@@ -1,5 +1,4 @@
 import type { Config } from 'tailwindcss';
-import defaultTheme from 'tailwindcss/defaultTheme';
 
 const config: Config = {
   content: [
@@ -7,9 +6,6 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  screens: {
-    ...defaultTheme.screens,
-  },
   theme: {
     extend: {
       colors: {
@@ -35,4 +31,5 @@ const config: Config = {
   },
   plugins: [],
 };
+
 export default config;

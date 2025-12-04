@@ -3,26 +3,26 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import HomeBackground from '@/components/home/home-background';
+import HomeBackground from './home-background';
 import Kmt from '@/assets/images/candidate/kmt.png';
 import KmtBtn from '@/assets/images/candidate/kmt-btn.svg';
 import Ddp from '@/assets/images/candidate/ddp.png';
 import DdpBtn from '@/assets/images/candidate/ddp-btn.svg';
 import Pfp from '@/assets/images/candidate/pfp.png';
 import PfpBtn from '@/assets/images/candidate/pfp-btn.svg';
-import '@/styles/home/candidate.css';
+import '../styles/candidate.css';
 
 function HomeCandidate() {
   return (
     <>
-      <div className="absolute top-0 w-full h-full left-0 overflow-hidden -z-[1]">
-        <div className="relative w-full h-full">
-          <HomeBackground className="border-b-[#F5F2F2] right-0 border-l-transparent border-l-[100vh] lg:border-l-[90vw]" />
-          <HomeBackground className="border-b-primary-red left-0 border-r-transparent border-r-[100vh] lg:border-r-[90vw]" />
+      <div className="absolute left-0 top-0 -z-[1] h-full w-full overflow-hidden">
+        <div className="relative h-full w-full">
+          <HomeBackground className="right-0 border-l-[100vh] border-b-[#F5F2F2] border-l-transparent lg:border-l-[90vw]" />
+          <HomeBackground className="left-0 border-r-[100vh] border-b-primary-red border-r-transparent lg:border-r-[90vw]" />
         </div>
       </div>
       <motion.div
-        className="pt-[18vh] flex justify-center w-full relative lg:pt-[22vh]"
+        className="relative flex w-full justify-center pt-[18vh] lg:pt-[22vh]"
         initial={{ translateY: '30%' }}
         animate={{
           translateY: '0%',
@@ -40,7 +40,7 @@ function HomeCandidate() {
             priority
             placeholder="blur"
           />
-          <KmtBtn className="block absolute -bottom-10 left-7 w-[122px] md:w-[205px] lg:w-[302px] lg:left-[10%]" />
+          <KmtBtn className="absolute -bottom-10 left-7 block w-[122px] md:w-[205px] lg:left-[10%] lg:w-[302px]" />
         </Link>
 
         <Link
@@ -48,7 +48,7 @@ function HomeCandidate() {
           href="/poll#ddp"
           scroll={false}
         >
-          <DdpBtn className="block relative left-8 w-[140px] md:w-[238px] lg:w-[350px] lg:left-[10%]" />
+          <DdpBtn className="relative left-8 block w-[140px] md:w-[238px] lg:left-[10%] lg:w-[350px]" />
           <Image
             src={Ddp}
             alt="DDP"
@@ -67,7 +67,7 @@ function HomeCandidate() {
             priority
             placeholder="blur"
           />
-          <PfpBtn className="absolute bottom-3 right-0 w-[120px] md:w-[202px] md:bottom-8 lg:w-[298px] lg:right-[15%] lg:bottom-0" />
+          <PfpBtn className="absolute bottom-3 right-0 w-[120px] md:bottom-8 md:w-[202px] lg:bottom-0 lg:right-[15%] lg:w-[298px]" />
         </Link>
       </motion.div>
     </>

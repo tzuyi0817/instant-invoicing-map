@@ -11,7 +11,7 @@ function InvoicingGradientGrid({ children, linearGradient, showProportion }: Pro
   return (
     <div>
       <p className="text-right text-xs md:text-sm">{children}</p>
-      <div className={`w-[60px] h-[18px] flex justify-between items-center md:w-[100px] md:h-7 ${linearGradient}`}>
+      <div className={`flex h-[18px] w-[60px] items-center justify-between md:h-7 md:w-[100px] ${linearGradient}`}>
         {showProportion && (
           <>
             <p className={`${proportionText} origin-left md:pl-1`}>40%</p>

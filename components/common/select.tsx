@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useId } from 'react';
 import Select, {
   components,
   type PropsValue,
@@ -27,14 +27,12 @@ const DropdownIndicator: React.FC<DropdownIndicatorProps> = props => {
 };
 
 function InvoicingSelect(props: Props) {
-  const [isMounted, setIsMounted] = useState(false);
+  const id = useId();
 
-  useEffect(() => setIsMounted(true), []);
-
-  return isMounted ? (
+  return (
     <Select
-      id={Date.now().toString()}
-      className="w-fit min-w-[92px] text-xs text-center md:text-lg md:min-w-[184px]"
+      id={id}
+      className="w-fit min-w-[92px] text-center text-xs md:min-w-[184px] md:text-lg"
       placeholder="-----"
       {...props}
       components={{ DropdownIndicator }}
@@ -64,7 +62,7 @@ function InvoicingSelect(props: Props) {
         }),
       }}
     />
-  ) : null;
+  );
 }
 
 export default InvoicingSelect;

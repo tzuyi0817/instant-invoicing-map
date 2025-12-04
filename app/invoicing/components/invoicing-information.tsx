@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import Image from 'next/image';
-import InvoicingBar from '@/components/invoicing/invoicing-bar';
+import InvoicingBar from './invoicing-bar';
 import ddpAvatar from '@/assets/images/avatar/ddp-avatar.png';
 import kmtAvatar from '@/assets/images/avatar/kmt-avatar.png';
 import pfpAvatar from '@/assets/images/avatar/pfp-avatar.png';
@@ -15,7 +15,7 @@ function InvoicingInformation({ proportion }: Props) {
   const { countyName, townName, ddp, kmt, pfp } = proportion;
   const title = useMemo(() => {
     return [countyName, townName].filter(Boolean).join('/') || '全台';
-  }, [proportion]);
+  }, [countyName, townName]);
 
   return (
     <div className="border-2 border-black">

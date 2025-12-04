@@ -1,4 +1,4 @@
-import InvoicingProportion from '@/components/invoicing/invoicing-proportion';
+import InvoicingProportion from './components/invoicing-proportion';
 
 function Invoicing() {
   return (

@@ -4,10 +4,14 @@ export function sleep(ms = 300) {
 
 export function debounce<T>(fun: T, ms = 300) {
   if (typeof fun !== 'function') throw new TypeError('The first argument is not a function.');
-  let timer: NodeJS.Timeout | null = null;
+
+  let timer: ReturnType<typeof setTimeout> | null = null;
 
   return function closure(this: unknown, ...args: unknown[]) {
-    timer && clearTimeout(timer);
+    if (timer) {
+      clearTimeout(timer);
+    }
+
     timer = setTimeout(() => {
       fun.apply(this, args);
       timer = null;

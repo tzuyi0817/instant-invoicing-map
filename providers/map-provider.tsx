@@ -10,7 +10,7 @@ import {
   type SetStateAction,
 } from 'react';
 import { MapTopology, MapTopologyProperties, MapArea } from '@/types/map';
-import { INVOICING } from '@/configs/Invoicing';
+import { INVOICING } from '@/constants/Invoicing';
 import type { SelectAreaOption } from '@/types/select';
 
 interface MapContext {
@@ -46,7 +46,7 @@ function MapProvider({ children }: PropsWithChildren) {
     if (!county) return [{ value: null, label: '全台' }];
     return county.objects.county.geometries.reduce(
       (options, { properties }) => {
-        return options.push({ value: properties, label: properties.countyName }), options;
+        return (options.push({ value: properties, label: properties.countyName }), options);
       },
       [{ value: null, label: '全台' }] as SelectAreaOption[],
     );

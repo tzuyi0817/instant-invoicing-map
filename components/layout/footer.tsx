@@ -11,11 +11,11 @@ function Footer() {
 
   return (
     <AnimatePresence mode="wait">
-      <footer className="w-full px-6 py-[22px] bg-black text-white overflow-hidden flex flex-col gap-7 lg:flex-row lg:items-center lg:justify-between">
+      <footer className="flex w-full flex-col gap-7 overflow-hidden bg-black px-6 py-[22px] text-white lg:flex-row lg:items-center lg:justify-between">
         {isHomePage && (
           <Link href="/poll">
             <motion.h2
-              className="px-[10px] flex gap-1 items-center"
+              className="flex items-center gap-1 px-[10px]"
               initial={{ opacity: 1 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -55,8 +55,8 @@ function Footer() {
             </motion.h2>
           </Link>
         )}
-        <div className={`text-xs md:flex md:text-base ${isHomePage ? '' : 'lg:justify-center lg:flex-1'}`}>
-          <p className="px-[10px] mb-[10px] md:mb-0">樹懶設計 shulian@gmail.com</p>
+        <div className={`text-xs md:flex md:text-base ${isHomePage ? '' : 'lg:flex-1 lg:justify-center'}`}>
+          <p className="mb-[10px] px-[10px] md:mb-0">樹懶設計 shulian@gmail.com</p>
           <p className="px-[10px]">© 2023 樹懶設計 shulian 版權所有</p>
         </div>
       </footer>

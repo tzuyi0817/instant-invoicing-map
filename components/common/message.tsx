@@ -25,10 +25,7 @@ function Message({ children, isWhite, className, rotateClass, ...translate }: Pr
       <div className="relative text-center">
         {isWhite ? <WhiteMessage className={rotateClass} /> : <BlackMessage className={rotateClass} />}
         <p
-          className={`absolute left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap text-xs md:text-base lg:text-lg
-          ${isWhite ? 'text-black' : 'text-white'}
-          ${rotateClass ? 'top-[calc(50%+4px)]' : 'top-[calc(50%-5px)]'}
-          `}
+          className={`absolute left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap text-xs md:text-base lg:text-lg ${isWhite ? 'text-black' : 'text-white'} ${rotateClass ? 'top-[calc(50%+4px)]' : 'top-[calc(50%-5px)]'} `}
         >
           {children}
         </p>

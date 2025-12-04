@@ -1,6 +1,6 @@
 import { interpolateRound, scaleLinear, axisBottom, scaleBand, axisLeft, type ScaleBand, type ScaleLinear } from 'd3';
 import { createSvg } from './d3';
-import { BAR_CONFIG } from '@/configs/bar';
+import { BAR_CONFIG } from '@/constants/bar';
 import type { SelectionD3, D3BarItem } from '@/types/d3';
 
 class Bar {

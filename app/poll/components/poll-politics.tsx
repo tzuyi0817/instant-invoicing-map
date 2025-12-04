@@ -1,9 +1,9 @@
 'use client';
 
 import { useRef, forwardRef, type PropsWithChildren, type RefObject, type LegacyRef } from 'react';
-import PollPoliticsHeader from '@/components/poll/poll-politics-header';
-import PollPoliticsDescribe from '@/components/poll/poll-politics-describe';
-import { POLL_POLITICS_MAP } from '@/configs/poll';
+import PollPoliticsHeader from './poll-politics-header';
+import PollPoliticsDescribe from './poll-politics-describe';
+import { POLL_POLITICS_MAP } from '@/constants/poll';
 import Pfp from '@/assets/images/candidate/pfp-dark.png';
 import PfpSymbol from '@/assets/images/icon/pfp-symbol.svg';
 import Kmt from '@/assets/images/candidate/kmt-dark.png';
@@ -33,7 +33,7 @@ function PollPolitics() {
   return (
     <div
       ref={scrollRef}
-      className="flex overflow-x-scroll snap-x snap-mandatory px-4 gap-4 no-scrollbar md:px-[30px] md:gap-[30px] lg:px-[100px] lg:gap-[100px]"
+      className="no-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-scroll px-4 md:gap-[30px] md:px-[30px] lg:gap-[100px] lg:px-[100px]"
     >
       <PollPoliticsContainer ref={pfpRef}>
         <section id="pfp"></section>
@@ -107,7 +107,7 @@ function PollPoliticsDom({ children }: PropsWithChildren, ref: LegacyRef<HTMLDiv
 function ArrowIcon({ scrollNext }: { scrollNext: () => void }) {
   return (
     <Arrow
-      className="icon w-4 fill-black rotate-180 md:w-9"
+      className="icon w-4 rotate-180 fill-black md:w-9"
       onClick={scrollNext}
     />
   );

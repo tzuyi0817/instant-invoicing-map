@@ -85,7 +85,7 @@ function Loading() {
   return (
     isShow && (
       <motion.div
-        className="fixed top-0 left-0 w-screen h-screen bg-white flex justify-center items-center z-20"
+        className="fixed left-0 top-0 z-20 flex h-screen w-screen items-center justify-center bg-white"
         onAnimationComplete={onAnimationComplete}
         animate={{
           opacity: 0,

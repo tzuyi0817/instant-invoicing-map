@@ -1,8 +1,8 @@
 import { geoMercator, geoPath, select, type Selection } from 'd3';
 import { feature } from 'topojson-client';
 import { createSvg, createInvoicingInformation } from './d3';
-import { MAP_AREA_COLOR, MAP_CONFIG, type MapConfigKey } from '@/configs/map';
-import { INVOICING } from '@/configs/Invoicing';
+import { MAP_AREA_COLOR, MAP_CONFIG, type MapConfigKey } from '@/constants/map';
+import { INVOICING } from '@/constants/Invoicing';
 import type { SelectionD3 } from '@/types/d3';
 import type {
   Topology,

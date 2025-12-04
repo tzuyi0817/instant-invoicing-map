@@ -61,7 +61,7 @@ function Navigation({ toggle }: Props) {
 
   return (
     <>
-      <ul className="hidden lg:text-lg lg:flex lg:gap-10 lg:pr-20">
+      <ul className="hidden lg:flex lg:gap-10 lg:pr-20 lg:text-lg">
         <li className={`${segment === 'invoicing' ? 'text-primary-red' : 'hover:text-primary-red'} transition-colors`}>
           <Link href="/invoicing">開票地圖</Link>
         </li>
@@ -71,7 +71,7 @@ function Navigation({ toggle }: Props) {
       </ul>
 
       <motion.div
-        className="bg-primary-red fixed top-0 left-0 right-0 bottom-0 -z-[1]"
+        className="fixed bottom-0 left-0 right-0 top-0 -z-[1] bg-primary-red"
         variants={sidebar}
       />
 
@@ -83,13 +83,13 @@ function Navigation({ toggle }: Props) {
         <Image
           src={MenuPresidential}
           alt="menu background"
-          className="object-cover w-full"
+          className="w-full object-cover"
           placeholder="blur"
         />
       </motion.div>
 
       <motion.ul
-        className="fixed top-1/3 right-5 text-right text-white text-2xl font-bold flex flex-col gap-4 md:text-[32px] md:gap-8"
+        className="fixed right-5 top-1/3 flex flex-col gap-4 text-right text-2xl font-bold text-white md:gap-8 md:text-[32px]"
         variants={ulVariants}
       >
         <motion.li
