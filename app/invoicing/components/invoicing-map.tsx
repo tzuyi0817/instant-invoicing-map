@@ -57,7 +57,10 @@ function TaiwanMap() {
 
   return (
     <div className="map-container">
-      <svg className="map"></svg>
+      <div className="h-full w-full overflow-hidden">
+        <svg className="map"></svg>
+      </div>
+
       <div className="absolute right-5 top-5 flex flex-col gap-1">
         <InvoicingGradientGrid linearGradient="bg-[linear-gradient(to_left,#25A55C_0%_33.3%,#30CB73_33.3%_66.6%,#8AF1B6_66.6%_100%)]">
           民進黨

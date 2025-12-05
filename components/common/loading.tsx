@@ -96,8 +96,11 @@ function Loading() {
           <motion.div animate={controls}>
             <Image
               src={VoteStamp}
+              width={VoteStamp.width}
+              height={VoteStamp.height}
               alt="vote stamp"
               className="w-[153px] md:w-[250px] lg:w-[296px]"
+              priority
             />
           </motion.div>
           {messages.map(({ message, ...item }) => {

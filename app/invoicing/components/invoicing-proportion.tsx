@@ -49,6 +49,7 @@ function InvoicingProportion() {
         onAnimationComplete={onAnimationComplete}
       >
         <InvoicingMap />
+
         <div className="px-[10px] md:px-[30px] lg:px-0">
           <InvoicingSearch
             options={{ townOptionsMap, countyOptions }}
@@ -56,6 +57,7 @@ function InvoicingProportion() {
           />
         </div>
       </motion.div>
+
       <motion.div
         className="px-[10px] md:px-[30px] lg:w-[480px] lg:px-0"
         initial={{ translateX: '-30%' }}

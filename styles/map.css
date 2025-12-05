@@ -2,13 +2,13 @@
 
 @layer components {
   .map-container {
-    @apply bg-[#F5F2F2] w-screen h-[350px] relative md:h-[660px] lg:w-full;
+    @apply relative h-[350px] w-screen bg-[#F5F2F2] md:h-[660px] lg:w-full;
     .map {
-      @apply top-0 left-0 bottom-0 right-0;
+      @apply bottom-0 left-0 right-0 top-0;
       .county,
       .town,
       .village {
-        @apply stroke-white cursor-pointer hover:opacity-80 transition-all;
+        @apply cursor-pointer stroke-white transition-all hover:opacity-80;
         &-active {
           @apply drop-shadow-[-2px_2px_6px_rgba(0,0,0,0.9)];
         }
@@ -24,9 +24,9 @@
       }
     }
     .tooltip {
-      @apply absolute opacity-0 transition-all bg-white rounded shadow-lg w-fit z-[1] min-w-[240px] pointer-events-none md:min-w-[250px];
+      @apply pointer-events-none absolute left-0 top-0 z-[1] w-fit min-w-[240px] rounded bg-white opacity-0 shadow-lg transition-opacity md:min-w-[250px];
       &-bar {
-        @apply h-full transition-all duration-300 text-xs text-white flex items-center md:text-sm;
+        @apply flex h-full items-center text-xs text-white transition-all duration-300 md:text-sm;
       }
       img {
         @apply w-[34px];

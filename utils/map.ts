@@ -41,6 +41,7 @@ class Map {
     town: { x: 0, y: 0, scale: 1 },
   };
   currentArea: MapArea = 'county';
+  cleanTransitionTimer: ReturnType<typeof setTimeout> | null = null;
 
   static getInstance(manualSelect: (area: MapArea | 'default', properties: MapTopologyProperties) => void) {
     if (Map.instance === null) {
@@ -66,9 +67,12 @@ class Map {
     const container = document.querySelector('.map-container');
 
     if (!container) return;
+
     this.width = container.clientWidth;
     this.height = container.clientHeight;
+
     if (!this.height) return;
+
     const { x, y, scale } = MAP_CONFIG[this.height as MapConfigKey];
 
     this.removeMap();
@@ -133,20 +137,39 @@ class Map {
         const instance = Map.instance;
 
         if (!instance) return;
+
         instance.manualSelect(area, data.properties);
       })
-      .on('mouseover', (_, data) => {
+      .on('mouseover', (event, data) => {
+        if (this.cleanTransitionTimer) {
+          clearTimeout(this.cleanTransitionTimer);
+          this.cleanTransitionTimer = null;
+        }
+
+        this.setTooltipTranslate(event);
         this.tooltip?.style('opacity', 1).html(createInvoicingInformation(data.properties));
+
+        window.requestAnimationFrame(() => {
+          this.tooltip?.style('transition', 'transform 100ms cubic-bezier(0.4, 0, 0.2, 1)');
+        });
       })
       .on('mousemove', event => {
-        const x = event.offsetX + 10;
-        const max = this.width - 240;
-
-        this.tooltip?.style('left', `${x > max ? max : x}px`).style('top', `${event.offsetY + 10}px`);
+        this.setTooltipTranslate(event);
       })
       .on('mouseout', () => {
         this.tooltip?.style('opacity', 0);
+
+        this.cleanTransitionTimer = setTimeout(() => {
+          this.tooltip?.style('transition', 'none');
+        }, 300);
       });
+  }
+
+  setTooltipTranslate(event: MouseEvent) {
+    const x = event.offsetX + 10;
+    const max = this.width - 240;
+
+    this.tooltip?.style('transform', `translate(${x > max ? max : x}px, ${event.offsetY + 10}px)`);
   }
 
   async moveToArea(area: MapArea, path: SVGPathElement, data: MapFeature) {
