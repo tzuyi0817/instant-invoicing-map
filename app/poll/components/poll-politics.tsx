@@ -20,9 +20,10 @@ function PollPolitics() {
   const kmtRef = useRef<HTMLDivElement>(null);
   const ddpRef = useRef<HTMLDivElement>(null);
 
-  function scrollNext(to: RefObject<HTMLDivElement>) {
+  function scrollNext(to: RefObject<HTMLDivElement | null>) {
     requestAnimationFrame(() => {
       if (!to.current) return;
+
       scrollRef.current?.scrollTo({
         left: to.current.offsetLeft,
         behavior: 'smooth',
