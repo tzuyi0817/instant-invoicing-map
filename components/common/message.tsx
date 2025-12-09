@@ -1,5 +1,5 @@
 import type { PropsWithChildren } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import BlackMessage from '@/assets/images/loading/black-message.svg';
 import WhiteMessage from '@/assets/images/loading/white-message.svg';
 

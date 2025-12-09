@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import InvoicingMap from './invoicing-map';
 import InvoicingSearch from './invoicing-search';
 import InvoicingInformation from './invoicing-information';

@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useCycle } from 'framer-motion';
+import { motion, useCycle } from 'motion/react';
 import Logo from './navigation-logo';
 import Navigation from './navigation';
 import MenuToggle from '@/components/common/menu-toggle';

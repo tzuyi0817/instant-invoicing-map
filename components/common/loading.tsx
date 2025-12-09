@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { motion, useAnimationControls } from 'framer-motion';
+import { motion, useAnimationControls } from 'motion/react';
 import VoteStamp from '@/assets/images/loading/vote-stamp.png';
 import Message from './message';
 import { sleep } from '@/utils/common';
