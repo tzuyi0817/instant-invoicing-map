@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 import { POLL_POLITICS } from '@/constants/poll';
 
 type PollPolitics = (typeof POLL_POLITICS)[number]['key'];

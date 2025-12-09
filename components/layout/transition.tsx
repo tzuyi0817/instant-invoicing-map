@@ -3,7 +3,7 @@
 import { useMemo, useContext, type PropsWithChildren } from 'react';
 import { usePathname } from 'next/navigation';
 import { LayoutRouterContext } from 'next/dist/shared/lib/app-router-context.shared-runtime';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 
 function FrozenRouter({ children }: PropsWithChildren<{}>) {
   const context = useContext(LayoutRouterContext);

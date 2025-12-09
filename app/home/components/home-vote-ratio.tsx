@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import PaperPresidential from '@/assets/images/layout/paper-presidential.png';
 import PresidentialPalace from '@/assets/images/layout/presidential-palace.png';
 import { INVOICING } from '@/constants/Invoicing';

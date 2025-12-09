@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useSelectedLayoutSegment } from 'next/navigation';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import MenuPresidential from '@/assets/images/layout/menu-presidential.png';
 import MenuBackground from '@/assets/images/layout/menu-background.svg';
 
@@ -26,7 +26,7 @@ const sidebar = {
       damping: 40,
     },
   },
-};
+} as const;
 
 const ulVariants = {
   open: {

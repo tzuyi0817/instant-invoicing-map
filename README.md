@@ -18,7 +18,7 @@ Clone this repository and install dependencies by running `pnpm`(Node.js version
 - typescript
 - tailwindcss
 - d3
-- framer-motion
+- motion
 - react-select
 - topojson-client
 - @svgr/webpack

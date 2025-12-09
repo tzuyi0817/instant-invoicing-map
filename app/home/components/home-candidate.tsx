@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import HomeBackground from './home-background';
 import Kmt from '@/assets/images/candidate/kmt.png';
 import KmtBtn from '@/assets/images/candidate/kmt-btn.svg';

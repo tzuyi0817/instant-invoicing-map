@@ -1,4 +1,4 @@
-import { motion, type Variants, type Transition } from 'framer-motion';
+import { motion, type Variants, type Transition } from 'motion/react';
 
 interface Props {
   toggle: () => void;
