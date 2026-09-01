@@ -34,7 +34,7 @@
     "eslint-config-next": "^16.1.0",
     "eslint-plugin-prettier": "^5.5.4",
     "postcss": "^8.5.6",
-    "postcss-nesting": "^13.0.2",
+    "postcss-nesting": "^14.0.1",
     "postcss-pxtorem": "^6.1.0",
     "prettier": "^3.7.4",
     "prettier-plugin-tailwindcss": "^0.7.2",
